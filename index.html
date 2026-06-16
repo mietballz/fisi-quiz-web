@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FISI Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Menü -->
+    <div id="menu-view">
+
+        <h1>📚 FISI Quiz Trainer</h1>
+        <p>Prüfungsvorbereitung Fachinformatiker Systemintegration</p>
+
+        <div class="menu-section">
+            <button onclick="starteModus('RANDOM')">
+                🎲 Zufallsprüfung (30 Fragen)
+            </button>
+        </div>
+
+        <h2>Fragensets</h2>
+
+        <div class="menu-section">
+
+            <button onclick="starteModus('fragen.json')">
+                Hauptset
+            </button>
+
+            <button onclick="starteModus('fragen_ga1_s2020_rechnen.json')">
+                GA1 Rechnen
+            </button>
+
+            <button onclick="starteModus('fragen_ga1_s2020_netzwerk.json')">
+                GA1 Netzwerk
+            </button>
+
+            <button onclick="starteModus('fragen_ga1_s2020_cloud_storage.json')">
+                Cloud & Storage
+            </button>
+
+            <button onclick="starteModus('fragen_ga1_s2020_scripting_systemverwaltung.json')">
+                Scripting & Systemverwaltung
+            </button>
+
+            <button onclick="starteModus('fragen_ap2_w2025_systeme_datenbank.json')">
+                AP2 Systeme & Datenbank
+            </button>
+
+            <button onclick="starteModus('fragen_ap2_w2025_programmierung_backup.json')">
+                AP2 Programmierung & Backup
+            </button>
+
+            <button onclick="starteModus('fragen_ap2_w2025_nat_vpn.json')">
+                AP2 NAT & VPN
+            </button>
+
+            <button onclick="starteModus('fragen_ap2_w2025_vlan_switching.json')">
+                AP2 VLAN & Switching
+            </button>
+
+            <button onclick="starteModus('fragen_ap2_w2025_berechnungen_troubleshooting.json')">
+                AP2 Berechnungen & Troubleshooting
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Quiz -->
+    <div id="quiz-card" style="display:none;">
+
+        <div id="fortschritt"></div>
+
+        <h3 id="kategorie"></h3>
+
+        <div id="typ-badge-container">
+            <span id="typ-badge"></span>
+        </div>
+
+        <h2 id="frage-text"></h2>
+
+        <div id="hinweis-container" style="display:none;">
+            <button id="hinweis-btn" onclick="toggleHinweis()">
+                💡 Tipp anzeigen
+            </button>
+
+            <div id="hinweis-box" style="display:none;">
+                <p id="hinweis-text"></p>
+            </div>
+        </div>
+
+        <div id="antworten-box"></div>
+
+        <div class="button-row">
+
+            <button id="action-btn">
+                Antwort auswerten
+            </button>
+
+            <button onclick="zurueckZumMenue()">
+                Hauptmenü
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

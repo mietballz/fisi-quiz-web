@@ -7,9 +7,9 @@ const alleJsonFiles = [
     'fragen_ga1_s2020_scripting_systemverwaltung.json',
     'fragen_ap2_w2025_systeme_datenbank.json', 
     'fragen_ap2_w2025_programmierung_backup.json',
-    'fragen_ap2_w2025_netzwerk_ipv6.json',
-    'fragen_ap2_w2025_netzwerk_switching.json',
-    'fragen_ap2_w2025_netzwerk_glasfaser.json'
+    'fragen_ap2_w2025_nat_vpn.json',
+    'fragen_ap2_w2025_vlan_switching.json',
+    'fragen_ap2_w2025_berechnungen_troubleshooting.json'
 ];
 
 let fragen = [];
