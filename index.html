@@ -19,7 +19,6 @@
         <button class="menu-btn" onclick="starteModus('fragen_ga1_s2020_scripting_systemverwaltung.json')">GA1 - Scripting & System</button>
         <button class="menu-btn" onclick="starteModus('fragen_ap2_w2025_systeme_datenbank.json')">AP2 - Systeme & Datenbank</button>
         <button class="menu-btn" onclick="starteModus('fragen_ap2_w2025_programmierung_backup.json')">AP2 - Programmierung</button>
-        
         <button class="menu-btn" onclick="starteModus('fragen_ap2_w2025_netzwerk_ipv6.json')">AP2 - IPv6 & Provider</button>
         <button class="menu-btn" onclick="starteModus('fragen_ap2_w2025_netzwerk_switching.json')">AP2 - Switching</button>
         <button class="menu-btn" onclick="starteModus('fragen_ap2_w2025_netzwerk_glasfaser.json')">AP2 - Glasfaser</button>
@@ -27,11 +26,25 @@
 
     <div id="quiz-card" style="display: none;">
         <button id="back-btn" onclick="zurueckZumMenue()">🔙 Zurück zur Auswahl</button>
+        
         <div class="header">
             <span id="kategorie">Lade...</span>
-            <span id="fortschritt">0 / 0</span>
+            <span id="fortschritt">Frage 0 / 0</span>
         </div>
+        
+        <div id="typ-badge-container" style="text-align: right; margin-bottom: 10px;">
+            <span id="typ-badge" class="badge"></span>
+        </div>
+        
         <h2 id="frage-text">Frage wird geladen...</h2>
+        
+        <div id="hinweis-container" style="margin-bottom: 20px; display: none;">
+            <button id="hinweis-btn" onclick="toggleHinweis()">💡 Tipp anzeigen</button>
+            <div id="hinweis-box" class="hinweis-box" style="display: none;">
+                <p id="hinweis-text"></p>
+            </div>
+        </div>
+        
         <div id="antworten-box"></div>
         <button id="action-btn" onclick="auswerten()" disabled>Antwort auswerten</button>
     </div>
