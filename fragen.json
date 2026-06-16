@@ -1,0 +1,381 @@
+[
+    {
+        "id": "wiso_s2020_01",
+        "kategorie": "Unternehmensformen & Sektoren",
+        "frage": "Die Infotec GmbH bietet als IT-Dienstleister für klein- und mittelständische Betriebe kundenspezifische Hard- und Softwarelösungen an. Welche der folgenden Bezeichnungen treffen auf die Infotec GmbH zu? (Wählen Sie 2)",
+        "typ": "multiple-choice",
+        "hinweis": "Denke daran, was IT-Dienstleistungen sind (nicht Landwirtschaft, nicht reine Industrie) und mit welchem primären Ziel eine GmbH betrieben wird.",
+        "antwortOptionen": [
+            { "text": "Unternehmen des primären Sektors", "istKorrekt": false, "loesungsweg": "Falsch. Der primäre Sektor umfasst die Urproduktion wie Land- und Forstwirtschaft." },
+            { "text": "Unternehmen des sekundären Sektors", "istKorrekt": false, "loesungsweg": "Falsch. Der sekundäre Sektor ist das produzierende und verarbeitende Gewerbe (z. B. Industrie, Handwerk)." },
+            { "text": "Unternehmen des tertiären Sektors", "istKorrekt": true, "loesungsweg": "Richtig! Alle Dienstleistungen (wie IT-Services) gehören zum tertiären Sektor." },
+            { "text": "Gemeinwirtschaftlicher Betrieb", "istKorrekt": false, "loesungsweg": "Falsch. Gemeinwirtschaftliche Betriebe arbeiten zur Bedarfsdeckung der Gesellschaft (z. B. Stadtwerke), nicht primär gewinnorientiert." },
+            { "text": "Einzelunternehmen", "istKorrekt": false, "loesungsweg": "Falsch. Die Infotec ist eine GmbH (Gesellschaft mit beschränkter Haftung) und somit eine Kapitalgesellschaft, kein Einzelunternehmen." },
+            { "text": "Erwerbswirtschaftlicher Betrieb", "istKorrekt": true, "loesungsweg": "Richtig! Eine GmbH ist erwerbswirtschaftlich tätig, das heißt, sie strebt nach Gewinnerzielung." }
+        ]
+    },
+    {
+        "id": "wiso_s2020_02a",
+        "kategorie": "Wirtschaftskreislauf",
+        "frage": "Die Infotec GmbH erhält eine Subvention der Kommune für die Anschaffung von zwei Elektrofahrzeugen. Welchem Geldstrom im Wirtschaftskreislauf entspricht das?",
+        "typ": "single-choice",
+        "hinweis": "Überlege, wer das Geld gibt (Kommune) und wer es empfängt.",
+        "antwortOptionen": [
+            { "text": "Vom Staat an das Unternehmen", "istKorrekt": true, "loesungsweg": "Richtig! Die Kommune ist Teil des Staates und zahlt die Subvention an das Unternehmen aus." },
+            { "text": "Vom Unternehmen an den Staat", "istKorrekt": false, "loesungsweg": "Falsch. Das wäre z. B. der Fall bei der Zahlung von Steuern." },
+            { "text": "Von Privaten Haushalten an den Staat", "istKorrekt": false, "loesungsweg": "Falsch. Dies wäre der Fall bei der Zahlung von Lohnsteuer durch Arbeitnehmer." }
+        ]
+    },
+    {
+        "id": "wiso_s2020_03",
+        "kategorie": "Arbeitsrecht",
+        "frage": "Für neue Mitarbeiter soll vorübergehend eine tägliche Arbeitszeit von zehn Stunden vereinbart werden. Welche Aussage zur regelmäßigen täglichen Arbeitszeit trifft laut Arbeitszeitgesetz zu?",
+        "typ": "single-choice",
+        "hinweis": "Was sagt das Gesetz zum Ausgleich, wenn an einem Tag mehr als 8 Stunden gearbeitet wird?",
+        "antwortOptionen": [
+            { "text": "Zulässig, wenn sie tarifvertraglich vereinbart wurde.", "istKorrekt": false, "loesungsweg": "Falsch. Tarifverträge dürfen Gesetze nicht zuungunsten des Arbeitnehmers aufheben." },
+            { "text": "Zulässig, weil die tägliche Arbeitszeit keiner gesetzlichen Beschränkung unterliegt.", "istKorrekt": false, "loesungsweg": "Falsch. Sie unterliegt strengen Beschränkungen durch das Arbeitszeitgesetz (ArbZG)." },
+            { "text": "Zulässig, wenn innerhalb von sechs Monaten im Durchschnitt acht Stunden werktäglich nicht überschritten werden.", "istKorrekt": true, "loesungsweg": "Richtig! Nach § 3 ArbZG darf die Arbeitszeit auf bis zu 10 Stunden verlängert werden, wenn dieser Ausgleichszeitraum eingehalten wird." },
+            { "text": "Zulässig, weil in der Infotec GmbH an Wochenenden nicht gearbeitet wird.", "istKorrekt": false, "loesungsweg": "Falsch. Das freie Wochenende allein reicht als Begründung für systematische 10-Stunden-Tage rechtlich nicht aus." }
+        ]
+    },
+    {
+        "id": "wiso_s2020_04",
+        "kategorie": "Arbeitsrecht",
+        "frage": "Für neue Mitarbeiter soll eine Probezeit von sechs Monaten vereinbart werden. Welche Aussage trifft auf die vereinbarte Probezeit zu?",
+        "typ": "single-choice",
+        "hinweis": "Denke an die verkürzten Fristen in den ersten Monaten eines Arbeitsverhältnisses.",
+        "antwortOptionen": [
+            { "text": "Der Arbeitgeber kann nur aus wichtigem Grund kündigen.", "istKorrekt": false, "loesungsweg": "Falsch. In der Probezeit bedarf es keines besonderen Kündigungsgrundes." },
+            { "text": "Das Arbeitsverhältnis kann während der Probezeit mit einer Frist von zwei Wochen gekündigt werden.", "istKorrekt": true, "loesungsweg": "Richtig! Gesetzlich gilt in der Probezeit (max. 6 Monate) eine beidseitige Kündigungsfrist von zwei Wochen (§ 622 BGB)." },
+            { "text": "Während der Probezeit kann nur der Arbeitnehmer kündigen.", "istKorrekt": false, "loesungsweg": "Falsch. Beide Parteien haben in der Probezeit das gleiche Recht zur ordentlichen Kündigung." },
+            { "text": "Die Probezeit muss mindestens einen Monat und darf maximal vier Monate betragen.", "istKorrekt": false, "loesungsweg": "Falsch. Die gesetzliche Höchstdauer für eine Probezeit beträgt sechs Monate." }
+        ]
+    },
+    {
+        "id": "wiso_s2020_05",
+        "kategorie": "Kollektives Arbeitsrecht",
+        "frage": "In welchem der folgenden Bestandteile des Arbeitsvertrages ist die Infotec GmbH an kollektives Arbeitsrecht gebunden?",
+        "typ": "single-choice",
+        "hinweis": "Kollektives Arbeitsrecht betrifft Vereinbarungen, die zwischen ganzen 'Kollektiven' (Gewerkschaften und Arbeitgeberverbänden) getroffen werden.",
+        "antwortOptionen": [
+            { "text": "Das Arbeitsverhältnis beginnt am 1. Juli 2020.", "istKorrekt": false, "loesungsweg": "Falsch. Das ist individuelles Arbeitsrecht (wird einzelvertraglich ausgehandelt)." },
+            { "text": "Der Mitarbeiter erhält ein monatliches Bruttogehalt von 3.000,00 EUR.", "istKorrekt": false, "loesungsweg": "Falsch. Solange hier nicht 'nach Tarif' steht, ist dies eine individuelle Vereinbarung." },
+            { "text": "Die wöchentliche Arbeitszeit beträgt nach Tarifvertrag 38,5 Stunden.", "istKorrekt": true, "loesungsweg": "Richtig! Der Tarifvertrag ist das klassische Instrument des kollektiven Arbeitsrechts. Daran ist die GmbH gebunden." }
+        ]
+    },
+    {
+        "id": "wiso_s2020_06",
+        "kategorie": "Personalwesen",
+        "frage": "Welche der folgenden Fragen dürfen in einem Vorstellungsgespräch NICHT gestellt werden bzw. müssen vom Bewerber nicht wahrheitsgemäß beantwortet werden? (Wählen Sie 2)",
+        "typ": "multiple-choice",
+        "hinweis": "Denke an das Allgemeine Gleichbehandlungsgesetz (AGG) und Fragen zur engsten Privatsphäre.",
+        "antwortOptionen": [
+            { "text": "Haben Sie Erfahrungen in Teamarbeit?", "istKorrekt": false, "loesungsweg": "Falsch. Diese fachliche Frage ist erlaubt und muss wahrheitsgemäß beantwortet werden." },
+            { "text": "Welcher Religionsgemeinschaft gehören Sie an?", "istKorrekt": true, "loesungsweg": "Richtig! Dies verstößt gegen das Diskriminierungsverbot (AGG). Man darf hier lügen ('Recht zur Lüge'). Ausnahme: Tendenzbetriebe wie Kirchen." },
+            { "text": "Wie gut schätzen Sie Ihre Kenntnisse in JAVA ein?", "istKorrekt": false, "loesungsweg": "Falsch. Das ist eine rein fachliche Frage, die zwingend erlaubt ist." },
+            { "text": "Sind Sie schwanger?", "istKorrekt": true, "loesungsweg": "Richtig! Fragen nach Familienplanung oder Schwangerschaft sind streng verboten. Bewerberinnen dürfen hier lügen." }
+        ]
+    },
+    {
+        "id": "wiso_s2020_07",
+        "kategorie": "Betriebsverfassungsgesetz",
+        "frage": "In welchen der folgenden Angelegenheiten hat der Betriebsrat laut Betriebsverfassungsgesetz ein Mitbestimmungsrecht? (Wählen Sie 2)",
+        "typ": "multiple-choice",
+        "hinweis": "Mitbestimmung greift stark bei Arbeitszeiten und der Überwachung von Mitarbeitern.",
+        "antwortOptionen": [
+            { "text": "Einführung einer neuen Gleitzeitregelung", "istKorrekt": true, "loesungsweg": "Richtig! Nach § 87 BetrVG bestimmt der Betriebsrat bei Beginn und Ende der täglichen Arbeitszeit zwingend mit." },
+            { "text": "Errichten einer neuen Lagerhalle", "istKorrekt": false, "loesungsweg": "Falsch. Das ist eine rein unternehmerische Entscheidung. Hier gibt es maximal ein Informationsrecht." },
+            { "text": "Einführung eines Zeiterfassungssystems", "istKorrekt": true, "loesungsweg": "Richtig! Bei technischen Einrichtungen, die dazu geeignet sind, Verhalten oder Leistung der Arbeitnehmer zu überwachen, muss der Betriebsrat zustimmen." },
+            { "text": "Gründung einer Filiale", "istKorrekt": false, "loesungsweg": "Falsch. Auch dies ist eine wirtschaftliche Entscheidung der Geschäftsleitung." }
+        ]
+    },
+    {
+        "id": "wiso_s2020_08",
+        "kategorie": "Betriebsverfassungsgesetz",
+        "frage": "Der Betriebsrat lädt zur vierteljährlichen Betriebsversammlung ein. Wer ist berechtigt, teilzunehmen?",
+        "typ": "single-choice",
+        "hinweis": "Wer wählt den Betriebsrat und von wem ist die Betriebsversammlung das Sprachrohr?",
+        "antwortOptionen": [
+            { "text": "Nur die Betriebsratsmitglieder und die Gewerkschaftsvertreter", "istKorrekt": false, "loesungsweg": "Falsch. Das wäre eine interne Betriebsratssitzung." },
+            { "text": "Alle Arbeitnehmer des Unternehmens", "istKorrekt": true, "loesungsweg": "Richtig! Die Betriebsversammlung ist die Zusammenkunft aller Arbeitnehmer (§ 42 BetrVG), unabhängig von Gewerkschaftszugehörigkeit oder Arbeitszeitmodell." },
+            { "text": "Nur die Vollzeitmitarbeiter und die Auszubildenden", "istKorrekt": false, "loesungsweg": "Falsch. Auch Teilzeitkräfte, Werkstudenten etc. dürfen teilnehmen." }
+        ]
+    },
+    {
+        "id": "wiso_s2020_09",
+        "kategorie": "Kollektives Arbeitsrecht",
+        "frage": "In Tarifverhandlungen wird zwischen dem Entgelttarifvertrag und dem Manteltarifvertrag (Rahmentarifvertrag) unterschieden. Was wird im Manteltarifvertrag geregelt?",
+        "typ": "single-choice",
+        "hinweis": "Der Mantel legt die äußeren, langfristigen 'Rahmenbedingungen' fest, nicht das harte Geld.",
+        "antwortOptionen": [
+            { "text": "Gehaltssätze für die einzelnen Gehaltsgruppen", "istKorrekt": false, "loesungsweg": "Falsch. Löhne und Gehälter werden im Lohn-/Entgelttarifvertrag geregelt." },
+            { "text": "Regelmäßige Wochenarbeitszeit", "istKorrekt": true, "loesungsweg": "Richtig! Der Manteltarifvertrag regelt allgemeine Arbeitsbedingungen wie Arbeitszeit, Kündigungsfristen oder Urlaubsansprüche. Er läuft meist über mehrere Jahre." },
+            { "text": "Ausbildungsvergütung", "istKorrekt": false, "loesungsweg": "Falsch. Dies gehört wie das Gehalt in den Entgelttarifvertrag." }
+        ]
+    },
+    {
+        "id": "wiso_s2020_10",
+        "kategorie": "Arbeitsrecht",
+        "frage": "Welche der folgenden Einrichtungen wird zu den Sozialpartnern gerechnet?",
+        "typ": "single-choice",
+        "hinweis": "Wer verhandelt im Falle eines Streiks miteinander?",
+        "antwortOptionen": [
+            { "text": "Bundesministerium für Arbeit und Soziales", "istKorrekt": false, "loesungsweg": "Falsch. Der Staat (und seine Ministerien) ist bei uns nicht an der Tarifautonomie beteiligt." },
+            { "text": "Industrie- und Handelskammern", "istKorrekt": false, "loesungsweg": "Falsch. Die IHK ist zuständig für Berufsbildung und Interessenvertretung, aber kein Verhandlungspartner für Tarifverträge." },
+            { "text": "Arbeitgeberverbände", "istKorrekt": true, "loesungsweg": "Richtig! Die 'Sozialpartner' sind die Gewerkschaften (als Vertreter der Arbeitnehmer) und die Arbeitgeberverbände." }
+        ]
+    },
+    {
+        "id": "wiso_s2020_12_BONUS",
+        "kategorie": "Kaufmännisches Rechnen",
+        "frage": "BONUS-RECHENAUFGABE: Eine Fachinformatikerin hat ein Bruttogehalt von 3.200,00 EUR. Der allgemeine Beitragssatz zur gesetzlichen Krankenversicherung liegt bei 14,6 %, der Zusatzbeitrag bei 0,7 %. Wie hoch ist der Beitrag, der ihr vom Gehalt abgezogen wird?",
+        "typ": "single-choice",
+        "hinweis": "Denke daran, dass in der GKV der Arbeitgeber und Arbeitnehmer sich den Beitrag in der Regel exakt teilen (Paritätische Finanzierung).",
+        "antwortOptionen": [
+            { "text": "489,60 EUR", "istKorrekt": false, "loesungsweg": "Falsch. Du hast die vollen 15,3 % berechnet. Das ist der Gesamtbeitrag, aber Arbeitgeber und Arbeitnehmer teilen sich diesen Beitrag!" },
+            { "text": "233,60 EUR", "istKorrekt": false, "loesungsweg": "Falsch. Hier hast du den Zusatzbeitrag von 0,7 % komplett vergessen mitzurechnen." },
+            { "text": "244,80 EUR", "istKorrekt": true, "loesungsweg": "Richtig! Rechnung: Gesamter Satz = 14,6% + 0,7% = 15,3%. Da paritätisch geteilt wird, zahlt sie die Hälfte: 15,3% / 2 = 7,65%.  Rechnung: 3.200,00 EUR * 7,65 % = 244,80 EUR." }
+        ]
+    }
+    ,
+    {
+        "id": "wiso_s2020_13",
+        "kategorie": "Gesetzliche Unfallversicherung",
+        "frage": "Für welche der folgenden Fälle werden von der gesetzlichen Unfallversicherung Leistungen gewährt? (Wählen Sie 2)",
+        "typ": "multiple-choice",
+        "hinweis": "Die gesetzliche Unfallversicherung (Berufsgenossenschaft) greift nur bei Unfällen am Arbeitsplatz, bei beruflich veranlassten Tätigkeiten oder auf dem direkten Arbeitsweg (Wegeunfall).",
+        "antwortOptionen": [
+            { "text": "Stolpern über ein Kabel im Büro (Bürounfall)", "istKorrekt": true, "loesungsweg": "Richtig! Dies ist ein klassischer Arbeitsunfall während der regulären Arbeitszeit im Betrieb." },
+            { "text": "Sturz am arbeitsfreien Wochenende mit dem Fahrrad", "istKorrekt": false, "loesungsweg": "Falsch. Dies geschah in der Freizeit und ist ein Fall für die normale Krankenversicherung." },
+            { "text": "Ausrutschen auf dem direkten Weg zur Arbeit", "istKorrekt": true, "loesungsweg": "Richtig! Dies ist ein sogenannter 'Wegeunfall', der durch die gesetzliche Unfallversicherung abgedeckt ist." },
+            { "text": "Arbeitsunfähigkeit wegen einer Grippeerkrankung", "istKorrekt": false, "loesungsweg": "Falsch. Krankheiten wie eine Grippe sind keine Unfälle und fallen unter die Krankenversicherung." },
+            { "text": "Verschlechterung der Sehkraft (Besuch beim Augenarzt)", "istKorrekt": false, "loesungsweg": "Falsch. Auch das ist eine normale Krankheit/Alterserscheinung und kein Arbeitsunfall." }
+        ]
+    },
+    {
+        "id": "wiso_s2020_14",
+        "kategorie": "Rentenversicherung",
+        "frage": "Zwei Auszubildende der Infotec GmbH diskutieren über die gesetzliche Rentenversicherung und private Altersvorsorge. Welches Argument trifft zu?",
+        "typ": "single-choice",
+        "hinweis": "Stichwort: Demografischer Wandel (Generationenvertrag). Es gibt immer mehr Rentner und weniger Beitragszahler.",
+        "antwortOptionen": [
+            { "text": "Eine private Altersvorsorge ist notwendig, weil die gesetzliche Rente voraussichtlich nicht ausreichen wird.", "istKorrekt": true, "loesungsweg": "Richtig! Durch den demografischen Wandel sinkt das Rentenniveau kontinuierlich (Rentenlücke), daher ist private Vorsorge wichtig." },
+            { "text": "Der demografische Wandel sorgt in Zukunft für genug Beitragszahler, das Rentenniveau steigt.", "istKorrekt": false, "loesungsweg": "Falsch. Das genaue Gegenteil ist der Fall: Es gibt weniger Beitragszahler und mehr Leistungsempfänger." },
+            { "text": "Eine private Altersvorsorge lohnt sich nicht, weil jedem Arbeitnehmer eine Betriebsrente zusteht.", "istKorrekt": false, "loesungsweg": "Falsch. Es gibt keinen generellen gesetzlichen Anspruch darauf, dass der Arbeitgeber eine Betriebsrente (bAV) finanziert." }
+        ]
+    },
+    {
+        "id": "wiso_s2020_15",
+        "kategorie": "Sozialstaat",
+        "frage": "Solidarität ist ein gesellschaftspolitisches Prinzip in Deutschland. Welcher der folgenden Sachverhalte entspricht dem Prinzip der Solidarität?",
+        "typ": "single-choice",
+        "hinweis": "Solidarität bedeutet in der Sozialversicherung: 'Einer für alle, alle für einen'. Wer mehr verdient, zahlt mehr ein, bekommt aber im Krankheitsfall die gleiche Leistung.",
+        "antwortOptionen": [
+            { "text": "Der Staat erhöht die Steuersätze für Einkünfte aus Zinsen.", "istKorrekt": false, "loesungsweg": "Falsch. Das ist eine steuerpolitische Maßnahme (Kapitalertragsteuer), kein klassisches Beispiel für das Solidarprinzip der Sozialversicherungen." },
+            { "text": "Die Leistungen der gesetzlichen Krankenversicherungen sind einkommensunabhängig.", "istKorrekt": true, "loesungsweg": "Richtig! Egal ob ein Geschäftsführer den Höchstsatz einzahlt oder ein Azubi einen kleinen Beitrag: Beide erhalten beim Arzt exakt die gleiche, medizinisch notwendige Behandlung." },
+            { "text": "Die Freibeträge bei der Erbschaftssteuer werden gesenkt.", "istKorrekt": false, "loesungsweg": "Falsch. Das betrifft das Steuerrecht und die Vermögensverteilung, nicht das Solidarprinzip." }
+        ]
+    },
+    {
+        "id": "wiso_s2020_16",
+        "kategorie": "Unternehmensformen",
+        "frage": "In Deutschland gibt es neben privaten Betrieben auch öffentlich-rechtliche Betriebe (z.B. Stadtwerke, Müllabfuhr). Welches Ziel verfolgen diese primär?",
+        "typ": "single-choice",
+        "hinweis": "Vergleiche die Ziele einer AG oder GmbH (Gewinnmaximierung) mit den Aufgaben des Staates gegenüber seinen Bürgern.",
+        "antwortOptionen": [
+            { "text": "Steigerung des Einkommens der Kommune", "istKorrekt": false, "loesungsweg": "Falsch. Öffentliche Betriebe sollen kostendeckend arbeiten, aber Gewinnerzielung ist nicht ihr Hauptziel." },
+            { "text": "Dividendenausschüttung an Aktionäre", "istKorrekt": false, "loesungsweg": "Falsch. Das ist das klassische Ziel einer privaten Aktiengesellschaft (AG)." },
+            { "text": "Bestmögliche Versorgung der Bevölkerung mit Dienstleistungen oder Sachgütern", "istKorrekt": true, "loesungsweg": "Richtig! Dies nennt man das 'Bedarfsdeckungsprinzip'. Die Grundversorgung (Wasser, Müll, Nahverkehr) soll für alle Bürger sichergestellt werden." }
+        ]
+    },
+    {
+        "id": "wiso_s2020_19",
+        "kategorie": "Markt & Preis (Rechnen)",
+        "frage": "RECHENAUFGABE: In einem Markt-Modell schneiden sich Angebot und Nachfrage bei einer Menge von 90 Stück und einem Preis von 75,00 EUR (Gleichgewichtspreis). Bei einem Preis von 90,00 EUR liegt das Angebot bei 110 Stück, die Nachfrage aber nur bei 70 Stück. \n\nWie hoch ist der maximal erzielbare Umsatz und wie groß ist der Angebotsüberhang bei 90,00 EUR?",
+        "typ": "single-choice",
+        "hinweis": "Umsatz = Preis × verkaufte Menge. Am Gleichgewichtspreis wird am meisten verkauft. Der Angebotsüberhang ist die Differenz zwischen dem, was Anbieter produzieren wollen, und dem, was Käufer kaufen wollen.",
+        "antwortOptionen": [
+            { "text": "Max. Umsatz: 6.300 EUR | Angebotsüberhang: 20 Stück", "istKorrekt": false, "loesungsweg": "Falsch. 6.300 EUR wäre der Umsatz beim zu hohen Preis von 90 EUR (90 EUR × 70 abgesetzte Stück)." },
+            { "text": "Max. Umsatz: 8.250 EUR | Angebotsüberhang: 40 Stück", "istKorrekt": false, "loesungsweg": "Falsch. 8.250 EUR ist rechnerisch 75 EUR × 110 Stück. Aber bei 75 EUR werden nur 90 Stück produziert/nachgefragt!" },
+            { "text": "Max. Umsatz: 6.750 EUR | Angebotsüberhang: 40 Stück", "istKorrekt": true, "loesungsweg": "Richtig! \n1. Maximaler Umsatz entsteht am Gleichgewichtspreis: 75,00 EUR × 90 Stück = 6.750,00 EUR.\n2. Angebotsüberhang bei 90 EUR: Angebot (110) minus Nachfrage (70) = 40 Stück." }
+        ]
+    },
+    {
+        "id": "wiso_s2020_20",
+        "kategorie": "Kaufmännisches Rechnen",
+        "frage": "RECHENAUFGABE: Berechnen Sie die Umsatzrentabilität für die Quartale. In welchem Quartal war sie am höchsten?\nQ1: Umsatz 280.000 EUR, Gewinn 11.200 EUR\nQ2: Umsatz 320.000 EUR, Gewinn 19.200 EUR\nQ3: Umsatz 260.000 EUR, Gewinn 13.000 EUR\nQ4: Umsatz 340.000 EUR, Gewinn 23.800 EUR",
+        "typ": "single-choice",
+        "hinweis": "Die Formel für die Umsatzrentabilität lautet: (Gewinn ÷ Umsatz) × 100. Berechne dies für jedes Quartal.",
+        "antwortOptionen": [
+            { "text": "Quartal 2 mit 6,0 %", "istKorrekt": false, "loesungsweg": "Falsch. Q2 liegt bei (19.200 / 320.000) * 100 = 6,0 %. Das ist gut, aber nicht der höchste Wert." },
+            { "text": "Quartal 4 mit 7,0 %", "istKorrekt": true, "loesungsweg": "Richtig! Wir rechnen für jedes Quartal (Gewinn / Umsatz) * 100:\nQ1: 11.200 / 280.000 = 4%\nQ2: 19.200 / 320.000 = 6%\nQ3: 13.000 / 260.000 = 5%\nQ4: 23.800 / 340.000 = 7%. Quartal 4 ist also am rentabelsten." },
+            { "text": "Quartal 4 mit 14,2 %", "istKorrekt": false, "loesungsweg": "Falsch. Hier wurde vermutlich (Umsatz / Gewinn) gerechnet oder eine Null bei der Prozentrechnung vergessen." },
+            { "text": "Quartal 3 mit 5,0 %", "istKorrekt": false, "loesungsweg": "Falsch. Q3 liegt bei exakt 5,0 % und ist damit schlechter als Q2 und Q4." }
+        ]
+    }
+    ,
+    {
+        "id": "wiso_s2020_21",
+        "kategorie": "Mutterschutz & Elternzeit",
+        "frage": "Eine Mitarbeiterin der Infotec GmbH erwartet ein Kind. Welche Aussage zum Mutterschutzgesetz trifft zu?",
+        "typ": "single-choice",
+        "hinweis": "Es gibt eine Frist vor und eine Frist nach der Geburt, in der ein absolutes Beschäftigungsverbot bzw. ein besonderer Schutz gilt.",
+        "antwortOptionen": [
+            { "text": "Die Schutzfrist beginnt vier Wochen vor und endet zehn Wochen nach der Entbindung.", "istKorrekt": false, "loesungsweg": "Falsch. Die Fristen sind anders verteilt." },
+            { "text": "Während der Schutzfrist darf die Frau auf eigenen Wunsch unbegrenzt weiterarbeiten.", "istKorrekt": false, "loesungsweg": "Falsch. Nach der Entbindung gilt ein absolutes Beschäftigungsverbot (auch freiwillig darf nicht gearbeitet werden)." },
+            { "text": "Die Schutzfrist beginnt sechs Wochen vor der Entbindung und endet acht Wochen danach.", "istKorrekt": true, "loesungsweg": "Richtig! Das ist die gesetzliche Regelschutzfrist nach § 3 MuSchG (insgesamt 14 Wochen)." },
+            { "text": "Das Mutterschutzgeld wird ausschließlich von der Krankenkasse gezahlt.", "istKorrekt": false, "loesungsweg": "Falsch. Der Arbeitgeber zahlt einen Zuschuss zum Mutterschaftsgeld." }
+        ]
+    },
+    {
+        "id": "wiso_s2020_22",
+        "kategorie": "Berufsbildungsgesetz (BBiG)",
+        "frage": "Ein Auszubildender hat seine Abschlussprüfung vor dem im Vertrag vereinbarten Ausbildungsende bestanden. Wann endet sein Berufsausbildungsverhältnis rechtlich?",
+        "typ": "single-choice",
+        "hinweis": "Denke an den Moment, in dem man offiziell weiß, dass man bestanden hat.",
+        "antwortOptionen": [
+            { "text": "Mit dem Ablauf der im Berufsausbildungsvertrag vereinbarten Ausbildungszeit.", "istKorrekt": false, "loesungsweg": "Falsch. Wenn man vorher besteht, verkürzt sich die Zeit automatisch." },
+            { "text": "Mit Bekanntgabe des Ergebnisses durch den Prüfungsausschuss.", "istKorrekt": true, "loesungsweg": "Richtig! Nach § 21 BBiG endet das Ausbildungsverhältnis an dem Tag, an dem der Prüfungsausschuss das Bestehen offiziell mitteilt (meist der Tag der mündlichen Prüfung)." },
+            { "text": "Mit dem Tag der Zeugnisübergabe in der Berufsschule.", "istKorrekt": false, "loesungsweg": "Falsch. Die Berufsschule hat mit dem rechtlichen Ausbildungsende nichts zu tun." },
+            { "text": "Erst nach Ablauf einer zweiwöchigen Übergangsfrist.", "istKorrekt": false, "loesungsweg": "Falsch. Eine solche Frist gibt es im Gesetz nicht." }
+        ]
+    },
+    {
+        "id": "wiso_s2020_23",
+        "kategorie": "Personalentwicklung",
+        "frage": "Welcher der folgenden Sachverhalte ist eine Maßnahme der beruflichen Fortbildung?",
+        "typ": "single-choice",
+        "hinweis": "Fortbildung bedeutet, auf einem bestehenden Beruf aufzubauen, um im Job weiter aufzusteigen.",
+        "antwortOptionen": [
+            { "text": "Ein ungelernter Helfer schließt eine Ausbildung zum Fachinformatiker ab.", "istKorrekt": false, "loesungsweg": "Falsch. Das ist eine Berufsausbildung (Erstausbildung), keine Fortbildung." },
+            { "text": "Ein Maurer lernt nach einem Unfall den Beruf des Bürokaufmanns.", "istKorrekt": false, "loesungsweg": "Falsch. Wenn man einen komplett neuen Beruf lernt, nennt man das Umschulung." },
+            { "text": "Ein Fachinformatiker absolviert einen Lehrgang zum zertifizierten IT-Projektleiter.", "istKorrekt": true, "loesungsweg": "Richtig! Er baut auf seinem bestehenden Beruf auf und erweitert seine Qualifikation (Aufstiegsfortbildung)." }
+        ]
+    },
+    {
+        "id": "wiso_s2020_24",
+        "kategorie": "Jugendarbeitsschutzgesetz",
+        "frage": "Für einen 17-jährigen Auszubildenden gilt das Jugendarbeitsschutzgesetz (JArbSchG). Welche Regelungen sind hier zwingend vorgeschrieben? (Wählen Sie 2)",
+        "typ": "multiple-choice",
+        "hinweis": "Jugendliche haben strengere Schutzzeiten als Erwachsene (besonders bei Dauer der Arbeitszeit und an Wochenenden).",
+        "antwortOptionen": [
+            { "text": "Die wöchentliche Arbeitszeit darf 35 Stunden nicht überschreiten.", "istKorrekt": false, "loesungsweg": "Falsch. Auch Jugendliche dürfen bis zu 40 Stunden pro Woche arbeiten (8 Stunden an 5 Tagen)." },
+            { "text": "Die tägliche Arbeitszeit darf acht Stunden grundsätzlich nicht überschreiten.", "istKorrekt": true, "loesungsweg": "Richtig! § 8 JArbSchG regelt: Höchstens 8 Stunden täglich (Ausnahme bis 8,5 Std, wenn an einem anderen Tag verkürzt wird)." },
+            { "text": "Der Urlaubsanspruch beträgt mindestens 30 Werktage.", "istKorrekt": false, "loesungsweg": "Falsch. Für einen 17-Jährigen (noch nicht 18) sind gesetzlich nur 25 Werktage vorgeschrieben." },
+            { "text": "Bei einer Arbeitszeit von sechs Stunden müssen mindestens 45 Minuten Pause gewährt werden.", "istKorrekt": false, "loesungsweg": "Falsch. Bei 4,5 bis 6 Stunden sind 30 Minuten Pause vorgeschrieben. Erst ab 6 Stunden sind es 60 Minuten." },
+            { "text": "Der Jugendliche darf an Samstagen, Sonntagen und Feiertagen grundsätzlich nicht beschäftigt werden.", "istKorrekt": true, "loesungsweg": "Richtig! Für Jugendliche gilt die 5-Tage-Woche, und das Wochenende muss frei bleiben (Ausnahmen gibt es z. B. im Krankenhaus oder in der Gastronomie, aber nicht typischerweise in der IT)." }
+        ]
+    },
+    {
+        "id": "wiso_s2020_25",
+        "kategorie": "Betriebsrat",
+        "frage": "Wer ist bei der Betriebsratswahl in einem Unternehmen wahlberechtigt (aktives Wahlrecht)?",
+        "typ": "single-choice",
+        "hinweis": "Wer darf sein Kreuz auf dem Wahlzettel machen? Die Altersgrenze für das Wählen wurde vor einigen Jahren gesenkt.",
+        "antwortOptionen": [
+            { "text": "Alle Arbeitnehmer des Betriebs, die das 16. Lebensjahr vollendet haben.", "istKorrekt": true, "loesungsweg": "Richtig! Wählen darf jeder Arbeitnehmer, der 16 Jahre alt ist (aktives Wahlrecht)." },
+            { "text": "Nur Arbeitnehmer, die mindestens 18 Jahre alt sind.", "istKorrekt": false, "loesungsweg": "Falsch. 18 Jahre alt muss man nur sein, um GEWÄHLT zu werden (passives Wahlrecht)." },
+            { "text": "Nur Mitarbeiter, die mindestens sechs Monate dem Betrieb angehören.", "istKorrekt": false, "loesungsweg": "Falsch. Auch hier gilt die Sechs-Monats-Frist nur für das passive Wahlrecht (gewählt werden)." },
+            { "text": "Auch leitende Angestellte und die Geschäftsführung.", "istKorrekt": false, "loesungsweg": "Falsch. Leitende Angestellte gehören rechtlich zu den Arbeitgebern und dürfen den Betriebsrat weder wählen, noch in ihn gewählt werden." }
+        ]
+    },
+    {
+        "id": "wiso_s2020_26",
+        "kategorie": "Umweltschutz & Wirtschaft",
+        "frage": "Welcher Begriff beschreibt das Prinzip, in einem System nur so viele Ressourcen zu verbrauchen, wie wieder nachwachsen oder sich auf natürlichem Weg regenerieren können?",
+        "typ": "single-choice",
+        "hinweis": "Dieser Begriff taucht heutzutage in jeder Unternehmensphilosophie und im Klimaschutz auf.",
+        "antwortOptionen": [
+            { "text": "Ökonomisches Prinzip", "istKorrekt": false, "loesungsweg": "Falsch. Das ökonomische Prinzip (Minimal-/Maximalprinzip) beschreibt nur den effizienten Einsatz von Mitteln, egal ob sie nachwachsen oder nicht." },
+            { "text": "Subsidiarität", "istKorrekt": false, "loesungsweg": "Falsch. Subsidiarität bedeutet, dass Probleme auf der kleinstmöglichen Ebene (z. B. Kommune statt Staat) gelöst werden sollen." },
+            { "text": "Recycling", "istKorrekt": false, "loesungsweg": "Falsch. Recycling ist nur die Wiederverwertung von Abfall, nicht das ganzheitliche Konzept des Nicht-Erschöpfens von Ressourcen." },
+            { "text": "Nachhaltigkeit", "istKorrekt": true, "loesungsweg": "Richtig! Nachhaltigkeit bedeutet, ökologisch, ökonomisch und sozial so zu wirtschaften, dass zukünftigen Generationen dieselben Ressourcen zur Verfügung stehen." }
+        ]
+    },
+    {
+        "id": "wiso_s2020_27",
+        "kategorie": "Zahlungsverkehr",
+        "frage": "Welches Merkmal ist für die Durchführung einer SEPA-Basislastschrift zwingend erforderlich?",
+        "typ": "single-choice",
+        "hinweis": "Was muss der Kunde (Zahlungspflichtige) unterschreiben, damit das Unternehmen Geld von seinem Konto einziehen darf?",
+        "antwortOptionen": [
+            { "text": "Ein Überweisungsauftrag des Zahlungspflichtigen.", "istKorrekt": false, "loesungsweg": "Falsch. Bei einer Lastschrift holt sich der Empfänger das Geld. Eine Überweisung ist genau das Gegenteil." },
+            { "text": "Die Angabe der Kreditkartennummer.", "istKorrekt": false, "loesungsweg": "Falsch. Eine SEPA-Lastschrift erfolgt vom Girokonto (IBAN), nicht über eine Kreditkarte." },
+            { "text": "Ein gültiges SEPA-Mandat des Zahlungspflichtigen.", "istKorrekt": true, "loesungsweg": "Richtig! Das SEPA-Mandat (mit Gläubiger-Identifikationsnummer und Mandatsreferenz) ist die rechtliche Erlaubnis, dass das Konto belastet werden darf." }
+        ]
+    }
+    ,
+    {
+        "id": "wiso_s2020_11",
+        "kategorie": "Kündigungsschutz",
+        "frage": "Einem Arbeitnehmer der Infotec GmbH soll aus betrieblichen Gründen gekündigt werden. Welche Grundvoraussetzung muss erfüllt sein, damit das Kündigungsschutzgesetz (KSchG) in diesem Unternehmen überhaupt greift?",
+        "typ": "single-choice",
+        "hinweis": "Das Kündigungsschutzgesetz gilt nicht für absolute Kleinstbetriebe. Es gibt einen Schwellenwert bei der Mitarbeiterzahl.",
+        "antwortOptionen": [
+          { "text": "Der Betrieb muss in der Regel mehr als 10 Arbeitnehmer beschäftigen.", "istKorrekt": true, "loesungsweg": "Richtig! Das KSchG greift (für Mitarbeiter, die nach 2003 eingestellt wurden) erst in Betrieben mit mehr als 10 Mitarbeitern. Auszubildende zählen dabei übrigens nicht mit." },
+          { "text": "Der Arbeitnehmer muss zwingend Mitglied einer Gewerkschaft sein.", "istKorrekt": false, "loesungsweg": "Falsch. Das Kündigungsschutzgesetz gilt für alle Arbeitnehmer, unabhängig von einer Gewerkschaftszugehörigkeit." },
+          { "text": "Das Unternehmen muss einen Betriebsrat haben.", "istKorrekt": false, "loesungsweg": "Falsch. Ein Betriebsrat muss zwar vor jeder Kündigung angehört werden, aber das KSchG gilt auch in Betrieben ohne Betriebsrat." }
+        ]
+      },
+      {
+        "id": "wiso_s2020_17",
+        "kategorie": "Vertragsarten im IT-Bereich",
+        "frage": "In der IT-Branche werden täglich Verträge geschlossen. Bei welchem der folgenden Verträge schuldet der Auftragnehmer einen konkreten 'Erfolg' (z. B. die fertige, fehlerfreie Programmierung einer App) und nicht nur seine bloße Arbeitszeit?",
+        "typ": "single-choice",
+        "hinweis": "Wenn man einen Handwerker ruft, um ein Dach zu reparieren, bezahlt man für das reparierte Dach (den Erfolg), nicht nur dafür, dass er sich Mühe gibt. Welcher Vertrag ist das?",
+        "antwortOptionen": [
+          { "text": "Dienstvertrag", "istKorrekt": false, "loesungsweg": "Falsch. Beim Dienstvertrag (wie dem Arbeitsvertrag) schuldet man nur die Arbeitsleistung, nicht den Erfolg. Ein Arzt bekommt sein Geld, auch wenn der Patient nicht gesund wird." },
+          { "text": "Werkvertrag", "istKorrekt": true, "loesungsweg": "Richtig! Beim Werkvertrag wird die Herstellung eines versprochenen Werkes (z. B. ein Stück Software) geschuldet. Der Auftragnehmer trägt das Risiko, bis das 'Werk' erfolgreich abgenommen ist." },
+          { "text": "Sachmängelleihe", "istKorrekt": false, "loesungsweg": "Falsch. Das ist ein erfundener Begriff, der in diesem Kontext keinen Sinn ergibt." }
+        ]
+      },
+      {
+        "id": "wiso_s2020_18",
+        "kategorie": "Vollmachten",
+        "frage": "Ein leitender Systemadministrator soll im Namen der Infotec GmbH branchenübliche Server-Hardware einkaufen und Verträge mit Internetprovidern schließen dürfen. Er darf aber keine Grundstücke verkaufen oder Kredite für die Firma aufnehmen. Welche Vollmacht deckt dieses Profil ab?",
+        "typ": "single-choice",
+        "hinweis": "Es geht um alle Handlungen, die ein *bestimmtes* Gewerbe (hier IT-Betrieb) gewöhnlich mit sich bringt.",
+        "antwortOptionen": [
+          { "text": "Prokura", "istKorrekt": false, "loesungsweg": "Falsch. Die Prokura ist viel weitreichender. Ein Prokurist dürfte z. B. auch Kredite aufnehmen oder völlig branchenfremde Geschäfte tätigen." },
+          { "text": "Artvollmacht", "istKorrekt": false, "loesungsweg": "Falsch. Die Artvollmacht berechtigt nur zur Vornahme einer bestimmten *Art* von Geschäften (z. B. 'darf nur Druckerpapier kaufen')." },
+          { "text": "Allgemeine Handlungsvollmacht", "istKorrekt": true, "loesungsweg": "Richtig! Sie ermächtigt zu allen gewöhnlichen Rechtsgeschäften, die der konkrete Betrieb (IT-Firma) so mit sich bringt. Grundstücksverkäufe oder Darlehen sind davon gesetzlich ausgeschlossen." }
+        ]
+      },
+      {
+        "id": "wiso_s2020_28",
+        "kategorie": "Berufsbildungsgesetz (BBiG)",
+        "frage": "Wer ist in Deutschland die zuständige Stelle, die die Ausbildung in den IT-Berufen überwacht, die Ausbildungsverträge in ein Verzeichnis einträgt und die Abschlussprüfungen organisiert?",
+        "typ": "single-choice",
+        "hinweis": "An wen musstest du oder dein Betrieb die Anmeldung für deine bevorstehende Prüfung schicken?",
+        "antwortOptionen": [
+          { "text": "Die zuständige Berufsschule", "istKorrekt": false, "loesungsweg": "Falsch. Die Berufsschule ist nur für den schulischen Teil zuständig (duales System), organisiert aber nicht die Kammerprüfung." },
+          { "text": "Die Industrie- und Handelskammer (IHK)", "istKorrekt": true, "loesungsweg": "Richtig! Für kaufmännische und gewerbliche Ausbildungsberufe wie Fachinformatiker ist die IHK die zuständige Stelle nach dem BBiG." },
+          { "text": "Die Agentur für Arbeit", "istKorrekt": false, "loesungsweg": "Falsch. Sie hilft zwar bei der Berufsberatung und Vermittlung, überwacht aber nicht die laufenden Verträge." }
+        ]
+      },
+      {
+        "id": "wiso_s2020_29",
+        "kategorie": "Rechtsformen & Haftung",
+        "frage": "Zwei Fachinformatiker wollen sich nach der Ausbildung selbstständig machen. Sie suchen eine Rechtsform, bei der sie im Falle einer Insolvenz NICHT mit ihrem privaten Vermögen (z. B. Haus, Auto) haften. Welche Rechtsform erfüllt diese Bedingung?",
+        "typ": "single-choice",
+        "hinweis": "Suche nach einer Kapitalgesellschaft. Bei Personengesellschaften haften die Gesellschafter meist voll.",
+        "antwortOptionen": [
+          { "text": "Offene Handelsgesellschaft (OHG)", "istKorrekt": false, "loesungsweg": "Falsch. Bei der OHG haften alle Gesellschafter unmittelbar, unbeschränkt und solidarisch – auch mit dem Privatvermögen." },
+          { "text": "Gesellschaft bürgerlichen Rechts (GbR)", "istKorrekt": false, "loesungsweg": "Falsch. Auch bei der GbR (der einfachsten Form eines Zusammenschlusses) greift die volle private Haftung." },
+          { "text": "Gesellschaft mit beschränkter Haftung (GmbH)", "istKorrekt": true, "loesungsweg": "Richtig! Die GmbH ist eine Kapitalgesellschaft. Das Risiko ist auf das eingebrachte Stammkapital (mind. 25.000 EUR) beschränkt. Das Privatvermögen bleibt unangetastet." }
+        ]
+      },
+      {
+        "id": "wiso_s2020_30",
+        "kategorie": "Ergonomie & Arbeitsschutz",
+        "frage": "Als IT-System-Elektroniker richten Sie Bildschirmarbeitsplätze für Kunden ein. Welche der folgenden Anforderungen an einen ergonomischen Arbeitsplatz ist laut Arbeitsstättenverordnung zwingend vorgeschrieben?",
+        "typ": "single-choice",
+        "hinweis": "Denke an Dinge, die Augen und Nacken schonen.",
+        "antwortOptionen": [
+          { "text": "Die Tastatur muss fest mit dem Monitor verschraubt sein.", "istKorrekt": false, "loesungsweg": "Falsch. Genau das Gegenteil ist der Fall: Die Tastatur muss vom Bildschirm getrennt sein, um eine bequeme Arbeitshaltung zu ermöglichen." },
+          { "text": "Der Monitor muss eine feste, nicht verstellbare Höhe haben.", "istKorrekt": false, "loesungsweg": "Falsch. Bildschirme müssen neigbar und drehbar sein, um sich dem Mitarbeiter anzupassen." },
+          { "text": "Die Arbeitsfläche (Schreibtisch) muss reflexionsarm sein.", "istKorrekt": true, "loesungsweg": "Richtig! Hochglänzende Tische blenden und ermüden die Augen. Eine reflexionsarme (matte) Oberfläche ist vorgeschrieben." }
+        ]
+      }
+    ]

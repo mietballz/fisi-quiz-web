@@ -1,0 +1,408 @@
+[
+    {
+        "id": "ga1_s2020_netze_01",
+        "kategorie": "Netzwerktechnik - Gateway & DNS",
+        "frage": "Ein Server im Netz 10.0.0.0/22 hat die IPv4-Adresse 10.0.3.200 und als Standardgateway 200.0.0.2 eingetragen. Warum ist diese Konfiguration fehlerhaft?",
+        "typ": "single-choice",
+        "hinweis": "Das Standardgateway muss im gleichen lokalen Netz wie der Host liegen. Prüfe, welche Gateway-Adresse im Netz 10.0.0.0/22 sinnvoll ist.",
+        "antwortOptionen": [
+            {
+                "text": "Das Standardgateway liegt außerhalb des lokalen Netzes.",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Ein Host kann sein Gateway nur direkt erreichen, wenn es im gleichen lokalen Netz liegt. Für das Netz 10.0.0.0/22 wäre z. B. 10.0.3.254 als Gateway passend."
+            },
+            {
+                "text": "Die IPv4-Adresse des Servers ist ungültig, weil sie auf .200 endet.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Eine Hostadresse mit .200 kann gültig sein. Das Problem liegt hier beim eingetragenen Gateway."
+            },
+            {
+                "text": "Der DNS-Server muss immer identisch mit dem Standardgateway sein.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. DNS-Server und Standardgateway können unterschiedliche Systeme sein."
+            },
+            {
+                "text": "Die Subnetzmaske /22 verhindert grundsätzlich Internetzugriff.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Eine /22-Maske ist grundsätzlich gültig. Entscheidend ist, ob Gateway und Host im passenden Netz liegen."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_netze_02",
+        "kategorie": "Netzwerktechnik - Gateway & DNS",
+        "frage": "Ein Client hat die IPv4-Adresse 10.0.0.1/22. Als Standardgateway ist 10.0.3.200 eingetragen und als DNS-Server 10.0.3.254. Welche Korrektur ist sinnvoll?",
+        "typ": "single-choice",
+        "hinweis": "Achte darauf, welches Gerät routet und welches Gerät Namen auflöst.",
+        "antwortOptionen": [
+            {
+                "text": "Standardgateway 10.0.3.254 und DNS-Server 10.0.3.200 eintragen.",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Gateway und DNS wurden vertauscht. Der Router ist das Gateway, der Domaincontroller/DNS übernimmt die Namensauflösung."
+            },
+            {
+                "text": "Standardgateway und DNS-Server beide auf 127.0.0.1 setzen.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. 127.0.0.1 ist die Loopback-Adresse des eigenen Rechners und hier nicht passend."
+            },
+            {
+                "text": "Nur die Subnetzmaske auf 255.255.255.0 ändern.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das eigentliche Problem ist die Vertauschung von Gateway und DNS."
+            },
+            {
+                "text": "Die IPv4-Adresse auf 192.168.10.1 ändern.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Der Client gehört zum Netz 10.0.0.0/22. Eine Änderung in ein anderes Netz löst das Problem nicht."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_netze_03",
+        "kategorie": "Netzwerktechnik - Subnetze",
+        "frage": "Ein Mailserver befindet sich im Netz 192.168.99.0/29. Als Standardgateway ist 192.168.99.7 eingetragen. Warum kann das problematisch sein?",
+        "typ": "single-choice",
+        "hinweis": "Berechne bei /29 die Netzadresse, die nutzbaren Hostadressen und die Broadcastadresse.",
+        "antwortOptionen": [
+            {
+                "text": "192.168.99.7 ist die Broadcastadresse dieses /29-Netzes.",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Bei 192.168.99.0/29 reicht der Adressbereich von .0 bis .7. .0 ist die Netzadresse, .7 ist die Broadcastadresse. Nutzbare Hostadressen sind .1 bis .6."
+            },
+            {
+                "text": "192.168.99.7 ist die Netzadresse dieses /29-Netzes.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Die Netzadresse ist 192.168.99.0. Die .7 ist bei /29 die Broadcastadresse."
+            },
+            {
+                "text": "Ein Gateway darf nie mit 192.168 beginnen.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. 192.168.x.x ist ein privater IPv4-Adressbereich und kann intern sehr wohl verwendet werden."
+            },
+            {
+                "text": "Ein /29-Netz hat keine nutzbaren Hostadressen.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Ein /29-Netz hat 8 Adressen, davon 6 nutzbare Hostadressen."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_netze_04",
+        "kategorie": "Routing",
+        "frage": "Ein Router in der Zentrale kennt die lokalen Netze 10.0.0.0/22, 172.16.1.0/30, 192.168.99.0/29 und eine Default-Route ins Internet. Die Filiale 192.168.10.0/24 ist aber nicht erreichbar. Was fehlt wahrscheinlich?",
+        "typ": "single-choice",
+        "hinweis": "Damit ein Router ein entferntes internes Netz erreicht, braucht er eine passende Route oder eine geeignete Default-Route.",
+        "antwortOptionen": [
+            {
+                "text": "Eine Route zum Netz 192.168.10.0/24 über die Verbindung zur Filiale.",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Der Router muss wissen, dass das Filialnetz 192.168.10.0/24 über die Gegenstelle der WAN-Verbindung erreichbar ist."
+            },
+            {
+                "text": "Eine neue DNS-Zone für 192.168.10.0.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. DNS löst Namen auf, ersetzt aber keine Routingtabelle."
+            },
+            {
+                "text": "Ein größerer DHCP-Adresspool in der DMZ.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das Problem betrifft Routing zur Filiale, nicht DHCP in der DMZ."
+            },
+            {
+                "text": "Eine Änderung der Ethernet-Frame-Länge auf 1.518 Byte.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Die Frame-Länge löst keine fehlende Route."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_ipv6_01",
+        "kategorie": "IPv6 - Subnetting",
+        "frage": "RECHENAUFGABE: Ein IPv6-Netz mit Präfix /56 soll in vier gleich große Subnetze aufgeteilt werden. Welches neue Präfix erhalten die Subnetze?",
+        "typ": "single-choice",
+        "hinweis": "Für 4 Subnetze brauchst du 2 zusätzliche Subnetz-Bits, denn 2² = 4.",
+        "antwortOptionen": [
+            {
+                "text": "/54",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Ein kleineres Präfix würde größere Netze ergeben. Beim Aufteilen in Subnetze wird das Präfix länger."
+            },
+            {
+                "text": "/56",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. /56 ist das ursprüngliche Netz. Für vier Subnetze müssen zusätzliche Bits verwendet werden."
+            },
+            {
+                "text": "/58",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Für 4 Subnetze werden 2 Bits benötigt. Rechnung: /56 + 2 Bit = /58."
+            },
+            {
+                "text": "/64",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. /64 wäre ein typisches LAN-Präfix, aber für genau vier gleich große Subnetze aus /56 ist /58 korrekt."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_ipv6_02",
+        "kategorie": "IPv6 - Subnetting",
+        "frage": "Ein IPv6-Netz beginnt bei 2a02:ac20:e0:a000::/56 und wird in vier gleich große /58-Subnetze aufgeteilt. Welche Netz-ID gehört zum zweiten Subnetz?",
+        "typ": "single-choice",
+        "hinweis": "Bei /58 steigen die Netz-IDs im relevanten Hex-Block in 0x40-Schritten: a000, a040, a080, a0c0.",
+        "antwortOptionen": [
+            {
+                "text": "2a02:ac20:e0:a000::",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das ist die Netz-ID des ersten Subnetzes."
+            },
+            {
+                "text": "2a02:ac20:e0:a040::",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Die vier /58-Subnetze beginnen bei a000, a040, a080 und a0c0. Das zweite Subnetz ist 2a02:ac20:e0:a040::."
+            },
+            {
+                "text": "2a02:ac20:e0:a080::",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das ist die Netz-ID des dritten Subnetzes."
+            },
+            {
+                "text": "2a02:ac20:e0:a100::",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Dieser Schritt passt nicht zu den vier /58-Subnetzen aus dem /56-Netz."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_mtu_01",
+        "kategorie": "Netzwerktechnik - MTU & IPsec",
+        "frage": "RECHENAUFGABE: Eine Verbindung nutzt eine MTU von 1.500 Byte. Für eine IPsec-Verbindung fallen 20 Byte Tunnel-Overhead, 40 Byte ESP-Header und 40 Byte TCP/IP-Header an. Wie groß ist die maximal nutzbare Payload?",
+        "typ": "single-choice",
+        "hinweis": "Ziehe alle Header und Overheads von der MTU ab.",
+        "antwortOptionen": [
+            {
+                "text": "1.500 Byte",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. 1.500 Byte ist die gesamte MTU. Davon müssen die zusätzlichen Header abgezogen werden."
+            },
+            {
+                "text": "1.440 Byte",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Hier wurden nur 60 Byte abgezogen. Insgesamt sind es 20 + 40 + 40 = 100 Byte."
+            },
+            {
+                "text": "1.400 Byte",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Rechnung: 1.500 - 20 - 40 - 40 = 1.400 Byte."
+            },
+            {
+                "text": "1.518 Byte",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. 1.518 Byte ist die maximale Ethernet-Frame-Länge, nicht die nutzbare Payload innerhalb der MTU."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_mtu_02",
+        "kategorie": "Netzwerktechnik - MTU & Fragmentierung",
+        "frage": "Ein Ping wird mit gesetztem Don't-Fragment-Flag und einer Paketgröße von 1.500 Byte über eine IPsec-Verbindung gesendet. Die nutzbare Payload beträgt wegen Overhead nur 1.400 Byte. Warum gehen die Pakete verloren?",
+        "typ": "single-choice",
+        "hinweis": "Überlege, was passiert, wenn ein Paket größer ist als erlaubt und Fragmentierung gleichzeitig verboten ist.",
+        "antwortOptionen": [
+            {
+                "text": "Die Pakete müssten fragmentiert werden, dürfen wegen des DF-Flags aber nicht fragmentiert werden.",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Das Paket ist durch den Overhead zu groß. Da Fragmentierung verboten ist, wird es verworfen."
+            },
+            {
+                "text": "Die Pakete sind zu klein und werden deshalb verworfen.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das Problem ist eine zu große Paketgröße."
+            },
+            {
+                "text": "Der DNS-Server ist immer der Grund für 100 % Paketverlust.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Hier geht es um MTU und Fragmentierung, nicht um DNS."
+            },
+            {
+                "text": "Die Leitung mit 10 Mbit/s ist zu langsam für Ping.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Eine niedrige Datenrate macht Ping nicht automatisch unmöglich."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_mtu_03",
+        "kategorie": "Netzwerktechnik - Ping-Parameter",
+        "frage": "Welche Ping-Paketgröße ist bei einer effektiven Payload von 1.400 Byte sinnvoll, damit es bei gesetztem Don't-Fragment-Flag nicht zu Paketverlust durch Fragmentierung kommt?",
+        "typ": "single-choice",
+        "hinweis": "Die Ping-Größe darf nicht größer sein als die maximal nutzbare Payload.",
+        "antwortOptionen": [
+            {
+                "text": "ping -f -l 1500",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. 1.500 Byte ist zu groß, weil durch IPsec-Overhead nur 1.400 Byte Payload nutzbar sind."
+            },
+            {
+                "text": "ping -f -l 1518",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. 1.518 Byte ist die Ethernet-Frame-Länge und für die Ping-Nutzlast zu groß."
+            },
+            {
+                "text": "ping -f -l 1400",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Mit 1.400 Byte bleibt die Paketgröße innerhalb der maximal nutzbaren Payload. Dadurch ist keine Fragmentierung nötig."
+            },
+            {
+                "text": "ping -f -l 10000",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Diese Paketgröße wäre deutlich zu groß und würde bei gesetztem DF-Flag verworfen werden."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_transfer_01",
+        "kategorie": "Netzwerktechnik - Übertragungsdauer",
+        "frage": "RECHENAUFGABE: Es sollen 300 MiB Daten übertragen werden. Pro Paket können 1.400 Byte Nutzdaten übertragen werden. Die tatsächliche Ethernet-Frame-Länge beträgt 1.518 Byte. Die Leitung hat 10 Mbit/s. Welche minimale Übertragungsdauer ergibt sich ungefähr?",
+        "typ": "single-choice",
+        "hinweis": "Rechne zuerst MiB in Byte um. Danach bestimmst du die Anzahl der Pakete über die Payload. Für die Leitung zählt anschließend die tatsächliche Frame-Größe.",
+        "antwortOptionen": [
+            {
+                "text": "ca. 252 Sekunden",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Hier wurde der Ethernet-Overhead wahrscheinlich nicht vollständig berücksichtigt."
+            },
+            {
+                "text": "ca. 273 Sekunden",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! 300 MiB = 300 × 1.024 × 1.024 Byte = 314.572.800 Byte. Pakete: 314.572.800 / 1.400 = 224.694,86, also 224.695 Pakete. Tatsächliche Datenmenge: 224.695 × 1.518 Byte = 341.087.010 Byte = 2.728.696.080 Bit. Zeit: 2.728.696.080 / 10.000.000 = 272,87 s ≈ 273 s."
+            },
+            {
+                "text": "ca. 315 Sekunden",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Hier wurde wahrscheinlich mit falscher Umrechnung oder falschem Overhead gerechnet."
+            },
+            {
+                "text": "ca. 1.400 Sekunden",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. 1.400 Byte ist die Payload pro Paket, nicht die Übertragungsdauer."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_cloud_01",
+        "kategorie": "Cloud Computing",
+        "frage": "Welche Zuordnung passt zu Cloud-Servicemodellen?",
+        "typ": "single-choice",
+        "hinweis": "SaaS ist fertige Software, PaaS ist eine Plattform für Entwicklung/Betrieb, IaaS stellt Infrastruktur wie Rechenleistung oder Speicher bereit.",
+        "antwortOptionen": [
+            {
+                "text": "Webbasierter E-Mail-Dienst = SaaS, Entwicklungsumgebung = PaaS, Serverrechenkapazität = IaaS",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Ein fertiger E-Mail-Dienst ist SaaS. Eine Entwicklungsumgebung gehört zu PaaS. Rechenkapazität ist klassische Infrastruktur und damit IaaS."
+            },
+            {
+                "text": "Webbasierter E-Mail-Dienst = IaaS, Entwicklungsumgebung = SaaS, Serverrechenkapazität = PaaS",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Hier wurden die Ebenen vertauscht. Fertige Anwendungen sind SaaS, Plattformen sind PaaS und Infrastruktur ist IaaS."
+            },
+            {
+                "text": "Alle drei Beispiele gehören immer zu SaaS.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. SaaS betrifft fertige Softwaredienste, nicht jede Cloud-Leistung."
+            },
+            {
+                "text": "Alle drei Beispiele gehören immer zu IaaS.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. IaaS betrifft Infrastruktur, nicht fertige Anwendungen oder Entwicklungsplattformen."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_raid_01",
+        "kategorie": "Speichertechnik - RAID",
+        "frage": "Was ist eine Hot-Spare-Festplatte?",
+        "typ": "single-choice",
+        "hinweis": "Eine Hot-Spare-Platte wartet bereits im System und wird im Fehlerfall automatisch genutzt.",
+        "antwortOptionen": [
+            {
+                "text": "Eine bereits integrierte Ersatzfestplatte, die bei Ausfall einer Produktivplatte einspringt.",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Eine Hot-Spare ist im System vorhanden und kann bei einem Festplattenausfall automatisch oder schnell als Ersatz verwendet werden."
+            },
+            {
+                "text": "Eine besonders warme Festplatte mit höherer Drehzahl.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. 'Hot' bedeutet hier nicht Temperatur, sondern Austausch bzw. Nutzung im laufenden Betrieb."
+            },
+            {
+                "text": "Eine externe Backup-Festplatte außerhalb des RAID-Systems.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Eine Hot-Spare ist im RAID-System integriert oder direkt dafür vorgesehen."
+            },
+            {
+                "text": "Eine Paritätsfestplatte, auf der alle Nutzdaten doppelt gespeichert werden.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Eine Hot-Spare ist eine Ersatzplatte, nicht die Paritätsplatte."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_raid_02",
+        "kategorie": "Speichertechnik - RAID",
+        "frage": "RECHENAUFGABE: Ein Speichersystem besteht aus 6 Arrays. Jedes Array besitzt 16 HDDs mit je 3 TiB. Pro Array wird eine HDD für Parität und eine HDD als Hot-Spare verwendet. Wie groß ist die nutzbare Gesamtkapazität?",
+        "typ": "single-choice",
+        "hinweis": "Pro Array sind nicht alle 16 HDDs nutzbar. Ziehe pro Array eine Paritätsplatte und eine Hot-Spare-Platte ab.",
+        "antwortOptionen": [
+            {
+                "text": "288 TiB",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. 288 TiB wäre 16 × 6 × 3 TiB. Dabei wurden Parität und Hot-Spare nicht abgezogen."
+            },
+            {
+                "text": "270 TiB",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Hier wurde vermutlich nur eine Platte pro Array abgezogen. Es müssen aber Parität und Hot-Spare abgezogen werden."
+            },
+            {
+                "text": "252 TiB",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Pro Array sind 16 - 1 Parität - 1 Hot-Spare = 14 HDDs nutzbar. Rechnung: 14 × 6 Arrays × 3 TiB = 252 TiB."
+            },
+            {
+                "text": "84 TiB",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. 84 TiB wäre nur 14 × 6 TiB oder eine falsch interpretierte Teilrechnung. Korrekt sind 14 × 6 × 3 TiB."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_backup_01",
+        "kategorie": "Datensicherung - Übertragungsdauer",
+        "frage": "RECHENAUFGABE: Es sollen 7.200 GiB gesichert werden. Die Leitung hat 10 Gbit/s, davon sind aber nur 65 % effektiv nutzbar. Wie lange dauert die Übertragung ungefähr in Minuten?",
+        "typ": "single-choice",
+        "hinweis": "Wandle GiB zuerst in Bit um. Danach teilst du durch die effektiv nutzbare Datenrate. Am Ende in Minuten umrechnen.",
+        "antwortOptionen": [
+            {
+                "text": "ca. 95 Minuten",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Hier wurde wahrscheinlich mit voller Leitungskapazität gerechnet und der 65-%-Faktor nicht korrekt berücksichtigt."
+            },
+            {
+                "text": "ca. 159 Minuten",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Datenmenge: 7.200 × 1.024 × 1.024 × 1.024 × 8 Bit = 61.847.529.062.400 Bit. Effektive Rate pro Minute: 0,65 × 10.000.000.000 Bit/s × 60 = 390.000.000.000 Bit/min. Zeit: 61.847.529.062.400 / 390.000.000.000 = 158,58 min ≈ 159 min."
+            },
+            {
+                "text": "ca. 273 Minuten",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. 273 ist ein Ergebnis aus einer anderen Übertragungsaufgabe mit 300 MiB und 10 Mbit/s."
+            },
+            {
+                "text": "ca. 720 Minuten",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Hier wurden vermutlich Einheiten oder Datenrate falsch umgerechnet."
+            }
+        ]
+    }
+]

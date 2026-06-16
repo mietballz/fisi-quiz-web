@@ -1,0 +1,47 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #f5f5f7; display: flex; justify-content: center; align-items: center;
+    min-height: 100vh; margin: 0; padding: 20px; box-sizing: border-box;
+}
+#menu-view, #quiz-card {
+    background: white; padding: 30px; border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08); max-width: 480px; width: 100%;
+}
+#menu-view h1 { text-align: center; color: #1d1d1f; margin-top: 0; }
+#menu-view p { text-align: center; color: #86868b; margin-bottom: 25px; }
+
+.menu-btn {
+    display: block; width: 100%; padding: 15px; margin-bottom: 12px;
+    background: #f5f5f7; border: 1px solid #d2d2d7; border-radius: 12px;
+    color: #1d1d1f; font-size: 15px; font-weight: 600; cursor: pointer; transition: 0.2s;
+}
+.menu-btn:hover { background: #e8e8ed; }
+.random-btn { background: #0066cc; color: white; border: none; margin-bottom: 25px; }
+.random-btn:hover { background: #0055aa; }
+
+#back-btn {
+    background: none; border: none; color: #86868b; font-size: 14px; 
+    cursor: pointer; margin-bottom: 15px; padding: 0; text-align: left;
+}
+#back-btn:hover { color: #1d1d1f; }
+
+.header { display: flex; justify-content: space-between; font-size: 12px; font-weight: bold; color: #86868b; margin-bottom: 15px; }
+#kategorie { color: #0066cc; text-transform: uppercase; }
+
+.option-btn {
+    display: block; width: 100%; padding: 14px; margin-bottom: 10px;
+    background: #f5f5f7; border: 1px solid #d2d2d7; border-radius: 12px;
+    text-align: left; font-size: 15px; cursor: pointer; transition: all 0.2s;
+}
+.option-btn:hover { background: #e8e8ed; }
+.option-btn.selected { border-color: #0066cc; background: #e8f2ff; }
+.option-btn.correct { background: #d4edda; border-color: #28a745; color: #155724; }
+.option-btn.wrong { background: #f8d7da; border-color: #dc3545; color: #721c24; }
+
+#action-btn {
+    width: 100%; padding: 16px; background: #0066cc; color: white;
+    border: none; border-radius: 12px; font-size: 16px; font-weight: bold;
+    cursor: pointer; margin-top: 15px;
+}
+#action-btn:disabled { background: #d2d2d7; cursor: not-allowed; }
+.loesungsweg { font-size: 13px; color: #666; margin-top: 5px; margin-left: 10px; display: none; }

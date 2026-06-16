@@ -1,0 +1,495 @@
+[
+    {
+        "id": "ap2_w2025_sys_db_01",
+        "kategorie": "Serverauswahl - Rollen",
+        "frage": "Für zwei neue Serverrollen stehen zwei Systeme zur Verfügung. System A hat sehr viel RAM, viele schnelle NVMe-SSDs und RAID-Unterstützung. System B hat deutlich mehr CPU-Kerne, viel RAM und eine enge Integration in Virtualisierungs-/Managementumgebungen. Welche Zuordnung ist sinnvoll?",
+        "typ": "single-choice",
+        "hinweis": "Datenbanken profitieren stark von schnellem Speicher und viel RAM. Virtualisierung profitiert besonders von vielen CPU-Kernen und viel RAM für mehrere VMs.",
+        "antwortOptionen": [
+            {
+                "text": "System A als Datenbankserver, System B als Virtualisierungsserver",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Ein Datenbankserver profitiert stark von schnellem Primärspeicher, RAM und RAID. Ein Virtualisierungsserver benötigt vor allem viele Kerne, viel RAM und gute Management-/Virtualisierungsintegration."
+            },
+            {
+                "text": "System A als Virtualisierungsserver, System B als Datenbankserver",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das System mit mehr CPU-Kernen und Virtualisierungsintegration ist typischerweise besser für viele virtuelle Maschinen geeignet."
+            },
+            {
+                "text": "Beide Systeme sollten ausschließlich als Backupserver genutzt werden.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Die beschriebenen Stärken passen zu Datenbank- und Virtualisierungsrollen."
+            },
+            {
+                "text": "Die Zuordnung ist egal, da CPU, RAM und Speicher bei Serverrollen keine Rolle spielen.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Die Hardwareausstattung muss zur geplanten Serverrolle passen."
+            }
+        ]
+    },
+    {
+        "id": "ap2_w2025_sys_db_02",
+        "kategorie": "Festplatten - Mix-and-Match",
+        "frage": "Was bedeutet das Mix-and-Match-Prinzip beim Beschaffen von Festplatten für Server?",
+        "typ": "single-choice",
+        "hinweis": "Denke an Serienfehler, gleiche Charge und gleichzeitige Ausfälle.",
+        "antwortOptionen": [
+            {
+                "text": "Festplatten werden bewusst aus unterschiedlichen Chargen/Serien bezogen, um gleichartige Ausfallrisiken zu reduzieren.",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Wenn alle Platten aus derselben Charge stammen, könnten sie dieselben Produktionsfehler haben und ähnlich früh ausfallen. Mix-and-Match reduziert dieses Risiko."
+            },
+            {
+                "text": "Alle Festplatten müssen zwingend vom selben Produktionsdatum stammen.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Genau das soll eher vermieden werden, weil gleiche Chargen ähnliche Schwachstellen haben können."
+            },
+            {
+                "text": "SATA- und SAS-Festplatten werden beliebig im selben Slot gemischt, ohne Kompatibilität zu prüfen.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Kompatibilität muss weiterhin beachtet werden. Mix-and-Match meint vor allem unterschiedliche Chargen/Serien."
+            },
+            {
+                "text": "Es werden alte und defekte Platten gemischt, damit die Kapazität steigt.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Defekte Platten erhöhen kein Sicherheitsniveau."
+            }
+        ]
+    },
+    {
+        "id": "ap2_w2025_sys_db_03",
+        "kategorie": "Festplatten - Badewannenkurve",
+        "frage": "Welche Aussage beschreibt Zeitraum I der Badewannenkurve bei Festplatten?",
+        "typ": "single-choice",
+        "hinweis": "Am Anfang des Lebenszyklus treten häufig Frühausfälle auf.",
+        "antwortOptionen": [
+            {
+                "text": "Hohe Anfangsausfallrate, oft durch Fertigungsfehler oder frühe Defekte.",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! In der Frühphase fallen fehlerhafte Komponenten überdurchschnittlich oft aus."
+            },
+            {
+                "text": "Sehr lange stabile Betriebsphase mit niedriger Ausfallrate.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das beschreibt eher Zeitraum II."
+            },
+            {
+                "text": "Stark steigende Ausfallrate durch Alterung und Verschleiß.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das beschreibt eher Zeitraum III."
+            },
+            {
+                "text": "Festplatten können in dieser Phase niemals ausfallen.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Gerade in der Frühphase sind Ausfälle möglich."
+            }
+        ]
+    },
+    {
+        "id": "ap2_w2025_sys_db_04",
+        "kategorie": "Festplatten - Badewannenkurve",
+        "frage": "Welche Aussage beschreibt Zeitraum II der Badewannenkurve?",
+        "typ": "single-choice",
+        "hinweis": "Nach der Frühphase folgt normalerweise die längste Nutzungsphase.",
+        "antwortOptionen": [
+            {
+                "text": "Niedrige, relativ stabile Ausfallrate während der normalen Betriebsphase.",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Zeitraum II beschreibt die längere Betriebsphase mit vergleichsweise niedriger und stabiler Ausfallrate."
+            },
+            {
+                "text": "Hohe Anfangsausfallrate durch Fertigungsfehler.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das ist Zeitraum I."
+            },
+            {
+                "text": "Stark steigende Ausfallrate durch altersbedingten Verschleiß.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das ist Zeitraum III."
+            },
+            {
+                "text": "Die Ausfallrate ist dort immer exakt null.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Sie ist niedrig, aber nicht null."
+            }
+        ]
+    },
+    {
+        "id": "ap2_w2025_sys_db_05",
+        "kategorie": "Festplatten - Badewannenkurve",
+        "frage": "Welche Aussage beschreibt Zeitraum III der Badewannenkurve?",
+        "typ": "single-choice",
+        "hinweis": "Am Ende der Lebensdauer steigt die Ausfallwahrscheinlichkeit wieder.",
+        "antwortOptionen": [
+            {
+                "text": "Die Ausfallrate steigt durch Alterung und Verschleiß wieder an.",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! In der Abnutzungsphase werden Ausfälle wahrscheinlicher, weil Bauteile altern und verschleißen."
+            },
+            {
+                "text": "Die Ausfallrate sinkt dauerhaft auf null.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Am Lebensende steigt die Ausfallrate typischerweise wieder."
+            },
+            {
+                "text": "Zeitraum III beschreibt nur die Installation des Betriebssystems.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Es geht um den Lebenszyklus der Hardware."
+            },
+            {
+                "text": "Zeitraum III ist die normale Betriebsphase mit stabil niedriger Ausfallrate.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das beschreibt Zeitraum II."
+            }
+        ]
+    },
+    {
+        "id": "ap2_w2025_sys_db_06",
+        "kategorie": "BIOS/UEFI - Sicherheit",
+        "frage": "Welche BIOS-/UEFI-Einstellungen können die Sicherheit eines Servers erhöhen? (Wählen Sie 3)",
+        "typ": "multiple-choice",
+        "hinweis": "Denke an Schutz vor unbefugten Änderungen, sicheren Bootvorgang und nicht benötigte Schnittstellen.",
+        "antwortOptionen": [
+            {
+                "text": "BIOS-/UEFI-Administratorpasswort setzen",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Ein Passwort schützt die Firmware-Konfiguration vor unbefugten Änderungen."
+            },
+            {
+                "text": "Secure Boot aktivieren",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Secure Boot kann verhindern, dass nicht vertrauenswürdiger Code während des Bootvorgangs ausgeführt wird."
+            },
+            {
+                "text": "Nicht benötigte Schnittstellen oder Bootmedien deaktivieren",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Nicht benötigte Funktionen wie USB-Boot oder Schnittstellen können Angriffsflächen reduzieren."
+            },
+            {
+                "text": "Die Bootreihenfolge so einstellen, dass immer zuerst von unbekannten USB-Sticks gebootet wird",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das würde die Sicherheit eher verschlechtern."
+            }
+        ]
+    },
+    {
+        "id": "ap2_w2025_sys_db_07",
+        "kategorie": "BIOS/UEFI - TPM",
+        "frage": "Wofür kann ein aktiviertes TPM in einem Server sinnvoll sein?",
+        "typ": "single-choice",
+        "hinweis": "TPM unterstützt hardwarebasierte Sicherheitsfunktionen.",
+        "antwortOptionen": [
+            {
+                "text": "Zur Unterstützung hardwarebasierter Sicherheitsfunktionen, z. B. Laufwerksverschlüsselung.",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Ein TPM kann Schlüsselmaterial sicher speichern und z. B. BitLocker-ähnliche Verschlüsselungsfunktionen unterstützen."
+            },
+            {
+                "text": "Zur automatischen Erhöhung der RAM-Kapazität.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. TPM ist kein Arbeitsspeicher."
+            },
+            {
+                "text": "Zur Verdopplung der CPU-Kerne.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. TPM verändert keine CPU-Ausstattung."
+            },
+            {
+                "text": "Zur Abschaltung aller Sicherheitsfunktionen.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. TPM dient gerade der Unterstützung von Sicherheitsfunktionen."
+            }
+        ]
+    },
+    {
+        "id": "ap2_w2025_sys_db_08",
+        "kategorie": "Performance - Bottleneck",
+        "frage": "Ein Server zeigt sehr geringe CPU-, Datenträger- und Netzwerkauslastung, aber eine Arbeitsspeicherauslastung von über 90 %. Wo liegt der wahrscheinlichste Bottleneck?",
+        "typ": "single-choice",
+        "hinweis": "Ein Flaschenhals liegt dort, wo eine Ressource stark ausgelastet ist.",
+        "antwortOptionen": [
+            {
+                "text": "Beim Arbeitsspeicher",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Wenn CPU, Datenträger und Netzwerk kaum belastet sind, aber der RAM sehr stark ausgelastet ist, liegt der Engpass wahrscheinlich beim Arbeitsspeicher."
+            },
+            {
+                "text": "Bei der CPU, weil 1 % Auslastung kritisch ist",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Eine sehr niedrige CPU-Auslastung deutet nicht auf einen CPU-Flaschenhals hin."
+            },
+            {
+                "text": "Beim Netzwerk, weil 0 Bit/s immer eine Überlastung bedeutet",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. 0 Bit/s zeigt keine Netzwerklast an."
+            },
+            {
+                "text": "Beim Datenträger, obwohl keine nennenswerte Datenträgeraktivität sichtbar ist",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Die sichtbare hohe Auslastung liegt beim RAM."
+            }
+        ]
+    },
+    {
+        "id": "ap2_w2025_sys_db_09",
+        "kategorie": "Performance - Maßnahmen",
+        "frage": "Welche Maßnahmen können bei einem Arbeitsspeicher-Bottleneck sinnvoll sein? (Wählen Sie 2)",
+        "typ": "multiple-choice",
+        "hinweis": "Du kannst entweder mehr RAM bereitstellen oder den Speicherverbrauch senken.",
+        "antwortOptionen": [
+            {
+                "text": "RAM erweitern",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Mehr Arbeitsspeicher kann den Engpass direkt entschärfen."
+            },
+            {
+                "text": "Anwendungen auf übermäßigen Speicherverbrauch oder Memory Leaks prüfen",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Wenn Software unnötig viel RAM verbraucht, kann Optimierung oder Fehlerbehebung helfen."
+            },
+            {
+                "text": "Alle Sicherheitsupdates dauerhaft deaktivieren",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das löst den RAM-Engpass nicht sinnvoll und verschlechtert die Sicherheit."
+            },
+            {
+                "text": "Das Standardgateway löschen",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das hat mit Arbeitsspeicherauslastung nichts zu tun."
+            }
+        ]
+    },
+    {
+        "id": "ap2_w2025_sys_db_10",
+        "kategorie": "Datenbanken - Indexierung",
+        "frage": "Warum können Indizes in relationalen Datenbanksystemen die Leistung verbessern?",
+        "typ": "single-choice",
+        "hinweis": "Ein Index hilft beim schnelleren Finden von Datensätzen.",
+        "antwortOptionen": [
+            {
+                "text": "Weil Daten bei Abfragen schneller gefunden werden können.",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Ein Index funktioniert ähnlich wie ein Inhaltsverzeichnis und kann Suchvorgänge erheblich beschleunigen."
+            },
+            {
+                "text": "Weil ein Index alle Daten automatisch verschlüsselt.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Indexierung ist keine Verschlüsselung."
+            },
+            {
+                "text": "Weil ein Index die Datenbank vollständig ohne Speicher betreibt.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Indizes benötigen selbst Speicherplatz."
+            },
+            {
+                "text": "Weil ein Index gleichzeitige Zugriffe grundsätzlich verbietet.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Gleichzeitige Zugriffe werden eher durch Sperrmechanismen gesteuert."
+            }
+        ]
+    },
+    {
+        "id": "ap2_w2025_sys_db_11",
+        "kategorie": "Datenbanken - Locking",
+        "frage": "Wozu dienen Locking-Mechanismen in einer Datenbank?",
+        "typ": "single-choice",
+        "hinweis": "Denke an mehrere Benutzer, die gleichzeitig auf dieselben Daten zugreifen.",
+        "antwortOptionen": [
+            {
+                "text": "Sie verhindern Konflikte bei gleichzeitigen Zugriffen auf dieselben Daten.",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Sperrmechanismen schützen Daten vor widersprüchlichen Änderungen, wenn mehrere Benutzer gleichzeitig arbeiten."
+            },
+            {
+                "text": "Sie ersetzen Backups vollständig.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Locking schützt Konsistenz bei Zugriffen, ersetzt aber keine Datensicherung."
+            },
+            {
+                "text": "Sie löschen automatisch alte Datensätze.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Locking löscht keine Daten."
+            },
+            {
+                "text": "Sie machen die Datenbank zu einem Mailserver.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Locking ist ein Datenbankmechanismus, kein E-Mail-Dienst."
+            }
+        ]
+    },
+    {
+        "id": "ap2_w2025_sys_db_12",
+        "kategorie": "Datenmodell - Primärschlüssel",
+        "frage": "Welche Felder sind in einem einfachen Materialwirtschafts-Datenmodell typische Primärschlüssel?",
+        "typ": "multiple-choice",
+        "hinweis": "Primärschlüssel identifizieren Datensätze eindeutig. Achte auf Felder mit ID im jeweiligen Hauptobjekt.",
+        "antwortOptionen": [
+            {
+                "text": "KategorieID in Kategorie",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! KategorieID identifiziert eine Kategorie eindeutig."
+            },
+            {
+                "text": "LieferantID in Lieferant",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! LieferantID identifiziert einen Lieferanten eindeutig."
+            },
+            {
+                "text": "BestellungID in Bestellung",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! BestellungID identifiziert eine Bestellung eindeutig."
+            },
+            {
+                "text": "Name in Teil",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Ein Name ist nicht zwingend eindeutig. Typischer Primärschlüssel wäre TeilID."
+            }
+        ]
+    },
+    {
+        "id": "ap2_w2025_sys_db_13",
+        "kategorie": "Datenmodell - Kardinalitäten",
+        "frage": "Welche Beziehung ist zwischen Kategorie und Teil in einem Materialwirtschaftsmodell plausibel?",
+        "typ": "single-choice",
+        "hinweis": "Eine Kategorie kann mehrere Teile enthalten. Ein Teil gehört in diesem Modell zu einer Kategorie.",
+        "antwortOptionen": [
+            {
+                "text": "Kategorie 1:n Teil",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Eine Kategorie kann viele Teile haben. Jedes Teil verweist über KategorieID auf eine Kategorie."
+            },
+            {
+                "text": "Kategorie n:1 Teil",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das würde bedeuten, dass viele Kategorien zu einem Teil gehören."
+            },
+            {
+                "text": "Kategorie 1:1 Teil",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Eine Kategorie kann normalerweise mehrere Teile enthalten."
+            },
+            {
+                "text": "Zwischen Kategorie und Teil gibt es nie eine Beziehung.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das Feld KategorieID in Teil stellt die Beziehung her."
+            }
+        ]
+    },
+    {
+        "id": "ap2_w2025_sys_db_14",
+        "kategorie": "Datenbanksicherheit",
+        "frage": "Welche Maßnahme passt zur Anforderung „unberechtigten Zugriff auf die Datenbank verhindern“?",
+        "typ": "single-choice",
+        "hinweis": "Denke an Benutzer, Rollen und Berechtigungen.",
+        "antwortOptionen": [
+            {
+                "text": "Benutzerverwaltung mit passenden Berechtigungen einführen",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Zugriffsschutz entsteht durch Benutzerkonten, Rollen und Rechte."
+            },
+            {
+                "text": "Alle Benutzer erhalten Administratorrechte.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das würde unberechtigte Zugriffe wahrscheinlicher machen."
+            },
+            {
+                "text": "Alle Logs deaktivieren.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Logs sind wichtig für Nachvollziehbarkeit."
+            },
+            {
+                "text": "Die Datenbank ohne Passwort ins Internet stellen.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das wäre unsicher."
+            }
+        ]
+    },
+    {
+        "id": "ap2_w2025_sys_db_15",
+        "kategorie": "Datenbanksicherheit - Nachvollziehbarkeit",
+        "frage": "Welche Maßnahme passt zur Anforderung „Änderungen von Daten müssen nachvollziehbar sein“?",
+        "typ": "single-choice",
+        "hinweis": "Nachvollziehbarkeit entsteht durch Aufzeichnung von Ereignissen.",
+        "antwortOptionen": [
+            {
+                "text": "Loggingmechanismen einführen und konfigurieren",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Logging ermöglicht die spätere Prüfung, wer wann welche Änderung vorgenommen hat."
+            },
+            {
+                "text": "Alle Benutzer anonym arbeiten lassen.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Anonymität erschwert Nachvollziehbarkeit."
+            },
+            {
+                "text": "Indizes vollständig löschen.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das verbessert keine Nachvollziehbarkeit."
+            },
+            {
+                "text": "Datenbankserver ausschalten.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das gewährleistet keine nachvollziehbaren Änderungen."
+            }
+        ]
+    },
+    {
+        "id": "ap2_w2025_sys_db_16",
+        "kategorie": "Datenbank - Verfügbarkeit",
+        "frage": "Welche Maßnahme passt zur Anforderung „hohe Verfügbarkeit aller Daten gewährleisten“?",
+        "typ": "single-choice",
+        "hinweis": "Denke an redundante Datenhaltung und mehrere Systeme.",
+        "antwortOptionen": [
+            {
+                "text": "Redundanz, Replikation oder Datenbankcluster einsetzen",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Redundante Systeme und Replikation helfen, Daten auch bei Ausfällen verfügbar zu halten."
+            },
+            {
+                "text": "Alle Backups löschen, damit weniger Speicher belegt wird.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das gefährdet Wiederherstellbarkeit und Verfügbarkeit."
+            },
+            {
+                "text": "Nur einen einzelnen Datenträger ohne Redundanz nutzen.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Ein einzelner Datenträger ist ein Ausfallrisiko."
+            },
+            {
+                "text": "Benutzerrechte komplett entfernen.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das betrifft Zugriff, löst aber keine Hochverfügbarkeit."
+            }
+        ]
+    },
+    {
+        "id": "ap2_w2025_sys_db_17",
+        "kategorie": "Datenbank - Performanceprobleme",
+        "frage": "Welche Ursachen können verzögerte Reaktionszeiten eines Datenbankservers verursachen? (Wählen Sie 3)",
+        "typ": "multiple-choice",
+        "hinweis": "Denke an Abfragen, Datenwachstum, Verbindungen und Transaktionslogs.",
+        "antwortOptionen": [
+            {
+                "text": "Schlecht optimierte Abfragen",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Ineffiziente Queries können Datenbankreaktionen stark verlangsamen."
+            },
+            {
+                "text": "Sehr starkes Datenwachstum und hohe Festplatten-/DB-Auslastung",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Große Datenmengen und hohe Auslastung können Reaktionszeiten verschlechtern."
+            },
+            {
+                "text": "Zu viele parallele Datenbankverbindungen",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Zu viele gleichzeitige Verbindungen können den Server überlasten."
+            },
+            {
+                "text": "Ein korrekt gesetztes BIOS-Passwort",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Ein BIOS-Passwort ist keine typische Ursache für langsame Datenbankabfragen."
+            }
+        ]
+    }
+]

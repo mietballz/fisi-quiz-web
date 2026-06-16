@@ -1,0 +1,350 @@
+[
+    {
+        "id": "ga1_s2020_cloud_storage_01",
+        "kategorie": "Cloud Computing",
+        "frage": "Welcher Vorteil spricht typischerweise für den Einsatz von Cloud-Computing in einem Unternehmen?",
+        "typ": "single-choice",
+        "hinweis": "Denke daran, wer Hardware, Updates, Wartung und Skalierung übernimmt.",
+        "antwortOptionen": [
+            {
+                "text": "IT-Ressourcen können flexibel skaliert werden und Wartung/Betrieb eigener Systeme kann reduziert werden.",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Cloud-Dienste können je nach Bedarf angepasst werden. Außerdem entfallen oft eigene Investitionen, Wartung und Betrieb bestimmter IT-Ressourcen."
+            },
+            {
+                "text": "Cloud-Systeme sind grundsätzlich immer kostenlos.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Cloud-Dienste verursachen weiterhin Kosten, oft aber nutzungsabhängig statt als große Anfangsinvestition."
+            },
+            {
+                "text": "Cloud-Systeme benötigen grundsätzlich keine Internet- oder Netzwerkverbindung.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Cloud-Dienste werden in der Regel über Netzwerk- oder Internetverbindungen genutzt."
+            },
+            {
+                "text": "Cloud-Computing bedeutet immer, dass das Unternehmen keine Verantwortung für Datenschutz mehr hat.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Auch bei Cloud-Nutzung bleibt das Unternehmen für Datenschutz, Zugriffskonzepte und Vertragsprüfung verantwortlich."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_cloud_storage_02",
+        "kategorie": "Cloud Computing - Servicemodelle",
+        "frage": "Welchem Cloud-Servicemodell gehört ein webbasierter E-Mail-Dienst am ehesten an?",
+        "typ": "single-choice",
+        "hinweis": "Der Nutzer verwendet fertige Software über das Netz.",
+        "antwortOptionen": [
+            {
+                "text": "Software as a Service (SaaS)",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Ein webbasierter E-Mail-Dienst ist eine fertige Anwendung, die als Dienst genutzt wird. Das ist typisch SaaS."
+            },
+            {
+                "text": "Platform as a Service (PaaS)",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. PaaS stellt eher Entwicklungs- oder Laufzeitplattformen bereit, nicht primär fertige Anwendersoftware."
+            },
+            {
+                "text": "Infrastructure as a Service (IaaS)",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. IaaS betrifft Infrastruktur wie Serverleistung, Speicher oder Netzwerke."
+            },
+            {
+                "text": "Backup as a Cable (BaaC)",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das ist kein übliches Cloud-Servicemodell."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_cloud_storage_03",
+        "kategorie": "Cloud Computing - Servicemodelle",
+        "frage": "Welchem Cloud-Servicemodell gehören Entwicklungsumgebungen am ehesten an?",
+        "typ": "single-choice",
+        "hinweis": "Eine Entwicklungsumgebung ist keine reine Hardware, aber auch keine fertige Endanwender-App.",
+        "antwortOptionen": [
+            {
+                "text": "Platform as a Service (PaaS)",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Entwicklungsumgebungen und Laufzeitplattformen sind typische Beispiele für PaaS."
+            },
+            {
+                "text": "Software as a Service (SaaS)",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. SaaS ist fertige Anwendersoftware, z. B. ein webbasierter E-Mail-Dienst."
+            },
+            {
+                "text": "Infrastructure as a Service (IaaS)",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. IaaS stellt grundlegende Infrastruktur wie Server, Speicher oder Netzwerk bereit."
+            },
+            {
+                "text": "Device as a Service (DaaS)",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das passt hier nicht zur klassischen Einordnung SaaS/PaaS/IaaS."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_cloud_storage_04",
+        "kategorie": "Cloud Computing - Servicemodelle",
+        "frage": "Welchem Cloud-Servicemodell gehören Serverrechenkapazität und Speichersysteme am ehesten an?",
+        "typ": "single-choice",
+        "hinweis": "Es geht um grundlegende IT-Infrastruktur.",
+        "antwortOptionen": [
+            {
+                "text": "Infrastructure as a Service (IaaS)",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Rechenkapazität und Speichersysteme sind Infrastrukturressourcen und werden daher IaaS zugeordnet."
+            },
+            {
+                "text": "Software as a Service (SaaS)",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. SaaS meint fertige Softwaredienste, nicht einzelne Infrastrukturressourcen."
+            },
+            {
+                "text": "Platform as a Service (PaaS)",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. PaaS liegt zwischen fertiger Software und Infrastruktur und stellt Plattformen bereit."
+            },
+            {
+                "text": "Mail as a Service (MaaS)",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das ist hier nicht die gesuchte Standardkategorie."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_cloud_storage_05",
+        "kategorie": "IT-Sicherheit - Verfügbarkeit",
+        "frage": "Welches Beispiel gefährdet hauptsächlich die Verfügbarkeit eines IT-Dienstes?",
+        "typ": "single-choice",
+        "hinweis": "Verfügbarkeit bedeutet: Der Dienst ist erreichbar und nutzbar.",
+        "antwortOptionen": [
+            {
+                "text": "Ein Server fällt wegen defekter Hardware oder Stromausfall aus.",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Wenn Hardware, Stromversorgung oder Netzwerk ausfallen, ist der Dienst nicht mehr verfügbar."
+            },
+            {
+                "text": "Ein Passwort wird über ein unsicheres Protokoll mitgelesen.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das betrifft vor allem Vertraulichkeit, nicht Verfügbarkeit."
+            },
+            {
+                "text": "Installationsmedien stammen aus einer nicht vertrauenswürdigen Quelle.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das betrifft eher Integrität, da Software manipuliert sein könnte."
+            },
+            {
+                "text": "Ein Benutzer erhält zu viele Leserechte auf vertrauliche Daten.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das betrifft vor allem Vertraulichkeit bzw. Berechtigungsmanagement."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_cloud_storage_06",
+        "kategorie": "IT-Sicherheit - Integrität",
+        "frage": "Welches Beispiel gefährdet hauptsächlich die Integrität eines Systems oder von Daten?",
+        "typ": "single-choice",
+        "hinweis": "Integrität bedeutet: Daten und Systeme sind korrekt, unverändert und vertrauenswürdig.",
+        "antwortOptionen": [
+            {
+                "text": "Schadsoftware verändert Dateien oder Systembestandteile.",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Wenn Malware Daten oder Systemdateien manipuliert, ist die Integrität verletzt."
+            },
+            {
+                "text": "Ein Server ist wegen Stromausfall nicht erreichbar.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das ist hauptsächlich ein Verfügbarkeitsproblem."
+            },
+            {
+                "text": "Ein unverschlüsseltes Backup-Medium wird entwendet.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das betrifft hauptsächlich Vertraulichkeit."
+            },
+            {
+                "text": "Ein Dienst ist durch eine DDoS-Attacke nicht erreichbar.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Eine DDoS-Attacke zielt meist auf Verfügbarkeit."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_cloud_storage_07",
+        "kategorie": "IT-Sicherheit - Vertraulichkeit",
+        "frage": "Welches Beispiel gefährdet hauptsächlich die Vertraulichkeit?",
+        "typ": "single-choice",
+        "hinweis": "Vertraulichkeit bedeutet: Nur berechtigte Personen dürfen Informationen sehen.",
+        "antwortOptionen": [
+            {
+                "text": "Anmeldedaten werden über ein unsicheres Protokoll mitgelesen.",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Wenn Benutzername oder Passwort mitgelesen werden können, ist die Vertraulichkeit gefährdet."
+            },
+            {
+                "text": "Eine Festplatte fällt aus und ein Dienst ist offline.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das betrifft hauptsächlich Verfügbarkeit."
+            },
+            {
+                "text": "Die Systemuhr wird manipuliert und Dienste arbeiten fehlerhaft.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das ist eher ein Integritätsproblem."
+            },
+            {
+                "text": "Eine Anwendung erhält ein Update und startet neu.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Ein normaler Neustart beschreibt nicht primär Vertraulichkeit."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_cloud_storage_08",
+        "kategorie": "Speichertechnik - RAID",
+        "frage": "Was ist eine Hot-Spare-Festplatte in einem RAID-System?",
+        "typ": "single-choice",
+        "hinweis": "Die Platte wartet bereits im System, bis eine produktive Platte ausfällt.",
+        "antwortOptionen": [
+            {
+                "text": "Eine im System vorhandene Ersatzfestplatte, die bei Ausfall einer Produktivplatte einspringt.",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Eine Hot-Spare-Festplatte ist bereits integriert und kann bei einem Plattenausfall als Ersatz verwendet werden."
+            },
+            {
+                "text": "Eine besonders schnelle Festplatte, die alle Daten verschlüsselt.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Hot-Spare beschreibt eine Ersatzfunktion, nicht Verschlüsselung oder Geschwindigkeit."
+            },
+            {
+                "text": "Eine externe Festplatte, die nur einmal monatlich angeschlossen wird.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Eine Hot-Spare-Platte ist bereits für das RAID-System vorgesehen bzw. integriert."
+            },
+            {
+                "text": "Eine Festplatte, auf der ausschließlich Logdateien gespeichert werden.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das hat nichts mit Hot-Spare zu tun."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_cloud_storage_09",
+        "kategorie": "Speichertechnik - RAID",
+        "frage": "RECHENAUFGABE: Ein Speichersystem besitzt 6 Arrays. Jedes Array hat 16 HDDs mit je 3 TiB. Pro Array werden 1 Paritäts-HDD und 1 Hot-Spare-HDD nicht als Nutzkapazität gerechnet. Wie groß ist die nutzbare Gesamtkapazität?",
+        "typ": "single-choice",
+        "hinweis": "Rechne zuerst die nutzbaren HDDs pro Array aus. Danach mit Anzahl der Arrays und TiB pro HDD multiplizieren.",
+        "antwortOptionen": [
+            {
+                "text": "252 TiB",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Pro Array: 16 - 1 Parität - 1 Hot-Spare = 14 nutzbare HDDs. Gesamt: 14 × 6 × 3 TiB = 252 TiB."
+            },
+            {
+                "text": "288 TiB",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. 288 TiB wäre 16 × 6 × 3 TiB. Dabei wurden Parität und Hot-Spare nicht abgezogen."
+            },
+            {
+                "text": "270 TiB",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Hier wurde wahrscheinlich nur eine HDD pro Array abgezogen. Es müssen aber zwei HDDs pro Array abgezogen werden."
+            },
+            {
+                "text": "96 TiB",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das berücksichtigt weder alle Arrays noch die korrekte Anzahl nutzbarer HDDs."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_cloud_storage_10",
+        "kategorie": "Datensicherung - Übertragungsdauer",
+        "frage": "RECHENAUFGABE: Es sollen 7.200 GiB übertragen werden. Wie viele Bit sind das?",
+        "typ": "single-choice",
+        "hinweis": "1 GiB = 1.024 × 1.024 × 1.024 Byte. 1 Byte = 8 Bit.",
+        "antwortOptionen": [
+            {
+                "text": "61.847.529.062.400 Bit",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Rechnung: 7.200 × 1.024 × 1.024 × 1.024 × 8 = 61.847.529.062.400 Bit."
+            },
+            {
+                "text": "57.600 Bit",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Hier wurde nur 7.200 × 8 gerechnet und die GiB-Umrechnung vergessen."
+            },
+            {
+                "text": "7.200.000.000 Bit",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das nutzt eine grobe Dezimalrechnung und vergisst mehrere Faktoren."
+            },
+            {
+                "text": "390.000.000.000 Bit",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das ist die effektive Übertragungsmenge pro Minute bei 65 % von 10 Gbit/s, nicht die Datenmenge."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_cloud_storage_11",
+        "kategorie": "Datensicherung - Übertragungsdauer",
+        "frage": "RECHENAUFGABE: Eine Leitung hat 10 Gbit/s. Effektiv sind wegen Auslastung nur 65 % nutzbar. Wie viele Bit pro Minute können effektiv übertragen werden?",
+        "typ": "single-choice",
+        "hinweis": "Effektive Datenrate: 0,65 × 10.000.000.000 Bit/s. Danach mit 60 Sekunden multiplizieren.",
+        "antwortOptionen": [
+            {
+                "text": "390.000.000.000 Bit/min",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! 0,65 × 10.000.000.000 Bit/s × 60 s/min = 390.000.000.000 Bit/min."
+            },
+            {
+                "text": "10.000.000.000 Bit/min",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. 10 Gbit/s ist die Datenrate pro Sekunde, nicht pro Minute und noch ohne 65-%-Faktor."
+            },
+            {
+                "text": "65.000.000 Bit/min",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Hier wurden Gbit und Prozent falsch umgerechnet."
+            },
+            {
+                "text": "61.847.529.062.400 Bit/min",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das ist die gesamte Datenmenge aus 7.200 GiB, nicht die Übertragungsrate pro Minute."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_cloud_storage_12",
+        "kategorie": "Datensicherung - Übertragungsdauer",
+        "frage": "RECHENAUFGABE: 7.200 GiB entsprechen 61.847.529.062.400 Bit. Effektiv können 390.000.000.000 Bit pro Minute übertragen werden. Wie lange dauert die Übertragung ungefähr?",
+        "typ": "single-choice",
+        "hinweis": "Zeit = Datenmenge ÷ Datenrate. Runde sinnvoll auf volle Minuten.",
+        "antwortOptionen": [
+            {
+                "text": "ca. 159 Minuten",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! 61.847.529.062.400 Bit ÷ 390.000.000.000 Bit/min = 158,58 min. Gerundet sind das ca. 159 Minuten."
+            },
+            {
+                "text": "ca. 65 Minuten",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. 65 % ist der nutzbare Anteil der Leitung, nicht die Übertragungszeit."
+            },
+            {
+                "text": "ca. 273 Minuten",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. 273 Sekunden gehört zu einer anderen Aufgabe mit 300 MiB und 10 Mbit/s."
+            },
+            {
+                "text": "ca. 7.200 Minuten",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. 7.200 ist die Datenmenge in GiB, nicht die Dauer in Minuten."
+            }
+        ]
+    }
+]

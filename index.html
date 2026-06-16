@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FiSi Quiz - Web Version</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="menu-view">
+        <h1>FiSi Prüfungstraining</h1>
+        <p>Wähle ein Fragenset aus:</p>
+        
+        <button class="menu-btn random-btn" onclick="starteModus('RANDOM')">🎲 Zufallsmix (30 Fragen)</button>
+        <button class="menu-btn" onclick="starteModus('fragen.json')">WiSo Sommer 2020</button>
+        <button class="menu-btn" onclick="starteModus('fragen_ga1_s2020_rechnen.json')">GA1 - Rechnen</button>
+        <button class="menu-btn" onclick="starteModus('fragen_ga1_s2020_netzwerk.json')">GA1 - Netzwerk</button>
+        <button class="menu-btn" onclick="starteModus('fragen_ga1_s2020_cloud_storage.json')">GA1 - Cloud & Storage</button>
+        <button class="menu-btn" onclick="starteModus('fragen_ga1_s2020_scripting_systemverwaltung.json')">GA1 - Scripting & System</button>
+        <button class="menu-btn" onclick="starteModus('fragen_ap2_w2025_systeme_datenbank.json')">AP2 - Systeme & Datenbank</button>
+        <button class="menu-btn" onclick="starteModus('fragen_ap2_w2025_programmierung_backup.json')">AP2 - Programmierung</button>
+    </div>
+
+    <div id="quiz-card" style="display: none;">
+        <button id="back-btn" onclick="zurueckZumMenue()">🔙 Zurück zur Auswahl</button>
+        <div class="header">
+            <span id="kategorie">Lade...</span>
+            <span id="fortschritt">0 / 0</span>
+        </div>
+        <h2 id="frage-text">Frage wird geladen...</h2>
+        <div id="antworten-box"></div>
+        <button id="action-btn" onclick="auswerten()" disabled>Antwort auswerten</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
