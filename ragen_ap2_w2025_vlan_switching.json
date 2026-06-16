@@ -1,0 +1,292 @@
+[
+  {
+    "id": "ap2_vlan_switching_01",
+    "kategorie": "AP2 - VLAN & Switching",
+    "frage": "Welche Vorteile bieten VLANs in Unternehmensnetzwerken?",
+    "typ": "multiple-choice",
+    "hinweis": "",
+    "antwortOptionen": [
+      {
+        "text": "Logische Trennung von Netzwerken.",
+        "istKorrekt": true,
+        "loesungsweg": "VLANs ermöglichen eine Segmentierung unabhängig von der physischen Infrastruktur."
+      },
+      {
+        "text": "Erhöhte Sicherheit durch getrennte Broadcast-Domänen.",
+        "istKorrekt": true,
+        "loesungsweg": "Broadcasts bleiben innerhalb des VLANs."
+      },
+      {
+        "text": "Mehr Flexibilität bei Änderungen der Netzstruktur.",
+        "istKorrekt": true,
+        "loesungsweg": "Netzsegmente können ohne neue Hardware erstellt werden."
+      },
+      {
+        "text": "VLANs machen Router überflüssig.",
+        "istKorrekt": false,
+        "loesungsweg": "Für Routing zwischen VLANs wird weiterhin ein Router oder Layer-3-Switch benötigt."
+      }
+    ]
+  },
+  {
+    "id": "ap2_vlan_switching_02",
+    "kategorie": "AP2 - VLAN & Switching",
+    "frage": "Welche Aussagen zu untagged Ports treffen zu?",
+    "typ": "multiple-choice",
+    "hinweis": "",
+    "antwortOptionen": [
+      {
+        "text": "Frames verlassen den Port ohne VLAN-Tag.",
+        "istKorrekt": true,
+        "loesungsweg": "Endgeräte arbeiten üblicherweise ohne VLAN-Tags."
+      },
+      {
+        "text": "Ein untagged Port gehört normalerweise genau einem VLAN an.",
+        "istKorrekt": true,
+        "loesungsweg": "Das VLAN wird am Switch-Port festgelegt."
+      },
+      {
+        "text": "Arbeitsplatz-PCs werden häufig an untagged Ports angeschlossen.",
+        "istKorrekt": true,
+        "loesungsweg": "Dies ist der Standardfall."
+      },
+      {
+        "text": "Untagged bedeutet verschlüsselt.",
+        "istKorrekt": false,
+        "loesungsweg": "Das hat nichts mit Verschlüsselung zu tun."
+      }
+    ]
+  },
+  {
+    "id": "ap2_vlan_switching_03",
+    "kategorie": "AP2 - VLAN & Switching",
+    "frage": "Welche Aussagen zu Tagged-Ports sind korrekt?",
+    "typ": "multiple-choice",
+    "hinweis": "",
+    "antwortOptionen": [
+      {
+        "text": "Frames enthalten eine VLAN-ID.",
+        "istKorrekt": true,
+        "loesungsweg": "IEEE 802.1Q fügt VLAN-Tags hinzu."
+      },
+      {
+        "text": "Mehrere VLANs können über denselben Port transportiert werden.",
+        "istKorrekt": true,
+        "loesungsweg": "Typischer Einsatz als Trunk-Port."
+      },
+      {
+        "text": "Switch-Uplinks werden häufig als Tagged-Port konfiguriert.",
+        "istKorrekt": true,
+        "loesungsweg": "Mehrere VLANs können über eine Verbindung laufen."
+      },
+      {
+        "text": "Tagged bedeutet automatisch verschlüsselt.",
+        "istKorrekt": false,
+        "loesungsweg": "Tagging hat nichts mit Verschlüsselung zu tun."
+      }
+    ]
+  },
+  {
+    "id": "ap2_vlan_switching_04",
+    "kategorie": "AP2 - VLAN & Switching",
+    "frage": "Welche Aussagen zu Router-on-a-Stick treffen zu?",
+    "typ": "multiple-choice",
+    "hinweis": "",
+    "antwortOptionen": [
+      {
+        "text": "Mehrere VLANs können über einen Routerport geroutet werden.",
+        "istKorrekt": true,
+        "loesungsweg": "Subinterfaces ermöglichen Inter-VLAN-Routing."
+      },
+      {
+        "text": "Jedes VLAN erhält ein eigenes Subinterface.",
+        "istKorrekt": true,
+        "loesungsweg": "Jedes Subinterface besitzt eine eigene Gateway-IP."
+      },
+      {
+        "text": "Inter-VLAN-Routing wird ermöglicht.",
+        "istKorrekt": true,
+        "loesungsweg": "Geräte aus unterschiedlichen VLANs können kommunizieren."
+      },
+      {
+        "text": "Für jedes VLAN wird ein eigener physischer Routerport benötigt.",
+        "istKorrekt": false,
+        "loesungsweg": "Genau das wird durch Router-on-a-Stick vermieden."
+      }
+    ]
+  },
+  {
+    "id": "ap2_vlan_switching_05",
+    "kategorie": "AP2 - VLAN & Switching",
+    "frage": "Welche Aufgaben erfüllt encapsulation dot1q?",
+    "typ": "multiple-choice",
+    "hinweis": "",
+    "antwortOptionen": [
+      {
+        "text": "Aktiviert VLAN-Tagging nach IEEE 802.1Q.",
+        "istKorrekt": true,
+        "loesungsweg": "Das Subinterface wird einem VLAN zugeordnet."
+      },
+      {
+        "text": "Ordnet einem Router-Subinterface eine VLAN-ID zu.",
+        "istKorrekt": true,
+        "loesungsweg": "Notwendig für Router-on-a-Stick."
+      },
+      {
+        "text": "Ermöglicht die Auswertung von VLAN-Tags.",
+        "istKorrekt": true,
+        "loesungsweg": "Der Router erkennt das jeweilige VLAN."
+      },
+      {
+        "text": "Aktiviert DHCP.",
+        "istKorrekt": false,
+        "loesungsweg": "DHCP ist unabhängig von dot1q."
+      }
+    ]
+  },
+  {
+    "id": "ap2_vlan_switching_06",
+    "kategorie": "AP2 - VLAN & Switching",
+    "frage": "Welche Vorteile bietet ein separates VoIP-VLAN?",
+    "typ": "multiple-choice",
+    "hinweis": "",
+    "antwortOptionen": [
+      {
+        "text": "QoS kann einfacher umgesetzt werden.",
+        "istKorrekt": true,
+        "loesungsweg": "Sprachverkehr kann priorisiert werden."
+      },
+      {
+        "text": "Telefonie wird vom Datennetz getrennt.",
+        "istKorrekt": true,
+        "loesungsweg": "Erhöht Sicherheit und Übersichtlichkeit."
+      },
+      {
+        "text": "Fehleranalysen werden erleichtert.",
+        "istKorrekt": true,
+        "loesungsweg": "VoIP-Traffic ist leichter identifizierbar."
+      },
+      {
+        "text": "Die Internetbandbreite verdoppelt sich.",
+        "istKorrekt": false,
+        "loesungsweg": "VLANs erzeugen keine zusätzliche Bandbreite."
+      }
+    ]
+  },
+  {
+    "id": "ap2_vlan_switching_07",
+    "kategorie": "AP2 - VLAN & Switching",
+    "frage": "Was ist ein Broadcast Storm?",
+    "typ": "multiple-choice",
+    "hinweis": "",
+    "antwortOptionen": [
+      {
+        "text": "Eine sehr große Menge von Broadcast-Frames.",
+        "istKorrekt": true,
+        "loesungsweg": "Broadcasts können das Netz überlasten."
+      },
+      {
+        "text": "Kann die Netzwerkperformance massiv beeinträchtigen.",
+        "istKorrekt": true,
+        "loesungsweg": "Die verfügbare Bandbreite wird verbraucht."
+      },
+      {
+        "text": "Kann durch defekte Netzwerkkarten verursacht werden.",
+        "istKorrekt": true,
+        "loesungsweg": "Fehlerhafte NICs können dauerhaft Broadcasts senden."
+      },
+      {
+        "text": "Tritt nur in WLANs auf.",
+        "istKorrekt": false,
+        "loesungsweg": "Broadcast Storms können auch in kabelgebundenen Netzen entstehen."
+      }
+    ]
+  },
+  {
+    "id": "ap2_vlan_switching_08",
+    "kategorie": "AP2 - VLAN & Switching",
+    "frage": "Welche Aussagen zu Switching-Loops treffen zu?",
+    "typ": "multiple-choice",
+    "hinweis": "",
+    "antwortOptionen": [
+      {
+        "text": "Frames können endlos im Netzwerk zirkulieren.",
+        "istKorrekt": true,
+        "loesungsweg": "Layer-2-Schleifen verursachen endlose Weiterleitungen."
+      },
+      {
+        "text": "Broadcast Storms können entstehen.",
+        "istKorrekt": true,
+        "loesungsweg": "Loops sind eine häufige Ursache."
+      },
+      {
+        "text": "Das Netzwerk kann stark ausgelastet werden.",
+        "istKorrekt": true,
+        "loesungsweg": "Die verfügbare Bandbreite wird verbraucht."
+      },
+      {
+        "text": "Loops verbessern die Ausfallsicherheit automatisch.",
+        "istKorrekt": false,
+        "loesungsweg": "Unkontrollierte Loops sind schädlich."
+      }
+    ]
+  },
+  {
+    "id": "ap2_vlan_switching_09",
+    "kategorie": "AP2 - VLAN & Switching",
+    "frage": "Welche Aufgaben erfüllt das Spanning Tree Protocol (STP)?",
+    "typ": "multiple-choice",
+    "hinweis": "",
+    "antwortOptionen": [
+      {
+        "text": "Verhindert Layer-2-Schleifen.",
+        "istKorrekt": true,
+        "loesungsweg": "STP erkennt redundante Verbindungen."
+      },
+      {
+        "text": "Blockiert bei Bedarf redundante Pfade.",
+        "istKorrekt": true,
+        "loesungsweg": "Nur ein aktiver Pfad bleibt bestehen."
+      },
+      {
+        "text": "Hilft beim Verhindern von Broadcast Storms.",
+        "istKorrekt": true,
+        "loesungsweg": "Loops werden verhindert."
+      },
+      {
+        "text": "Vergibt automatisch IP-Adressen.",
+        "istKorrekt": false,
+        "loesungsweg": "Das ist Aufgabe von DHCP."
+      }
+    ]
+  },
+  {
+    "id": "ap2_vlan_switching_10",
+    "kategorie": "AP2 - VLAN & Switching",
+    "frage": "Welche Ursachen können eine ungewöhnlich hohe Aktivität an einem einzelnen Switch-Port verursachen?",
+    "typ": "multiple-choice",
+    "hinweis": "",
+    "antwortOptionen": [
+      {
+        "text": "Broadcast Storm.",
+        "istKorrekt": true,
+        "loesungsweg": "Eine typische Ursache."
+      },
+      {
+        "text": "Switching Loop.",
+        "istKorrekt": true,
+        "loesungsweg": "Kann die Auslastung massiv erhöhen."
+      },
+      {
+        "text": "Defekte Netzwerkkarte eines Clients.",
+        "istKorrekt": true,
+        "loesungsweg": "Fehlerhafte NICs können viele Frames erzeugen."
+      },
+      {
+        "text": "Falscher Desktop-Hintergrund.",
+        "istKorrekt": false,
+        "loesungsweg": "Hat keinen Einfluss auf die Netzwerkauslastung."
+      }
+    ]
+  }
+]

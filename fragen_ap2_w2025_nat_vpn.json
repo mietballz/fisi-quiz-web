@@ -1,0 +1,292 @@
+[
+  {
+    "id": "ap2_nat_vpn_01",
+    "kategorie": "AP2 - NAT & VPN",
+    "frage": "Warum wird NAT eingesetzt, wenn interne Clients mit privaten IPv4-Adressen auf das Internet zugreifen?",
+    "typ": "multiple-choice",
+    "hinweis": "",
+    "antwortOptionen": [
+      {
+        "text": "Private IPv4-Adressen werden im Internet nicht geroutet.",
+        "istKorrekt": true,
+        "loesungsweg": "RFC1918-Adressen sind nur für interne Netze vorgesehen."
+      },
+      {
+        "text": "NAT ersetzt private Adressen durch öffentliche Adressen.",
+        "istKorrekt": true,
+        "loesungsweg": "Der Router übersetzt die Quelladresse beim Verlassen des Netzes."
+      },
+      {
+        "text": "NAT verschlüsselt automatisch den Datenverkehr.",
+        "istKorrekt": false,
+        "loesungsweg": "NAT bietet keine Verschlüsselung."
+      },
+      {
+        "text": "NAT erhöht die verfügbare Bandbreite.",
+        "istKorrekt": false,
+        "loesungsweg": "NAT beeinflusst die Bandbreite nicht."
+      }
+    ]
+  },
+  {
+    "id": "ap2_nat_vpn_02",
+    "kategorie": "AP2 - NAT & VPN",
+    "frage": "Welche Aussagen zu PAT (Port Address Translation) sind korrekt?",
+    "typ": "multiple-choice",
+    "hinweis": "",
+    "antwortOptionen": [
+      {
+        "text": "Mehrere Clients können dieselbe öffentliche IPv4-Adresse verwenden.",
+        "istKorrekt": true,
+        "loesungsweg": "PAT unterscheidet Verbindungen anhand von Portnummern."
+      },
+      {
+        "text": "PAT wird häufig auch NAT Overload genannt.",
+        "istKorrekt": true,
+        "loesungsweg": "Beide Begriffe beschreiben dieselbe Technik."
+      },
+      {
+        "text": "PAT verschlüsselt Netzwerkpakete.",
+        "istKorrekt": false,
+        "loesungsweg": "PAT verändert nur Adressen und Ports."
+      },
+      {
+        "text": "PAT benötigt für jeden Client eine eigene öffentliche IPv4-Adresse.",
+        "istKorrekt": false,
+        "loesungsweg": "Genau das wird durch PAT vermieden."
+      }
+    ]
+  },
+  {
+    "id": "ap2_nat_vpn_03",
+    "kategorie": "AP2 - NAT & VPN",
+    "frage": "Welche Aufgaben erfüllt ein Site-to-Site-VPN?",
+    "typ": "multiple-choice",
+    "hinweis": "",
+    "antwortOptionen": [
+      {
+        "text": "Es verbindet ganze Standorte miteinander.",
+        "istKorrekt": true,
+        "loesungsweg": "Standortnetze werden über einen Tunnel gekoppelt."
+      },
+      {
+        "text": "Die Tunnelendpunkte sind meist Router oder Firewalls.",
+        "istKorrekt": true,
+        "loesungsweg": "Diese Geräte bauen den VPN-Tunnel auf."
+      },
+      {
+        "text": "Es dient primär dem Zugriff einzelner Homeoffice-Benutzer.",
+        "istKorrekt": false,
+        "loesungsweg": "Das wäre eher Remote-Access-VPN."
+      },
+      {
+        "text": "Es ersetzt VLANs vollständig.",
+        "istKorrekt": false,
+        "loesungsweg": "VPN und VLAN lösen unterschiedliche Aufgaben."
+      }
+    ]
+  },
+  {
+    "id": "ap2_nat_vpn_04",
+    "kategorie": "AP2 - NAT & VPN",
+    "frage": "Welche Aussagen zu Remote-Access-VPNs treffen zu?",
+    "typ": "multiple-choice",
+    "hinweis": "",
+    "antwortOptionen": [
+      {
+        "text": "Mitarbeiter können von unterwegs auf Unternehmensressourcen zugreifen.",
+        "istKorrekt": true,
+        "loesungsweg": "Genau dafür werden Remote-Access-VPNs genutzt."
+      },
+      {
+        "text": "Ein VPN-Client auf dem Endgerät ist üblich.",
+        "istKorrekt": true,
+        "loesungsweg": "Der Client baut den Tunnel auf."
+      },
+      {
+        "text": "Sie funktionieren nur innerhalb des Firmennetzes.",
+        "istKorrekt": false,
+        "loesungsweg": "Sie sind für externe Zugriffe gedacht."
+      },
+      {
+        "text": "Sie werden oft auch Roadwarrior-VPN genannt.",
+        "istKorrekt": true,
+        "loesungsweg": "Dieser Begriff ist weit verbreitet."
+      }
+    ]
+  },
+  {
+    "id": "ap2_nat_vpn_05",
+    "kategorie": "AP2 - NAT & VPN",
+    "frage": "Welche Schutzziele werden durch VPN-Technologien unterstützt?",
+    "typ": "multiple-choice",
+    "hinweis": "",
+    "antwortOptionen": [
+      {
+        "text": "Vertraulichkeit",
+        "istKorrekt": true,
+        "loesungsweg": "Daten werden verschlüsselt übertragen."
+      },
+      {
+        "text": "Integrität",
+        "istKorrekt": true,
+        "loesungsweg": "Manipulationen können erkannt werden."
+      },
+      {
+        "text": "Authentizität",
+        "istKorrekt": true,
+        "loesungsweg": "Kommunikationspartner werden überprüft."
+      },
+      {
+        "text": "Defragmentierung",
+        "istKorrekt": false,
+        "loesungsweg": "Kein Schutzziel der Informationssicherheit."
+      }
+    ]
+  },
+  {
+    "id": "ap2_nat_vpn_06",
+    "kategorie": "AP2 - NAT & VPN",
+    "frage": "Welche Faktoren gehören zur Multi-Faktor-Authentifizierung?",
+    "typ": "multiple-choice",
+    "hinweis": "",
+    "antwortOptionen": [
+      {
+        "text": "Besitz eines Smartphones oder Tokens",
+        "istKorrekt": true,
+        "loesungsweg": "Besitzfaktor."
+      },
+      {
+        "text": "Fingerabdruck",
+        "istKorrekt": true,
+        "loesungsweg": "Biometrischer Faktor."
+      },
+      {
+        "text": "Passwort",
+        "istKorrekt": true,
+        "loesungsweg": "Wissensfaktor."
+      },
+      {
+        "text": "Monitorgröße",
+        "istKorrekt": false,
+        "loesungsweg": "Kein Authentifizierungsfaktor."
+      }
+    ]
+  },
+  {
+    "id": "ap2_nat_vpn_07",
+    "kategorie": "AP2 - NAT & VPN",
+    "frage": "Welche Ursachen können einen fehlgeschlagenen VPN-Verbindungsaufbau verursachen?",
+    "typ": "multiple-choice",
+    "hinweis": "",
+    "antwortOptionen": [
+      {
+        "text": "Falsche Zugangsdaten",
+        "istKorrekt": true,
+        "loesungsweg": "Authentifizierung schlägt fehl."
+      },
+      {
+        "text": "Firewall blockiert VPN-Protokolle",
+        "istKorrekt": true,
+        "loesungsweg": "Der Tunnel kann nicht aufgebaut werden."
+      },
+      {
+        "text": "VPN-Benutzer nicht freigeschaltet",
+        "istKorrekt": true,
+        "loesungsweg": "Der Zugriff wird verweigert."
+      },
+      {
+        "text": "Bildschirmhelligkeit zu niedrig",
+        "istKorrekt": false,
+        "loesungsweg": "Hat keinen Einfluss auf VPN."
+      }
+    ]
+  },
+  {
+    "id": "ap2_nat_vpn_08",
+    "kategorie": "AP2 - NAT & VPN",
+    "frage": "Welche Aussagen zu Port Forwarding treffen zu?",
+    "typ": "multiple-choice",
+    "hinweis": "",
+    "antwortOptionen": [
+      {
+        "text": "Eingehende Verbindungen können an interne Systeme weitergeleitet werden.",
+        "istKorrekt": true,
+        "loesungsweg": "Typischer Einsatz für Web- oder Mailserver."
+      },
+      {
+        "text": "Es basiert auf Destination NAT.",
+        "istKorrekt": true,
+        "loesungsweg": "Die Zieladresse wird umgeschrieben."
+      },
+      {
+        "text": "Es verschlüsselt den Netzwerkverkehr.",
+        "istKorrekt": false,
+        "loesungsweg": "Port Forwarding bietet keine Verschlüsselung."
+      },
+      {
+        "text": "Es erhöht automatisch die Internetgeschwindigkeit.",
+        "istKorrekt": false,
+        "loesungsweg": "Kein Zusammenhang."
+      }
+    ]
+  },
+  {
+    "id": "ap2_nat_vpn_09",
+    "kategorie": "AP2 - NAT & VPN",
+    "frage": "Welche Maßnahmen erhöhen die Passwortsicherheit?",
+    "typ": "multiple-choice",
+    "hinweis": "",
+    "antwortOptionen": [
+      {
+        "text": "Mindestlänge vorgeben",
+        "istKorrekt": true,
+        "loesungsweg": "Längere Passwörter erhöhen die Sicherheit."
+      },
+      {
+        "text": "Sonderzeichen zulassen oder verlangen",
+        "istKorrekt": true,
+        "loesungsweg": "Erhöht die Komplexität."
+      },
+      {
+        "text": "Bekannte Wörter verbieten",
+        "istKorrekt": true,
+        "loesungsweg": "Verhindert triviale Passwörter."
+      },
+      {
+        "text": "Passwörter öffentlich dokumentieren",
+        "istKorrekt": false,
+        "loesungsweg": "Massiver Sicherheitsverstoß."
+      }
+    ]
+  },
+  {
+    "id": "ap2_nat_vpn_10",
+    "kategorie": "AP2 - NAT & VPN",
+    "frage": "Warum funktioniert TLS trotz NAT?",
+    "typ": "multiple-choice",
+    "hinweis": "",
+    "antwortOptionen": [
+      {
+        "text": "TLS schützt die Nutzdaten, nicht die IP-Header.",
+        "istKorrekt": true,
+        "loesungsweg": "NAT verändert die Header."
+      },
+      {
+        "text": "NAT darf Quell- und Zieladressen anpassen.",
+        "istKorrekt": true,
+        "loesungsweg": "TLS bleibt davon unberührt."
+      },
+      {
+        "text": "TLS deaktiviert NAT automatisch.",
+        "istKorrekt": false,
+        "loesungsweg": "Beide Technologien arbeiten unabhängig."
+      },
+      {
+        "text": "TLS verschlüsselt Routingtabellen.",
+        "istKorrekt": false,
+        "loesungsweg": "Routingtabellen gehören nicht zu TLS."
+      }
+    ]
+  }
+]

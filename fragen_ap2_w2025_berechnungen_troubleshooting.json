@@ -1,0 +1,292 @@
+[
+  {
+    "id": "ap2_calc_trouble_01",
+    "kategorie": "AP2 - Berechnungen & Troubleshooting",
+    "frage": "Ein Provider garantiert eine Verfügbarkeit von 99 %. Wie hoch ist die maximale Ausfallzeit pro Jahr?",
+    "typ": "multiple-choice",
+    "hinweis": "",
+    "antwortOptionen": [
+      {
+        "text": "87,6 Stunden",
+        "istKorrekt": true,
+        "loesungsweg": "8760 Stunden pro Jahr × 1 % Ausfallzeit = 87,6 Stunden."
+      },
+      {
+        "text": "8,76 Stunden",
+        "istKorrekt": false,
+        "loesungsweg": "Dies entspricht ungefähr 99,9 % Verfügbarkeit."
+      },
+      {
+        "text": "876 Stunden",
+        "istKorrekt": false,
+        "loesungsweg": "Das wären 10 % eines Jahres."
+      },
+      {
+        "text": "43,8 Stunden",
+        "istKorrekt": false,
+        "loesungsweg": "Dies entspricht 0,5 % eines Jahres."
+      }
+    ]
+  },
+  {
+    "id": "ap2_calc_trouble_02",
+    "kategorie": "AP2 - Berechnungen & Troubleshooting",
+    "frage": "Zwei unabhängige Internetanschlüsse besitzen jeweils 99 % Verfügbarkeit. Welche Gesamtverfügbarkeit ergibt sich bei Redundanz?",
+    "typ": "multiple-choice",
+    "hinweis": "",
+    "antwortOptionen": [
+      {
+        "text": "99,99 %",
+        "istKorrekt": true,
+        "loesungsweg": "1 - (0,01 × 0,01) = 99,99 %."
+      },
+      {
+        "text": "99 %",
+        "istKorrekt": false,
+        "loesungsweg": "Dies wäre die Verfügbarkeit eines einzelnen Anschlusses."
+      },
+      {
+        "text": "98 %",
+        "istKorrekt": false,
+        "loesungsweg": "Falsch berechnet."
+      },
+      {
+        "text": "100 %",
+        "istKorrekt": false,
+        "loesungsweg": "Absolute Verfügbarkeit gibt es praktisch nicht."
+      }
+    ]
+  },
+  {
+    "id": "ap2_calc_trouble_03",
+    "kategorie": "AP2 - Berechnungen & Troubleshooting",
+    "frage": "Welche Nachteile besitzt ein Shared-Medium-Anschluss?",
+    "typ": "multiple-choice",
+    "hinweis": "",
+    "antwortOptionen": [
+      {
+        "text": "Die verfügbare Bandbreite wird mit anderen Kunden geteilt.",
+        "istKorrekt": true,
+        "loesungsweg": "Shared Medium bedeutet geteilte Ressourcen."
+      },
+      {
+        "text": "Die Geschwindigkeit kann durch andere Teilnehmer beeinflusst werden.",
+        "istKorrekt": true,
+        "loesungsweg": "Hohe Auslastung anderer Kunden wirkt sich aus."
+      },
+      {
+        "text": "Jeder Teilnehmer erhält jederzeit die volle Bandbreite.",
+        "istKorrekt": false,
+        "loesungsweg": "Genau das ist bei Shared Medium nicht garantiert."
+      },
+      {
+        "text": "Shared Medium existiert ausschließlich bei WLAN.",
+        "istKorrekt": false,
+        "loesungsweg": "Auch andere Technologien nutzen Shared Media."
+      }
+    ]
+  },
+  {
+    "id": "ap2_calc_trouble_04",
+    "kategorie": "AP2 - Berechnungen & Troubleshooting",
+    "frage": "Welche Maßnahmen ermöglichen eingehende Verbindungen trotz CGNAT oder DS-Lite?",
+    "typ": "multiple-choice",
+    "hinweis": "",
+    "antwortOptionen": [
+      {
+        "text": "VPN-Dienst mit öffentlicher IPv4-Adresse nutzen.",
+        "istKorrekt": true,
+        "loesungsweg": "Der VPN-Anbieter stellt die öffentliche IPv4 bereit."
+      },
+      {
+        "text": "Portmapper mit IPv4-zu-IPv6-Weiterleitung verwenden.",
+        "istKorrekt": true,
+        "loesungsweg": "Eine häufige Lösung bei DS-Lite."
+      },
+      {
+        "text": "Normales Port Forwarding im Heimrouter konfigurieren.",
+        "istKorrekt": false,
+        "loesungsweg": "Bei CGNAT reicht dies nicht aus."
+      },
+      {
+        "text": "IPv6 deaktivieren.",
+        "istKorrekt": false,
+        "loesungsweg": "Dies verschlechtert die Situation eher."
+      }
+    ]
+  },
+  {
+    "id": "ap2_calc_trouble_05",
+    "kategorie": "AP2 - Glasfaser",
+    "frage": "Welche Ursachen können einen Glasfaser-Uplink verhindern?",
+    "typ": "multiple-choice",
+    "hinweis": "",
+    "antwortOptionen": [
+      {
+        "text": "TX und RX wurden vertauscht.",
+        "istKorrekt": true,
+        "loesungsweg": "Die Übertragungsrichtungen müssen korrekt gekreuzt werden."
+      },
+      {
+        "text": "Unterschiedliche Wellenlängen der SFP-Module.",
+        "istKorrekt": true,
+        "loesungsweg": "Beide Seiten müssen kompatibel sein."
+      },
+      {
+        "text": "Verschmutzte Glasfaserstecker.",
+        "istKorrekt": true,
+        "loesungsweg": "Schon kleine Verschmutzungen können den Link verhindern."
+      },
+      {
+        "text": "Zu viele Kupferports am Switch belegt.",
+        "istKorrekt": false,
+        "loesungsweg": "Hat keinen Einfluss auf den Glasfaser-Link."
+      }
+    ]
+  },
+  {
+    "id": "ap2_calc_trouble_06",
+    "kategorie": "AP2 - Glasfaser",
+    "frage": "Nach einem Switchtausch funktioniert der SFP-Uplink nicht mehr. Welche Ursache ist wahrscheinlich?",
+    "typ": "multiple-choice",
+    "hinweis": "",
+    "antwortOptionen": [
+      {
+        "text": "Die alte Konfiguration wurde auf falsche Portnummern übernommen.",
+        "istKorrekt": true,
+        "loesungsweg": "Bei neuen Switchmodellen ändern sich oft die SFP-Portnummern."
+      },
+      {
+        "text": "Die SFP-Ports liegen an anderen Positionen als beim Vorgängergerät.",
+        "istKorrekt": true,
+        "loesungsweg": "Typischer Fehler nach Hardwaretausch."
+      },
+      {
+        "text": "Die Hintergrundfarbe der Managementoberfläche wurde geändert.",
+        "istKorrekt": false,
+        "loesungsweg": "Hat keinen Einfluss auf den Link."
+      },
+      {
+        "text": "Die Uhrzeit des Switches ist falsch.",
+        "istKorrekt": false,
+        "loesungsweg": "Nicht relevant für den Linkaufbau."
+      }
+    ]
+  },
+  {
+    "id": "ap2_calc_trouble_07",
+    "kategorie": "AP2 - Glasfaser",
+    "frage": "Welche Maßnahmen helfen bei einem fehlerhaften SFP-Modul?",
+    "typ": "multiple-choice",
+    "hinweis": "",
+    "antwortOptionen": [
+      {
+        "text": "Modul neu einsetzen.",
+        "istKorrekt": true,
+        "loesungsweg": "Kontaktprobleme können dadurch behoben werden."
+      },
+      {
+        "text": "Stecker reinigen.",
+        "istKorrekt": true,
+        "loesungsweg": "Verschmutzungen sind eine häufige Fehlerquelle."
+      },
+      {
+        "text": "Modul gegen ein kompatibles Modell austauschen.",
+        "istKorrekt": true,
+        "loesungsweg": "Defekte oder inkompatible Module müssen ersetzt werden."
+      },
+      {
+        "text": "Alle VLANs löschen.",
+        "istKorrekt": false,
+        "loesungsweg": "Hat nichts mit dem SFP-Modul zu tun."
+      }
+    ]
+  },
+  {
+    "id": "ap2_calc_trouble_08",
+    "kategorie": "AP2 - Troubleshooting",
+    "frage": "Welche Ursachen können ungewöhnlich hohe Aktivität an einem Switchport verursachen?",
+    "typ": "multiple-choice",
+    "hinweis": "",
+    "antwortOptionen": [
+      {
+        "text": "Monitoring-Port (SPAN-Port).",
+        "istKorrekt": true,
+        "loesungsweg": "Dort wird zusätzlicher Verkehr gespiegelt."
+      },
+      {
+        "text": "Uplink-Port des Netzwerks.",
+        "istKorrekt": true,
+        "loesungsweg": "Hier läuft oft der gesamte Datenverkehr zusammen."
+      },
+      {
+        "text": "ARP-Spoofing oder Man-in-the-Middle-Angriff.",
+        "istKorrekt": true,
+        "loesungsweg": "Kann zusätzlichen Verkehr erzeugen."
+      },
+      {
+        "text": "Falscher Desktop-Hintergrund.",
+        "istKorrekt": false,
+        "loesungsweg": "Kein technischer Zusammenhang."
+      }
+    ]
+  },
+  {
+    "id": "ap2_calc_trouble_09",
+    "kategorie": "AP2 - Berechnungen",
+    "frage": "Wie viele MiB entsprechen ungefähr 2 GiB?",
+    "typ": "multiple-choice",
+    "hinweis": "",
+    "antwortOptionen": [
+      {
+        "text": "2048 MiB",
+        "istKorrekt": true,
+        "loesungsweg": "1 GiB = 1024 MiB."
+      },
+      {
+        "text": "2000 MiB",
+        "istKorrekt": false,
+        "loesungsweg": "Dies wäre eine dezimale Umrechnung."
+      },
+      {
+        "text": "1024 MiB",
+        "istKorrekt": false,
+        "loesungsweg": "Das entspricht 1 GiB."
+      },
+      {
+        "text": "4096 MiB",
+        "istKorrekt": false,
+        "loesungsweg": "Das entspricht 4 GiB."
+      }
+    ]
+  },
+  {
+    "id": "ap2_calc_trouble_10",
+    "kategorie": "AP2 - Glasfaser",
+    "frage": "Welche Aussagen zu SFP-Modulen treffen zu?",
+    "typ": "multiple-choice",
+    "hinweis": "",
+    "antwortOptionen": [
+      {
+        "text": "Beide Seiten müssen kompatible Wellenlängen verwenden.",
+        "istKorrekt": true,
+        "loesungsweg": "Sonst kommt keine optische Verbindung zustande."
+      },
+      {
+        "text": "TX muss auf RX der Gegenseite treffen.",
+        "istKorrekt": true,
+        "loesungsweg": "Grundprinzip jeder Duplex-Glasfaserverbindung."
+      },
+      {
+        "text": "Verschmutzte Stecker können die Verbindung verhindern.",
+        "istKorrekt": true,
+        "loesungsweg": "Häufige Fehlerursache in der Praxis."
+      },
+      {
+        "text": "Die Wellenlänge spielt keine Rolle.",
+        "istKorrekt": false,
+        "loesungsweg": "Sie ist entscheidend für die Kompatibilität."
+      }
+    ]
+  }
+]
