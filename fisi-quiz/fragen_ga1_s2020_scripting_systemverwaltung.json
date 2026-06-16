@@ -1,0 +1,466 @@
+[
+    {
+        "id": "ga1_s2020_scripting_sys_01",
+        "kategorie": "PowerShell - Variablen",
+        "frage": "In einem PowerShell-Skript soll das aktuelle Datum in einer Variable gespeichert werden. Welche Zuweisung ist dafür sinnvoll?",
+        "typ": "single-choice",
+        "hinweis": "In PowerShell beginnen Variablen mit $. Für das aktuelle Datum gibt es ein Cmdlet.",
+        "antwortOptionen": [
+            {
+                "text": "$AktuellesDatum = Get-Date",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! In PowerShell wird eine Variable mit $ geschrieben. Get-Date liefert das aktuelle Datum bzw. die aktuelle Uhrzeit."
+            },
+            {
+                "text": "AktuellesDatum = Date.now()",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das sieht eher nach JavaScript aus und ist keine typische PowerShell-Schreibweise."
+            },
+            {
+                "text": "$AktuellesDatum == Get-Date",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Für eine Zuweisung nutzt PowerShell ein einfaches Gleichheitszeichen. == ist hier nicht passend."
+            },
+            {
+                "text": "let AktuellesDatum = Get-Date",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. let ist keine normale PowerShell-Variablendeklaration."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_scripting_sys_02",
+        "kategorie": "PowerShell - Variablen",
+        "frage": "In einem Skript soll der Mailserver mit der IP-Adresse 192.168.99.1 in einer Variable gespeichert werden. Welche Schreibweise passt zu PowerShell?",
+        "typ": "single-choice",
+        "hinweis": "Eine IP-Adresse wird hier als Zeichenkette gespeichert.",
+        "antwortOptionen": [
+            {
+                "text": "$smtpServer = \"192.168.99.1\"",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Die Variable heißt $smtpServer und die IP-Adresse wird als String gespeichert."
+            },
+            {
+                "text": "smtpServer := 192.168.99.1",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. := ist keine übliche PowerShell-Zuweisung."
+            },
+            {
+                "text": "$smtpServer = 192.168.99.1.0",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das ist keine gültige IPv4-Adresse für den genannten Mailserver."
+            },
+            {
+                "text": "smtpServer == \"192.168.99.1\"",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Es fehlt das $ vor dem Variablennamen und == ist hier keine Zuweisung."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_scripting_sys_03",
+        "kategorie": "PowerShell - Zeichenketten",
+        "frage": "In einem PowerShell-Skript soll der Firmenname „BauMit AG“ in einer Variable gespeichert werden. Welche Variante ist sinnvoll?",
+        "typ": "single-choice",
+        "hinweis": "Textwerte werden normalerweise als String in Anführungszeichen geschrieben.",
+        "antwortOptionen": [
+            {
+                "text": "$Firma = \"BauMit AG\"",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! $Firma ist eine PowerShell-Variable und der Firmenname wird als Zeichenkette gespeichert."
+            },
+            {
+                "text": "$Firma = BauMit AG",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Ohne Anführungszeichen wird der Text nicht sauber als String interpretiert."
+            },
+            {
+                "text": "Firma: BauMit AG",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das ist keine PowerShell-Zuweisung."
+            },
+            {
+                "text": "var Firma = \"BauMit AG\"",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. var ist keine typische PowerShell-Variablendeklaration."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_scripting_sys_04",
+        "kategorie": "PowerShell - Kennwortablauf",
+        "frage": "Ein Skript benachrichtigt Benutzer per E-Mail, bevor ihr Kennwort abläuft. Die erste E-Mail wird sechs Tage vor Ablauf gesendet. Was beschreibt dieses Verhalten richtig?",
+        "typ": "single-choice",
+        "hinweis": "Achte auf den Zeitpunkt der ersten Benachrichtigung.",
+        "antwortOptionen": [
+            {
+                "text": "Die erste Benachrichtigung erfolgt sechs Tage vor Ablauf des Kennwortes.",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Das Skript informiert den Benutzer rechtzeitig vor Ablauf, damit er das Kennwort vorher ändern kann."
+            },
+            {
+                "text": "Die erste Benachrichtigung erfolgt erst nach Ablauf des Kennwortes.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Dann wäre der Benutzer unter Umständen bereits ausgesperrt."
+            },
+            {
+                "text": "Benachrichtigungen werden nur gesendet, wenn das Kennwort bereits gesperrt wurde.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Ziel ist eine rechtzeitige Warnung vor dem Ablauf."
+            },
+            {
+                "text": "Das Skript sendet immer täglich unbegrenzt viele E-Mails.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. In der Lösung wird von bis zu zwei Benachrichtigungen ausgegangen."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_scripting_sys_05",
+        "kategorie": "PowerShell - String-Ersetzung",
+        "frage": "In einer E-Mail-Vorlage soll ein Platzhalter für ein Datum durch das tatsächliche Ablaufdatum eines Benutzers ersetzt werden. Welcher PowerShell-Ausdruck passt am besten?",
+        "typ": "single-choice",
+        "hinweis": "In PowerShell kann man mit -replace Textbestandteile ersetzen.",
+        "antwortOptionen": [
+            {
+                "text": "$Email.Body = $Email.Body -replace $Datum, $Benutzer.AblaufDatum",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Der bisherige E-Mail-Text wird genommen, der Platzhalter $Datum wird durch $Benutzer.AblaufDatum ersetzt und wieder in $Email.Body gespeichert."
+            },
+            {
+                "text": "$Email.Body += $Datum -delete $Benutzer.AblaufDatum",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. -delete ist hier nicht der passende Operator und += würde eher anhängen statt gezielt ersetzen."
+            },
+            {
+                "text": "$Email.Body = replace($Benutzer.AblaufDatum, $Datum)",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das ist keine passende PowerShell-Schreibweise für die gezeigte Ersetzung."
+            },
+            {
+                "text": "$Datum = $Email.Body -smtp $Benutzer.AblaufDatum",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. -smtp ist kein passender Operator zum Ersetzen von Text."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_scripting_sys_06",
+        "kategorie": "IT-Sicherheit - Hashwerte",
+        "frage": "Warum kann ein Hashwert verwendet werden, um Manipulationen an einem Skript zu erkennen?",
+        "typ": "single-choice",
+        "hinweis": "Schon kleine Änderungen an einer Datei führen normalerweise zu einem anderen Hashwert.",
+        "antwortOptionen": [
+            {
+                "text": "Weil eine veränderte Datei einen anderen Hashwert erzeugt.",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Wird das Skript manipuliert, ändert sich sein Hashwert. Durch Vergleich mit einem bekannten Hashwert kann die Änderung erkannt werden."
+            },
+            {
+                "text": "Weil ein Hashwert eine Datei automatisch repariert.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Ein Hashwert erkennt Änderungen, repariert aber keine Datei."
+            },
+            {
+                "text": "Weil ein Hashwert das Skript schneller ausführt.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Hashwerte dienen hier der Integritätsprüfung, nicht der Performance."
+            },
+            {
+                "text": "Weil ein Hashwert den Quellcode verschlüsselt und dadurch unsichtbar macht.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Hashing ist keine Verschlüsselung. Aus einem Hashwert kann man den ursprünglichen Inhalt nicht einfach zurückgewinnen."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_scripting_sys_07",
+        "kategorie": "E-Mail-Protokolle",
+        "frage": "Wofür wird SMTP hauptsächlich verwendet?",
+        "typ": "single-choice",
+        "hinweis": "SMTP ist das Protokoll zum Senden bzw. Weiterleiten von E-Mails.",
+        "antwortOptionen": [
+            {
+                "text": "Zum Versenden von E-Mails zwischen Client und Server oder zwischen Mailservern.",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! SMTP wird für den E-Mail-Versand genutzt, sowohl vom Client zum Mailserver als auch zwischen Mailservern."
+            },
+            {
+                "text": "Zum Abrufen und Löschen lokaler Dateien.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. SMTP ist ein E-Mail-Protokoll, kein Dateisystem-Protokoll."
+            },
+            {
+                "text": "Zum grafischen Erstellen von Formularen.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. SMTP hat nichts mit GUI-Formularen zu tun."
+            },
+            {
+                "text": "Zum Formatieren von Datenträgern.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. SMTP wird nicht zur Datenträgerverwaltung verwendet."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_scripting_sys_08",
+        "kategorie": "E-Mail-Protokolle",
+        "frage": "Welche Aussage zu POP3 und IMAP4 ist richtig?",
+        "typ": "single-choice",
+        "hinweis": "Beide Protokolle dienen dem Zugriff auf E-Mails, unterscheiden sich aber in der typischen Arbeitsweise.",
+        "antwortOptionen": [
+            {
+                "text": "POP3 dient typischerweise dem Abholen von E-Mails, IMAP4 dem Lesen und Verwalten von E-Mails auf dem Server.",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! POP3 wird klassisch zum Abholen von E-Mails genutzt. IMAP4 ermöglicht das Lesen und Verwalten der Nachrichten direkt auf dem Server."
+            },
+            {
+                "text": "POP3 wird zum Senden von E-Mails verwendet, IMAP4 zur IP-Adressvergabe.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. E-Mail-Versand ist SMTP. IP-Adressvergabe erfolgt typischerweise über DHCP."
+            },
+            {
+                "text": "POP3 und IMAP4 sind ausschließlich Backup-Programme.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Es sind E-Mail-Protokolle."
+            },
+            {
+                "text": "IMAP4 ist ein Protokoll zum Kopieren von Windows-Dateien mit XCOPY.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. IMAP4 hat nichts mit XCOPY zu tun."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_scripting_sys_09",
+        "kategorie": "GUI - Formularelemente",
+        "frage": "In einer grafischen Oberfläche sollen die festen Bezeichnungen „Datenquelle“ und „Zielordner“ angezeigt werden. Welches Formularelement passt dafür?",
+        "typ": "single-choice",
+        "hinweis": "Ein Element, das nur beschriftet und normalerweise keine Eingabe erwartet.",
+        "antwortOptionen": [
+            {
+                "text": "Label",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Labels werden für feste Beschriftungen in einer Oberfläche verwendet."
+            },
+            {
+                "text": "Text-Box",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Eine Text-Box dient typischerweise zur Eingabe oder Anzeige editierbarer Texte."
+            },
+            {
+                "text": "Radio-Button",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Radio-Buttons dienen der Auswahl genau einer Option aus mehreren Alternativen."
+            },
+            {
+                "text": "Check-Box",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Check-Boxes dienen der Auswahl von Optionen, die unabhängig voneinander gesetzt werden können."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_scripting_sys_10",
+        "kategorie": "GUI - Formularelemente",
+        "frage": "In einer Oberfläche soll der Benutzer zwischen „Differenziell“, „Inkrementell“ und „Vollsicherung“ genau eine Sicherungsart auswählen. Welches Element passt am besten?",
+        "typ": "single-choice",
+        "hinweis": "Gesucht ist eine Auswahl, bei der normalerweise nur eine Option aktiv sein soll.",
+        "antwortOptionen": [
+            {
+                "text": "Radio-Button",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Radio-Buttons sind geeignet, wenn aus mehreren Möglichkeiten genau eine ausgewählt werden soll."
+            },
+            {
+                "text": "Check-Box",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Check-Boxes erlauben mehrere unabhängige Auswahlmöglichkeiten."
+            },
+            {
+                "text": "Label",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Ein Label ist nur eine Beschriftung."
+            },
+            {
+                "text": "Button",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Ein Button löst eine Aktion aus, ist aber nicht die passende dauerhafte Auswahl für eine Sicherungsart."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_scripting_sys_11",
+        "kategorie": "GUI - Formularelemente",
+        "frage": "Für Optionen wie „Unterverzeichnisse einbeziehen“, „bei Fehler überspringen“ und „Backup prüfen“ sollen mehrere Optionen gleichzeitig möglich sein. Welches Element passt?",
+        "typ": "single-choice",
+        "hinweis": "Mehrere unabhängige Ja/Nein-Auswahlen.",
+        "antwortOptionen": [
+            {
+                "text": "Check-Box",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Check-Boxes eignen sich für mehrere voneinander unabhängige Optionen."
+            },
+            {
+                "text": "Radio-Button",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Radio-Buttons nutzt man eher, wenn genau eine Option aus mehreren gewählt werden soll."
+            },
+            {
+                "text": "Label",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Labels sind Beschriftungen und keine Auswahlfelder."
+            },
+            {
+                "text": "ProgressView",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Eine Fortschrittsanzeige zeigt Status an, dient aber nicht zur Auswahl von Backup-Optionen."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_scripting_sys_12",
+        "kategorie": "Windows CLI - XCOPY",
+        "frage": "Ein Backup soll mit XCOPY von D:\\Projekte nach S:\\Projekte-bak\\ kopiert werden. Unterverzeichnisse sollen einbezogen, Fehler übersprungen und die Kopie geprüft werden. Welche Parameter passen zu /E, /C und /V?",
+        "typ": "single-choice",
+        "hinweis": "/E betrifft Unterverzeichnisse, /C Fehlerbehandlung, /V Überprüfung.",
+        "antwortOptionen": [
+            {
+                "text": "/E = Unterverzeichnisse inklusive leerer Verzeichnisse, /C = bei Fehlern fortsetzen, /V = kopierte Dateien überprüfen",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Diese Parameter passen zur beschriebenen Backup-Aufgabe mit XCOPY."
+            },
+            {
+                "text": "/E = E-Mails senden, /C = Cloud starten, /V = VPN deaktivieren",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Diese Bedeutungen passen nicht zu XCOPY."
+            },
+            {
+                "text": "/E = Datei verschlüsseln, /C = Datei komprimieren, /V = Datei verstecken",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das sind nicht die passenden XCOPY-Parameter für diese Aufgabe."
+            },
+            {
+                "text": "/E = nur eine Datei kopieren, /C = Kopieren abbrechen, /V = Version anzeigen",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. /C bedeutet bei XCOPY gerade, dass bei Fehlern fortgesetzt werden kann."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_scripting_sys_13",
+        "kategorie": "Windows CLI - XCOPY",
+        "frage": "Welche XCOPY-Zeile passt zu einer Sicherung von D:\\Projekte nach S:\\Projekte-bak\\ mit Archivbit, Datum 25.04.2020, Unterverzeichnissen, Fehlerfortsetzung und Überprüfung?",
+        "typ": "single-choice",
+        "hinweis": "Die Lösung kombiniert Quelle, Ziel und mehrere Parameter.",
+        "antwortOptionen": [
+            {
+                "text": "XCOPY D:\\Projekte S:\\Projekte-bak\\ /A /D:04-25-2020 /E /C /V",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Quelle und Ziel sind korrekt angegeben. /A nutzt Dateien mit gesetztem Archivbit, /D:04-25-2020 berücksichtigt das Datum, /E Unterverzeichnisse, /C Fortsetzen bei Fehlern und /V Überprüfen."
+            },
+            {
+                "text": "COPY D:\\Projekte S:\\Projekte-bak\\ /SMTP /POP3 /IMAP",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. COPY ist hier nicht die gewünschte XCOPY-Zeile und SMTP/POP3/IMAP sind E-Mail-Protokolle."
+            },
+            {
+                "text": "XCOPY S:\\Projekte-bak\\ D:\\Projekte /FORMAT /DELETE",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Quelle und Ziel sind vertauscht, außerdem passen die Parameter nicht zur Aufgabe."
+            },
+            {
+                "text": "XCOPY D:\\Projekte /LABEL /RADIO /CHECKBOX",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Label, Radio und Checkbox sind GUI-Begriffe, keine passenden XCOPY-Parameter."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_scripting_sys_14",
+        "kategorie": "Dateisystem - Kopierfehler",
+        "frage": "Welche Ursachen können dazu führen, dass eine Datei bei einem Backup nicht kopiert werden kann? (Wählen Sie 3)",
+        "typ": "multiple-choice",
+        "hinweis": "Denke an geöffnete Dateien, Berechtigungen und Lesefehler.",
+        "antwortOptionen": [
+            {
+                "text": "Die Datei ist gerade geöffnet.",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Geöffnete oder gesperrte Dateien können je nach Programm und Zugriff nicht kopiert werden."
+            },
+            {
+                "text": "Für die Datei fehlen die notwendigen Berechtigungen.",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Ohne ausreichende Rechte kann eine Datei nicht gelesen oder kopiert werden."
+            },
+            {
+                "text": "Es liegt ein Lesefehler auf dem Datenträger vor.",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Bei Datenträger- oder Lesefehlern kann der Kopiervorgang fehlschlagen."
+            },
+            {
+                "text": "Die Datei hat einen Namen mit mehr als drei Buchstaben.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Ein Dateiname mit mehr als drei Buchstaben ist grundsätzlich kein Kopierfehler."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_scripting_sys_15",
+        "kategorie": "NTFS-Berechtigungen",
+        "frage": "Welche Berechtigungen sind typisch, wenn ein Benutzer Dateien lesen, schreiben und Ordnerinhalte auflisten können soll?",
+        "typ": "single-choice",
+        "hinweis": "Gesucht sind Lesen, Schreiben und Anzeigen von Ordnerinhalten.",
+        "antwortOptionen": [
+            {
+                "text": "Read, Write, List Folder Contents",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Diese Rechte erlauben Lesen, Schreiben und das Auflisten von Ordnerinhalten."
+            },
+            {
+                "text": "Nur Full-Control",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Full-Control wäre deutlich umfangreicher als nötig."
+            },
+            {
+                "text": "Nur Execute",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Execute erlaubt Ausführen, deckt aber nicht Schreiben und Auflisten ab."
+            },
+            {
+                "text": "Deny All",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Damit würde der Zugriff verweigert."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_scripting_sys_16",
+        "kategorie": "Speicherverwaltung - Clustergröße",
+        "frage": "Nach einer Kopie belegt dieselbe Datenmenge auf dem Ziellaufwerk mehr Speicherplatz als auf dem Ursprungslaufwerk. Welche Erklärung ist plausibel?",
+        "typ": "single-choice",
+        "hinweis": "Denke an die Größe der Zuordnungseinheiten, auch Cluster-Size genannt.",
+        "antwortOptionen": [
+            {
+                "text": "Das Ziellaufwerk hat eine größere Cluster-Size als das Ursprungslaufwerk.",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Größere Zuordnungseinheiten können mehr ungenutzten Speicher pro Datei verursachen. Kleinere Cluster sind bei vielen kleinen Dateien oft speichereffizienter."
+            },
+            {
+                "text": "SMTP hat die Dateien beim Kopieren vergrößert.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. SMTP ist ein E-Mail-Protokoll und hat mit der Clustergröße eines Dateisystems nichts zu tun."
+            },
+            {
+                "text": "Eine größere Cluster-Size erhöht immer die nutzbare Kapazität.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Größere Cluster können bei vielen kleinen Dateien zu mehr Verschnitt führen."
+            },
+            {
+                "text": "Der Dateiname wird bei jeder Kopie automatisch verdoppelt.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das ist keine sinnvolle Erklärung für unterschiedliche Speicherbelegung."
+            }
+        ]
+    }
+]

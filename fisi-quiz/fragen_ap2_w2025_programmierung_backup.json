@@ -1,0 +1,408 @@
+[
+    {
+        "id": "ap2_w2025_code_backup_01",
+        "kategorie": "Programmierung - Arrays",
+        "frage": "Ein Array hat 50 Felder mit den gültigen Indizes 0 bis 49. Warum kann eine Schleife mit der Bedingung i <= 50 zu einem Fehler führen?",
+        "typ": "single-choice",
+        "hinweis": "Der letzte gültige Index ist bei 50 Feldern nicht 50.",
+        "antwortOptionen": [
+            {
+                "text": "Weil bei i = 50 auf ein Feld außerhalb des Arrays zugegriffen wird.",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Bei 50 Feldern sind die Indizes 0 bis 49 gültig. Index 50 liegt außerhalb des Arrays und führt zu einem Out-of-Range-Fehler."
+            },
+            {
+                "text": "Weil Arrays grundsätzlich bei 1 beginnen.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. In vielen Sprachen beginnen Arrays bei Index 0."
+            },
+            {
+                "text": "Weil der Wert 50 niemals in Variablen gespeichert werden darf.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Der Wert 50 ist erlaubt, aber nicht als Index in einem Array mit 50 Feldern."
+            },
+            {
+                "text": "Weil die Schleife dadurch gar nicht startet.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Sie startet, läuft aber am Ende zu weit."
+            }
+        ]
+    },
+    {
+        "id": "ap2_w2025_code_backup_02",
+        "kategorie": "Programmierung - Arrays",
+        "frage": "Welche Korrektur verhindert bei einem Array mit 50 Feldern typischerweise einen Zugriff außerhalb der Grenzen?",
+        "typ": "single-choice",
+        "hinweis": "Die Schleife soll nur bis Index 49 laufen.",
+        "antwortOptionen": [
+            {
+                "text": "Die Schleifenbedingung von i <= anzahl auf i < anzahl ändern.",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Wenn anzahl = 50 ist, läuft i < anzahl nur von 0 bis 49."
+            },
+            {
+                "text": "Die Schleife bei i = 100 starten.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das würde direkt außerhalb des gültigen Indexbereichs liegen."
+            },
+            {
+                "text": "Den Arrayzugriff komplett ohne Index schreiben.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Ein Arrayelement muss über einen gültigen Index angesprochen werden."
+            },
+            {
+                "text": "Die Prüfung auf freie Felder entfernen.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das löst den Grenzfehler nicht sinnvoll."
+            }
+        ]
+    },
+    {
+        "id": "ap2_w2025_code_backup_03",
+        "kategorie": "Programmierung - Validierung",
+        "frage": "Eine Service-ID muss siebenstellig sein und zwischen 1111111 und 9999999 liegen. Welche if-Bedingung prüft diesen Bereich korrekt?",
+        "typ": "single-choice",
+        "hinweis": "Beide Bedingungen müssen gleichzeitig erfüllt sein: Untergrenze und Obergrenze.",
+        "antwortOptionen": [
+            {
+                "text": "if ((serviceID >= 1111111) && (serviceID <= 9999999))",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Die ID muss mindestens 1111111 und höchstens 9999999 sein. Daher wird eine UND-Verknüpfung benötigt."
+            },
+            {
+                "text": "if ((serviceID <= 1111111) && (serviceID >= 9999999))",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Diese Bedingung kann für gültige IDs nicht sinnvoll erfüllt werden."
+            },
+            {
+                "text": "if ((serviceID >= 1111111) || (serviceID <= 9999999))",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Mit ODER wären auch viele ungültige Werte erlaubt."
+            },
+            {
+                "text": "if (serviceID == 0)",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. 0 markiert freie Felder im Array, ist aber keine gültige siebenstellige Service-ID."
+            }
+        ]
+    },
+    {
+        "id": "ap2_w2025_code_backup_04",
+        "kategorie": "Programmierung - Ganzzahldivision & Modulo",
+        "frage": "Eine siebenstellige Service-ID ist so aufgebaut: Stellen 1-2 = Fehlerquelle, Stelle 3 = Priorität, Stellen 4-7 = Fehlercode. Wie kann die Priorität aus serviceID = 9123456 rechnerisch ermittelt werden?",
+        "typ": "single-choice",
+        "hinweis": "Mit Ganzzahldivision entfernst du die letzten vier Stellen. Mit Modulo 10 holst du danach die letzte verbliebene Stelle.",
+        "antwortOptionen": [
+            {
+                "text": "prioritaet = (serviceID / 10000) % 10",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! 9123456 / 10000 ergibt 912. 912 % 10 ergibt 2. Die Priorität ist also 2."
+            },
+            {
+                "text": "prioritaet = serviceID % 10000",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das liefert den Fehlercode 3456, nicht die Priorität."
+            },
+            {
+                "text": "prioritaet = serviceID / 1000000",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das liefert nur die erste Stelle, nicht die dritte Stelle."
+            },
+            {
+                "text": "prioritaet = serviceID + 10000",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Addition extrahiert keine Stelle aus der ID."
+            }
+        ]
+    },
+    {
+        "id": "ap2_w2025_code_backup_05",
+        "kategorie": "Softwaretest",
+        "frage": "Was beschreibt einen White-Box-Test?",
+        "typ": "single-choice",
+        "hinweis": "White-Box bedeutet: Die innere Struktur ist bekannt.",
+        "antwortOptionen": [
+            {
+                "text": "Der Quellcode bzw. die interne Struktur wird analysiert und beim Test berücksichtigt.",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Beim White-Box-Test kennt der Tester die interne Logik und kann gezielt Codepfade prüfen."
+            },
+            {
+                "text": "Es wird nur die Benutzeroberfläche betrachtet, der Quellcode ist unbekannt.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das beschreibt eher einen Black-Box-Test."
+            },
+            {
+                "text": "Es wird ausschließlich Hardware getestet.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. White-Box ist ein Softwaretestverfahren."
+            },
+            {
+                "text": "Das Programm wird ohne Testdaten installiert und sofort produktiv geschaltet.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das wäre kein sinnvolles Testverfahren."
+            }
+        ]
+    },
+    {
+        "id": "ap2_w2025_code_backup_06",
+        "kategorie": "Softwaretest",
+        "frage": "Was beschreibt einen Black-Box-Test?",
+        "typ": "single-choice",
+        "hinweis": "Black-Box bedeutet: Man prüft Verhalten anhand von Eingaben und Ausgaben, ohne den inneren Code zu kennen.",
+        "antwortOptionen": [
+            {
+                "text": "Das Programm wird anhand von Testdaten und Spezifikationen geprüft, ohne den Quellcode zu analysieren.",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Beim Black-Box-Test zählt das beobachtbare Verhalten. Die interne Struktur ist nicht Gegenstand des Tests."
+            },
+            {
+                "text": "Der Quellcode muss vollständig offengelegt und zeilenweise analysiert werden.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das beschreibt einen White-Box-Test."
+            },
+            {
+                "text": "Es wird ausschließlich die Stromversorgung des Servers getestet.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Black-Box ist ein Softwaretestverfahren."
+            },
+            {
+                "text": "Testdaten spielen keine Rolle.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Die Qualität eines Black-Box-Tests hängt stark von geeigneten Testdaten ab."
+            }
+        ]
+    },
+    {
+        "id": "ap2_w2025_code_backup_07",
+        "kategorie": "Zuverlässigkeit - MTBF/MTTF",
+        "frage": "Welche Aussage zu MTBF und MTTF ist richtig?",
+        "typ": "single-choice",
+        "hinweis": "MTBF wird bei reparierbaren Systemen genutzt, MTTF bei nicht reparierten bzw. auszutauschenden Komponenten.",
+        "antwortOptionen": [
+            {
+                "text": "MTBF ist vor allem für reparierbare Systeme relevant, MTTF eher für Komponenten, die bei Defekt ersetzt werden.",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Ein Backup-System kann meist instandgesetzt werden, daher ist MTBF wichtig. Einzelne defekte Festplatten werden oft ersetzt, daher passt MTTF."
+            },
+            {
+                "text": "MTBF bedeutet maximale Temperatur beim Formatieren.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. MTBF steht für Mean Time Between Failures."
+            },
+            {
+                "text": "MTTF gilt nur für Softwarelizenzen.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. MTTF wird bei nicht reparierbaren bzw. ersetzten Komponenten verwendet."
+            },
+            {
+                "text": "MTBF und MTTF sind identisch und immer beliebig austauschbar.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Die Begriffe haben unterschiedliche Einsatzbereiche."
+            }
+        ]
+    },
+    {
+        "id": "ap2_w2025_code_backup_08",
+        "kategorie": "RAID - Ausfallsicherheit",
+        "frage": "Welchen Vorteil bietet RAID 6 gegenüber RAID 5?",
+        "typ": "single-choice",
+        "hinweis": "RAID 6 nutzt mehr Paritätsinformationen.",
+        "antwortOptionen": [
+            {
+                "text": "RAID 6 kann den Ausfall von bis zu zwei Festplatten tolerieren.",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! RAID 6 nutzt zwei Paritätsblöcke und ist dadurch gegenüber RAID 5 ausfallsicherer."
+            },
+            {
+                "text": "RAID 6 benötigt keine Festplatten.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. RAID 6 ist ein Festplattenverbund."
+            },
+            {
+                "text": "RAID 6 speichert keine Paritätsdaten.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. RAID 6 basiert gerade auf doppelter Parität."
+            },
+            {
+                "text": "RAID 6 ist immer langsamer als jede Einzelfestplatte und deshalb unbrauchbar.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. RAID 6 hat Vor- und Nachteile, ist aber keineswegs grundsätzlich unbrauchbar."
+            }
+        ]
+    },
+    {
+        "id": "ap2_w2025_code_backup_09",
+        "kategorie": "RAID - Kapazitätsberechnung",
+        "frage": "RECHENAUFGABE: Ein RAID-6-System besteht aus 20 Festplatten mit je 8 TiB. Wie groß ist die Nettospeicherkapazität?",
+        "typ": "single-choice",
+        "hinweis": "Bei RAID 6 werden zwei Plattenkapazitäten für Parität abgezogen.",
+        "antwortOptionen": [
+            {
+                "text": "144 TiB",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Bei RAID 6: (20 - 2) × 8 TiB = 18 × 8 TiB = 144 TiB."
+            },
+            {
+                "text": "160 TiB",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. 160 TiB wäre 20 × 8 TiB ohne Abzug der Parität."
+            },
+            {
+                "text": "152 TiB",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das entspräche nur dem Abzug einer Platte, eher wie bei RAID 5."
+            },
+            {
+                "text": "80 TiB",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das ist deutlich zu wenig für 20 Platten mit RAID 6."
+            }
+        ]
+    },
+    {
+        "id": "ap2_w2025_code_backup_10",
+        "kategorie": "Backup - LTO-Bandlaufwerk",
+        "frage": "Welche Gründe sprechen für den Einsatz eines LTO-Bandlaufwerks im Backup-Konzept? (Wählen Sie 3)",
+        "typ": "multiple-choice",
+        "hinweis": "Denke an Kapazität, Kosten, Langzeitaufbewahrung und Offline-Schutz.",
+        "antwortOptionen": [
+            {
+                "text": "Hohe Speicherkapazität",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Bandmedien eignen sich für große Datenmengen."
+            },
+            {
+                "text": "Offline-Speicherung zum Schutz vor bestimmten Angriffen",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Offline gelagerte Bänder sind nicht dauerhaft aus dem Netz erreichbar."
+            },
+            {
+                "text": "Kosteneffizienz bei langfristiger Archivierung",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Für große Datenmengen und längere Aufbewahrung können Bänder kostengünstig sein."
+            },
+            {
+                "text": "Ein Bandlaufwerk verhindert automatisch jeden Datenverlust ohne Backup-Plan.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Auch mit Bandlaufwerk braucht man ein sauberes Backup- und Restore-Konzept."
+            }
+        ]
+    },
+    {
+        "id": "ap2_w2025_code_backup_11",
+        "kategorie": "Backup - Inkrementell",
+        "frage": "Bei einer Wiederherstellung nach einem Datenverlust am Mittag des 14. Mai liegt das letzte Vollbackup vom 7. Mai auf Band B08. Danach gibt es tägliche inkrementelle Sicherungen B09 bis B14. Welche Bänder werden benötigt?",
+        "typ": "single-choice",
+        "hinweis": "Bei inkrementellen Sicherungen brauchst du das letzte Vollbackup und alle folgenden inkrementellen Sicherungen bis zum gewünschten Stand.",
+        "antwortOptionen": [
+            {
+                "text": "B08, B09, B10, B11, B12, B13, B14",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Erst wird das Vollbackup B08 wiederhergestellt, danach alle inkrementellen Sicherungen bis B14 in Reihenfolge."
+            },
+            {
+                "text": "Nur B14",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Eine inkrementelle Sicherung enthält nur Änderungen seit der vorherigen Sicherung. Das Vollbackup und die Zwischenstände werden benötigt."
+            },
+            {
+                "text": "B01 bis B23",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Für den Stand am 14. Mai werden nicht alle Bänder benötigt."
+            },
+            {
+                "text": "Nur B08 und B14",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Bei inkrementellem Backup fehlen dann die Änderungen aus B09 bis B13."
+            }
+        ]
+    },
+    {
+        "id": "ap2_w2025_code_backup_12",
+        "kategorie": "Backup - Großvater-Vater-Sohn",
+        "frage": "Im Großvater-Vater-Sohn-Prinzip ist das Vollbackup B22 vom 21. Mai der Sohn. Welche Bänder sind dann Vater und Großvater, wenn die vorherigen Vollbackups B15 und B08 waren?",
+        "typ": "single-choice",
+        "hinweis": "Der Vater ist die vorherige Generation, der Großvater die Generation davor.",
+        "antwortOptionen": [
+            {
+                "text": "Vater: B15, Großvater: B08",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Wenn B22 der Sohn ist, ist das vorherige Vollbackup B15 der Vater und B08 der Großvater."
+            },
+            {
+                "text": "Vater: B08, Großvater: B15",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Die Reihenfolge ist vertauscht."
+            },
+            {
+                "text": "Vater: B21, Großvater: B20",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. B21 und B20 sind inkrementelle Sicherungen, nicht die passenden Vollbackup-Generationen."
+            },
+            {
+                "text": "Vater: B23, Großvater: B22",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. B23 ist eine spätere inkrementelle Sicherung und B22 ist bereits als Sohn definiert."
+            }
+        ]
+    },
+    {
+        "id": "ap2_w2025_code_backup_13",
+        "kategorie": "Backup vs. Archivierung",
+        "frage": "Was ist der Hauptunterschied zwischen Datensicherung und Datenarchivierung?",
+        "typ": "single-choice",
+        "hinweis": "Backup dient Wiederherstellung nach Verlust. Archivierung dient langfristiger Aufbewahrung.",
+        "antwortOptionen": [
+            {
+                "text": "Backups dienen der Wiederherstellung nach Datenverlust, Archive der langfristigen Aufbewahrung seltener genutzter Daten.",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Eine Datensicherung soll Systeme oder Daten nach einem Verlust wiederherstellen. Archivierung bewahrt Daten langfristig auf, oft aus rechtlichen oder organisatorischen Gründen."
+            },
+            {
+                "text": "Archivierung ist dasselbe wie RAM-Erweiterung.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Archivierung betrifft langfristige Datenspeicherung, nicht Arbeitsspeicher."
+            },
+            {
+                "text": "Backups dürfen nie wiederhergestellt werden.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Wiederherstellung ist der Zweck eines Backups."
+            },
+            {
+                "text": "Archive sind immer temporäre Dateien, die nach einem Neustart gelöscht werden.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Archive sind gerade langfristig gedacht."
+            }
+        ]
+    },
+    {
+        "id": "ap2_w2025_code_backup_14",
+        "kategorie": "Backup - Organisation",
+        "frage": "Welche organisatorischen Maßnahmen erhöhen Sicherheit und Verfügbarkeit von Unternehmensdaten? (Wählen Sie 3)",
+        "typ": "multiple-choice",
+        "hinweis": "Denke nicht nur an Technik, sondern auch an Planung, Tests und Verantwortlichkeiten.",
+        "antwortOptionen": [
+            {
+                "text": "Regelmäßige Sicherungskopien durchführen und dokumentieren",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Regelmäßige und dokumentierte Backups sind Grundlage für Wiederherstellbarkeit."
+            },
+            {
+                "text": "Notfallplan für Datenverlust erstellen",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Ein Notfallplan legt fest, wer was im Störfall tut."
+            },
+            {
+                "text": "Wiederherstellung regelmäßig testen",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Ein Backup ist nur dann wertvoll, wenn der Restore auch funktioniert."
+            },
+            {
+                "text": "Alle Backup-Verantwortlichkeiten ungeklärt lassen",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Unklare Verantwortlichkeiten gefährden Sicherheit und Verfügbarkeit."
+            }
+        ]
+    }
+]

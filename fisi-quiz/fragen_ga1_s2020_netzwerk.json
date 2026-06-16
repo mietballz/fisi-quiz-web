@@ -1,0 +1,350 @@
+[
+    {
+        "id": "ga1_s2020_netzwerk_01",
+        "kategorie": "Netzwerktechnik - IPv4-Konfiguration",
+        "frage": "Ein Server hat die IPv4-Adresse 10.0.3.200 mit der Subnetzmaske 255.255.252.0. Als Standardgateway ist 200.0.0.2 eingetragen. Was ist der Fehler?",
+        "typ": "single-choice",
+        "hinweis": "Das Standardgateway muss für den Host direkt erreichbar sein. Prüfe, ob die Gateway-Adresse im gleichen lokalen Netz liegt.",
+        "antwortOptionen": [
+            {
+                "text": "Das Standardgateway liegt nicht im lokalen Netz des Servers.",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Der Server befindet sich im Netz 10.0.0.0/22. Ein Gateway wie 200.0.0.2 liegt außerhalb dieses Netzes und ist nicht direkt erreichbar. Sinnvoll wäre z. B. 10.0.3.254."
+            },
+            {
+                "text": "Die Subnetzmaske 255.255.252.0 ist grundsätzlich ungültig.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. 255.255.252.0 entspricht /22 und ist eine gültige Subnetzmaske."
+            },
+            {
+                "text": "Die Serveradresse 10.0.3.200 ist eine Broadcastadresse.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Im Netz 10.0.0.0/22 ist 10.0.3.200 eine nutzbare Hostadresse."
+            },
+            {
+                "text": "Ein Server darf kein Standardgateway besitzen.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Ein Server benötigt ein Gateway, wenn er Netze außerhalb seines eigenen Subnetzes erreichen soll."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_netzwerk_02",
+        "kategorie": "Netzwerktechnik - Gateway & DNS",
+        "frage": "Ein Client im Netz 10.0.0.0/22 hat als Standardgateway 10.0.3.200 und als DNS-Server 10.0.3.254 eingetragen. Der Router hat die Adresse 10.0.3.254, der DNS-Server 10.0.3.200. Was ist zu tun?",
+        "typ": "single-choice",
+        "hinweis": "Überlege, welches Gerät routet und welches Gerät Namen auflöst.",
+        "antwortOptionen": [
+            {
+                "text": "Gateway und DNS-Server wurden vertauscht und müssen korrigiert werden.",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Der Router muss als Standardgateway eingetragen werden: 10.0.3.254. Der DNS-Server ist 10.0.3.200."
+            },
+            {
+                "text": "Die IP-Adresse des Clients muss auf 200.0.0.2 geändert werden.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Der Client gehört zum internen Netz 10.0.0.0/22. Eine andere Netzadresse würde das Problem nicht lösen."
+            },
+            {
+                "text": "Der DNS-Server muss immer dieselbe Adresse wie das Gateway haben.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. DNS und Gateway sind unterschiedliche Funktionen und können auf verschiedenen Systemen liegen."
+            },
+            {
+                "text": "Die Subnetzmaske muss auf 255.255.255.255 gesetzt werden.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. 255.255.255.255 wäre eine Hostroute und für ein normales LAN ungeeignet."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_netzwerk_03",
+        "kategorie": "Netzwerktechnik - DMZ",
+        "frage": "Ein Mailserver in der DMZ hat die Adresse 192.168.99.1/29. Als Standardgateway ist 192.168.99.7 eingetragen. Warum ist diese Gateway-Adresse falsch?",
+        "typ": "single-choice",
+        "hinweis": "Berechne den Adressbereich eines /29-Netzes: 8 Adressen, davon eine Netzadresse und eine Broadcastadresse.",
+        "antwortOptionen": [
+            {
+                "text": "192.168.99.7 ist bei 192.168.99.0/29 die Broadcastadresse.",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Das Netz 192.168.99.0/29 umfasst .0 bis .7. .0 ist die Netzadresse, .7 ist die Broadcastadresse. Nutzbare Hosts sind .1 bis .6."
+            },
+            {
+                "text": "192.168.99.7 liegt in einem öffentlichen Netz und darf intern nicht genutzt werden.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. 192.168.x.x ist ein privater Adressbereich. Das Problem ist hier die Broadcastadresse im /29-Netz."
+            },
+            {
+                "text": "192.168.99.1 ist keine gültige Hostadresse.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. 192.168.99.1 ist in diesem /29-Netz eine gültige Hostadresse."
+            },
+            {
+                "text": "Ein Mailserver darf grundsätzlich kein Gateway haben.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Ein Mailserver braucht ein Gateway, wenn er Systeme außerhalb seines lokalen Netzes erreichen soll."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_netzwerk_04",
+        "kategorie": "Netzwerktechnik - Subnetzberechnung",
+        "frage": "RECHENAUFGABE: Wie viele nutzbare Hostadressen besitzt das IPv4-Netz 192.168.99.0/29?",
+        "typ": "single-choice",
+        "hinweis": "/29 bedeutet: 32 - 29 = 3 Hostbits. Rechne 2³ Adressen und ziehe Netz- und Broadcastadresse ab.",
+        "antwortOptionen": [
+            {
+                "text": "4 nutzbare Hostadressen",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. 4 wäre zu wenig. Ein /29-Netz hat 8 Gesamtadressen."
+            },
+            {
+                "text": "6 nutzbare Hostadressen",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! /29 hat 3 Hostbits. 2³ = 8 Gesamtadressen. Davon sind eine Netzadresse und eine Broadcastadresse nicht für Hosts nutzbar. 8 - 2 = 6 nutzbare Hostadressen."
+            },
+            {
+                "text": "8 nutzbare Hostadressen",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. 8 ist die Gesamtzahl der Adressen, aber Netz- und Broadcastadresse sind nicht nutzbar."
+            },
+            {
+                "text": "29 nutzbare Hostadressen",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. /29 ist die Präfixlänge, nicht die Anzahl nutzbarer Hosts."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_netzwerk_05",
+        "kategorie": "Routing",
+        "frage": "Die Zentrale hat eine WAN-Verbindung zur Filiale. Das Filialnetz lautet 192.168.10.0/24. In der Routingtabelle der Zentrale fehlt ein Eintrag zu diesem Netz. Was ist die Folge?",
+        "typ": "single-choice",
+        "hinweis": "Ein Router kann Pakete nur zustellen, wenn er eine passende Route kennt oder eine passende Default-Route verwenden soll.",
+        "antwortOptionen": [
+            {
+                "text": "Pakete zur Filiale können nicht korrekt geroutet werden.",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Ohne Route zum Netz 192.168.10.0/24 weiß der Router der Zentrale nicht, über welche Schnittstelle bzw. welchen Next Hop die Filiale erreichbar ist."
+            },
+            {
+                "text": "Die DNS-Auflösung im Internet wird dadurch schneller.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Eine fehlende Route zur Filiale hat nichts mit einer schnelleren DNS-Auflösung zu tun."
+            },
+            {
+                "text": "Alle Clients erhalten automatisch neue IP-Adressen.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Routingtabellen beeinflussen nicht automatisch die IP-Vergabe per DHCP."
+            },
+            {
+                "text": "Das Filialnetz wird automatisch über die DMZ erreichbar.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Ohne passenden Routingeintrag entsteht keine automatische Erreichbarkeit über die DMZ."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_netzwerk_06",
+        "kategorie": "Routing",
+        "frage": "Welche Route wäre sinnvoll, damit die Zentrale das Filialnetz 192.168.10.0/24 über die WAN-Verbindung erreicht?",
+        "typ": "single-choice",
+        "hinweis": "Gesucht ist eine Route zum Zielnetz der Filiale, nicht eine Default-Route ins Internet.",
+        "antwortOptionen": [
+            {
+                "text": "Route zum Netz 192.168.10.0 mit Maske 255.255.255.0 über die WAN-Schnittstelle zur Filiale.",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Eine passende Route muss das Filialnetz 192.168.10.0/24 über die WAN-Verbindung bzw. den Next Hop der Filiale eintragen."
+            },
+            {
+                "text": "Route zum Netz 10.0.0.0 mit Maske 255.255.252.0 über die DMZ.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. 10.0.0.0/22 ist das Netz der Zentrale, nicht das Filialnetz."
+            },
+            {
+                "text": "Route zum Netz 127.0.0.0 mit Maske 255.0.0.0 über das Internet.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. 127.0.0.0/8 ist der Loopback-Bereich und nicht für Routing zur Filiale geeignet."
+            },
+            {
+                "text": "Keine Route, weil private IPv4-Netze nicht geroutet werden können.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Private IPv4-Netze können innerhalb eines Unternehmensnetzes sehr wohl geroutet werden."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_netzwerk_07",
+        "kategorie": "DNS",
+        "frage": "Warum richtet ein interner DNS-Server eine Weiterleitung an einen externen DNS-Server ein?",
+        "typ": "single-choice",
+        "hinweis": "Ein interner DNS-Server kennt normalerweise seine eigene Zone. Für fremde Domains braucht er eine Möglichkeit zur externen Auflösung.",
+        "antwortOptionen": [
+            {
+                "text": "Damit Hostnamen außerhalb der eigenen DNS-Zone aufgelöst werden können.",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Der interne DNS-Server ist für die eigene Zone zuständig. Anfragen zu fremden Domains kann er an einen externen DNS-Server weiterleiten."
+            },
+            {
+                "text": "Damit die Subnetzmaske automatisch berechnet wird.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. DNS hat nichts mit der Berechnung von Subnetzmasken zu tun."
+            },
+            {
+                "text": "Damit das Standardgateway ersetzt werden kann.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. DNS-Weiterleitungen ersetzen kein Gateway und kein Routing."
+            },
+            {
+                "text": "Damit alle Clients ohne IP-Adresse kommunizieren können.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Auch mit DNS benötigen Geräte weiterhin IP-Adressen für die Kommunikation."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_netzwerk_08",
+        "kategorie": "IPv6 - Subnetting",
+        "frage": "RECHENAUFGABE: Ein Provider stellt das IPv6-Netz 2a02:ac20:e0:a000::/56 bereit. Es sollen 4 gleich große Subnetze entstehen. Wie viele zusätzliche Subnetzbits werden benötigt?",
+        "typ": "single-choice",
+        "hinweis": "Gesucht ist die Anzahl Bits, mit denen du mindestens 4 Kombinationen bilden kannst.",
+        "antwortOptionen": [
+            {
+                "text": "1 Bit",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. 1 Bit ergibt nur 2 Kombinationen und reicht daher nur für 2 Subnetze."
+            },
+            {
+                "text": "2 Bit",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! 2² = 4. Für vier gleich große Subnetze werden also 2 zusätzliche Subnetzbits benötigt."
+            },
+            {
+                "text": "4 Bit",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. 4 Bit würden 16 Subnetze ermöglichen. Das ist mehr als gefordert."
+            },
+            {
+                "text": "8 Bit",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. 8 Bit würden 256 Subnetze ermöglichen und sind für diese Aufgabe nicht nötig."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_netzwerk_09",
+        "kategorie": "IPv6 - Subnetting",
+        "frage": "RECHENAUFGABE: Aus einem IPv6-/56-Netz werden mit 2 zusätzlichen Subnetzbits vier gleich große Subnetze gebildet. Welches Präfix haben die neuen Subnetze?",
+        "typ": "single-choice",
+        "hinweis": "Beim Subnetting wird das Präfix länger: ursprüngliches Präfix plus zusätzliche Subnetzbits.",
+        "antwortOptionen": [
+            {
+                "text": "/54",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. /54 wäre ein größeres Netz, nicht ein kleineres Subnetz."
+            },
+            {
+                "text": "/56",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. /56 ist das ursprüngliche Netz. Für vier Subnetze müssen zusätzliche Bits genutzt werden."
+            },
+            {
+                "text": "/58",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Ursprung: /56. Zusätzliche Subnetzbits: 2. Neues Präfix: /56 + 2 = /58."
+            },
+            {
+                "text": "/64",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. /64 ist im IPv6-LAN häufig, aber für genau vier gleich große Subnetze aus /56 ist /58 korrekt."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_netzwerk_10",
+        "kategorie": "IPv6 - Subnetting",
+        "frage": "Welche vier Netz-IDs entstehen, wenn 2a02:ac20:e0:a000::/56 in vier gleich große /58-Subnetze aufgeteilt wird?",
+        "typ": "single-choice",
+        "hinweis": "Bei /58 entstehen im relevanten Hex-Block Schritte von 0x40.",
+        "antwortOptionen": [
+            {
+                "text": "2a02:ac20:e0:a000::, 2a02:ac20:e0:a040::, 2a02:ac20:e0:a080::, 2a02:ac20:e0:a0c0::",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Die vier /58-Subnetze starten im relevanten Bereich bei a000, a040, a080 und a0c0."
+            },
+            {
+                "text": "2a02:ac20:e0:a000::, 2a02:ac20:e0:a001::, 2a02:ac20:e0:a002::, 2a02:ac20:e0:a003::",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Diese Schritte sind zu klein und entsprechen nicht der /58-Aufteilung."
+            },
+            {
+                "text": "2a02:ac20:e0:a000::, 2a02:ac20:e0:b000::, 2a02:ac20:e0:c000::, 2a02:ac20:e0:d000::",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Diese Schritte sind zu groß für vier /58-Subnetze aus dem gegebenen /56-Bereich."
+            },
+            {
+                "text": "2a02:ac20:e0:a000::, 2a02:ac20:e0:a100::, 2a02:ac20:e0:a200::, 2a02:ac20:e0:a300::",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Die Schrittweite 0x100 passt nicht zur /58-Aufteilung. Korrekt ist 0x40."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_netzwerk_11",
+        "kategorie": "WLAN - Mesh",
+        "frage": "Welcher Vorteil kann ein Mesh-WLAN gegenüber einzelnen, klassisch angebundenen Access Points haben?",
+        "typ": "single-choice",
+        "hinweis": "Denke an Reichweite, Handover und flexible Platzierung von Access Points.",
+        "antwortOptionen": [
+            {
+                "text": "Mesh-Knoten können untereinander funken und ermöglichen oft flexiblere Platzierung sowie besseres Roaming.",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! In einem Mesh können Access Points bzw. Mesh-Knoten Daten auch untereinander per Funk weitergeben. Dadurch sind Aufbau, Abdeckung und Roaming oft flexibler."
+            },
+            {
+                "text": "Ein Mesh-WLAN benötigt grundsätzlich keine Stromversorgung.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Auch Mesh-Geräte benötigen Strom. Nur die Datenanbindung kann je nach Aufbau per Funk statt per LAN erfolgen."
+            },
+            {
+                "text": "Ein Mesh-WLAN macht Verschlüsselung überflüssig.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Auch Mesh-WLANs müssen abgesichert werden, z. B. mit WPA2/WPA3."
+            },
+            {
+                "text": "Ein Mesh-WLAN verhindert automatisch alle Funkstörungen.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Mesh kann die Abdeckung verbessern, aber Funkstörungen nicht grundsätzlich verhindern."
+            }
+        ]
+    },
+    {
+        "id": "ga1_s2020_netzwerk_12",
+        "kategorie": "WLAN - Sicherheit",
+        "frage": "Warum ist WPA2-Enterprise in Unternehmen oft besser geeignet als ein gemeinsam genutzter WLAN-Schlüssel?",
+        "typ": "single-choice",
+        "hinweis": "Denke an individuelle Benutzerkonten und daran, was passiert, wenn ein Mitarbeiter das Unternehmen verlässt.",
+        "antwortOptionen": [
+            {
+                "text": "Weil Benutzer individuell authentifiziert werden können, z. B. über einen RADIUS-Server.",
+                "istKorrekt": true,
+                "loesungsweg": "Richtig! Bei WPA2-Enterprise können Benutzer eigene Zugangsdaten verwenden. Verlässt jemand das Unternehmen, kann sein Zugang gezielt deaktiviert werden."
+            },
+            {
+                "text": "Weil WPA2-Enterprise komplett ohne Authentifizierung funktioniert.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Gerade die Authentifizierung ist der zentrale Vorteil von WPA2-Enterprise."
+            },
+            {
+                "text": "Weil alle Benutzer denselben Schlüssel nutzen müssen.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. Das wäre eher typisch für WPA2-Personal mit gemeinsamem Pre-Shared Key."
+            },
+            {
+                "text": "Weil WPA2-Enterprise automatisch jedes Netzwerkkabel ersetzt.",
+                "istKorrekt": false,
+                "loesungsweg": "Falsch. WPA2-Enterprise betrifft WLAN-Sicherheit, ersetzt aber nicht automatisch die gesamte Netzwerkverkabelung."
+            }
+        ]
+    }
+]
