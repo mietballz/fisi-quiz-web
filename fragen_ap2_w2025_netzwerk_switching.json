@@ -1,0 +1,35 @@
+[
+{
+  "id": 202502,
+  "frage": "In der Abteilung Kundenbetreuung gibt es zeitweise eine extrem schlechte Netzwerkperformance. Am Switch wird an einem einzelnen Port eine ungewöhnlich hohe und konstante Aktivität (Auslastung) festgestellt. Was sind wahrscheinliche Ursachen?",
+  "kategorie": "AP2 - Switching",
+  "typ": "multiple-choice",
+  "antwortOptionen": [
+    {
+      "id": 1,
+      "text": "Es liegt ein Broadcast-Storm vor, verursacht durch eine fehlerhafte Netzwerkkarte eines Endgerätes.",
+      "istKorrekt": true,
+      "loesungsweg": "Korrekt. Eine defekte NIC (Network Interface Card) kann ununterbrochen Broadcast-Frames senden, die der Switch an alle anderen Ports weiterleitet und so das Netz lahmlegt."
+    },
+    {
+      "id": 2,
+      "text": "Es hat sich eine Switching-Loop (Schleife) gebildet und Spanning Tree Protocol (STP) ist deaktiviert.",
+      "istKorrekt": true,
+      "loesungsweg": "Korrekt. Wenn jemand z.B. ein Kabel versehentlich in zwei Dosen steckt und STP fehlt, kreisen Frames endlos im Netzwerk und lasten die Ports zu 100% aus."
+    },
+    {
+      "id": 3,
+      "text": "Das SFP-Modul für den Glasfaser-Uplink hat eine falsche Wellenlänge.",
+      "istKorrekt": false,
+      "loesungsweg": "Falsch. Eine falsche Wellenlänge am SFP-Modul führt zu einem kompletten Verbindungsabbruch (Link Down), nicht zu einer erhöhten Daten-Aktivität an einem einzelnen Client-Port."
+    },
+    {
+      "id": 4,
+      "text": "Der betroffene Port ist versehentlich im Half-Duplex-Modus konfiguriert worden.",
+      "istKorrekt": false,
+      "loesungsweg": "Falsch. Half-Duplex führt zwar zu Kollisionen und langsamer Geschwindigkeit, aber generiert keine 'deutlich erhöhte' Auslastung/Aktivität aus dem Nichts."
+    }
+  ]
+}
+]
+

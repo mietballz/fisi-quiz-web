@@ -1,0 +1,34 @@
+[
+  {
+    "id": 202501,
+    "frage": "Ein ISP stellt im Vertrag keine öffentliche IPv4-Adresse zur Verfügung, sondern nutzt Carrier-Grade-NAT (CGN) oder DS-Lite. Wie kann ein ankommender Tunnelaufbau via IPv4 in das lokale Netz dennoch realisiert werden?",
+    "kategorie": "AP2 - Netzwerk & Routing",
+    "typ": "multiple-choice",
+    "antwortOptionen": [
+      {
+        "id": 1,
+        "text": "Nutzung eines externen Portmappers, der eingehenden IPv4-Traffic auf eine IPv6-Adresse übersetzt.",
+        "istKorrekt": true,
+        "loesungsweg": "Korrekt. Da lokal keine öffentliche IPv4 existiert, nimmt der Portmapper (ein Server im Internet mit Dual-Stack) die IPv4-Anfrage an und leitet sie per IPv6 an das Heimnetz weiter."
+      },
+      {
+        "id": 2,
+        "text": "Aufbau eines ausgehenden Tunnels zu einem VPN-Dienstleister, der eine feste öffentliche IPv4-Adresse bereitstellt.",
+        "istKorrekt": true,
+        "loesungsweg": "Korrekt. Das interne Netz baut aktiv eine Verbindung nach außen (zum VPN-Server) auf. Eingehender Traffic läuft dann über diesen bereits etablierten Tunnel."
+      },
+      {
+        "id": 3,
+        "text": "Einrichtung einer statischen IPv4-Portweiterleitung (Port Forwarding) im lokalen Router.",
+        "istKorrekt": false,
+        "loesungsweg": "Falsch. Da der ISP CGN/DS-Lite nutzt, teilt man sich eine IPv4-Adresse mit vielen anderen Kunden. Der ISP leitet keine Ports auf den heimischen Router weiter."
+      },
+      {
+        "id": 4,
+        "text": "Deaktivierung von IPv6 am lokalen Router, um den ISP zur Vergabe einer dedizierten IPv4 zu zwingen.",
+        "istKorrekt": false,
+        "loesungsweg": "Falsch. Bei einem DS-Lite Anschluss funktioniert ohne IPv6 gar nichts mehr, da der IPv4-Traffic in IPv6-Pakete gekapselt wird (AFTR-Gateway)."
+      }
+    ]
+  }
+]

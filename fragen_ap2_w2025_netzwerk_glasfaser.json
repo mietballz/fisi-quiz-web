@@ -1,0 +1,34 @@
+[
+{
+  "id": 202503,
+  "frage": "Ein alter 24-Port-Switch mit SFP-Modul wurde gegen einen 48-Port-Switch getauscht. Die gesicherte Konfiguration des alten Switches wurde eingespielt. Nach dem Einschalten funktioniert der Glasfaser-Uplink nicht. Welche Fehlerquellen und passenden Lösungen sind hier denkbar?",
+  "kategorie": "AP2 - Glasfaser & Hardware",
+  "typ": "multiple-choice",
+  "antwortOptionen": [
+    {
+      "id": 1,
+      "text": "Sende- und Empfangsrichtung wurden vertauscht (TX/RX). Lösung: Auf einer Seite der LWL-Verbindung die Fasern/Stecker kreuzen.",
+      "istKorrekt": true,
+      "loesungsweg": "Korrekt. LWL kommuniziert gerichtet. Sendet Switch A auf der gleichen Faser, auf der Switch B auch sendet, kommt kein Link zustande (Kreuzung nötig)."
+    },
+    {
+      "id": 2,
+      "text": "Die übernommene Port-Konfiguration liegt auf den falschen physischen Ports. Lösung: Konfiguration des Glasfaser-Uplinks z.B. von Port 25/26 auf Port 49/50 verschieben.",
+      "istKorrekt": true,
+      "loesungsweg": "Korrekt. Bei einem 24-Port-Switch waren die SFP-Ports vermutlich Port 25/26. Beim 48-Port-Switch liegen sie aber auf 49/50. Die alte Config greift hier ins Leere."
+    },
+    {
+      "id": 3,
+      "text": "Das neue SFP-Modul nutzt eine andere Wellenlänge als die Gegenseite. Lösung: Modul tauschen, sodass beide Seiten die gleiche Wellenlänge (z.B. 1310 nm oder 850 nm) nutzen.",
+      "istKorrekt": true,
+      "loesungsweg": "Korrekt. Optische Transceiver müssen zwingend auf der exakt gleichen Wellenlänge funken, sonst sind sie füreinander 'blind'."
+    },
+    {
+      "id": 4,
+      "text": "Ein elektrischer Fehler blockiert das SFP-Modul. Lösung: Kupfer-Patchkabel von Port 1-48 abziehen, damit das SFP-Modul genügend Strom bekommt.",
+      "istKorrekt": false,
+      "loesungsweg": "Falsch. Switche haben Netzteile, die auf Volllast ausgelegt sind. Man muss keine Kupferports abziehen. Ein elektrischer Fehler wäre eher ein Wackelkontakt am SFP-Slot (Modul neu stecken)."
+    }
+  ]
+}
+]
