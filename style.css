@@ -13,7 +13,7 @@ body {
 #menu-view, #quiz-card {
     width: 100%;
     max-width: 520px;
-    box-shadow: none !important; /* Schatten komplett weg */
+    box-shadow: none !important; /* Alle Schatten restlos entfernt */
 }
 
 h1 {
@@ -21,13 +21,21 @@ h1 {
     font-weight: 700;
     color: #1d1d1f;
     margin-bottom: 24px;
+    text-align: center;
 }
 
-/* --- 2. Einheitliche Buttons & Klick-Boxen (Überall 16px Radius) --- */
-.menu-btn, .antwort-option, #action-btn, .hinweis-box {
+p {
+    text-align: center;
+    color: #86868b;
+    margin-bottom: 24px;
+}
+
+/* --- 2. Einheitliche Radien (Alles konsequent auf 16px abgerundet) --- */
+.menu-btn, .antwort-option, #action-btn, .hinweis-box, #back-btn, #hinweis-btn {
     border-radius: 16px !important;
 }
 
+/* --- 3. Menü & Auswahlbuttons --- */
 .menu-btn {
     display: block;
     width: 100%;
@@ -40,6 +48,7 @@ h1 {
     font-weight: 600;
     text-align: left;
     cursor: pointer;
+    box-sizing: border-box;
     transition: background 0.2s ease;
 }
 .menu-btn:hover { background: #e8e8ed; }
@@ -49,10 +58,11 @@ h1 {
     color: white;
     border: none;
     margin-bottom: 24px;
+    text-align: center;
 }
 .random-btn:hover { background: #0066d6; }
 
-/* --- 3. Antwort-Optionen & Checkboxen --- */
+/* --- 4. Antwortoptionen & Große Checkboxen --- */
 .antwort-option {
     display: block;
     width: 100%;
@@ -75,30 +85,31 @@ h1 {
     background: #f2f8ff;
 }
 
-/* Aufbau der Checkbox im Inneren */
 .option-content {
     display: flex;
     align-items: center;
 }
 
+/* Die neue, große, quadratische Checkbox (ohne Text-Icons) */
 .option-icon {
     display: inline-block;
     width: 22px;
     height: 22px;
     margin-right: 14px;
     border: 2px solid #c7c7cc;
-    border-radius: 6px; /* Leicht abgerundete Checkbox */
+    border-radius: 6px; /* Schön abgerundete Ecken am Kästchen */
     flex-shrink: 0;
     transition: all 0.2s ease;
+    box-sizing: border-box;
 }
 
-/* Checkbox gefüllt, wenn ausgewählt */
+/* Füllung der Checkbox bei Auswahl */
 .antwort-option.selected .option-icon {
     background: #007aff;
     border-color: #007aff;
 }
 
-/* --- 4. Auswertungs-Farben --- */
+/* --- 5. Auswertungszustände --- */
 .antwort-option.correct {
     background: #e8f5e9 !important;
     border-color: #34c759 !important;
@@ -117,7 +128,7 @@ h1 {
     border-color: #ff3b30 !important;
 }
 
-/* --- 5. Obere Menüleiste & Badges --- */
+/* --- 6. Obere Menüleiste & Badges --- */
 .header {
     display: flex;
     justify-content: space-between;
@@ -129,20 +140,20 @@ h1 {
 }
 #kategorie { color: #007aff; text-transform: uppercase; letter-spacing: 0.5px; }
 
-/* Zurück & Tipp Buttons einheitlich unaufdringlich */
+/* Hilfsbuttons (Zurück & Tipp) jetzt vollkommen harmonisch integriert */
 #back-btn, #hinweis-btn {
     background: #f5f5f7;
     border: 1px solid #d2d2d7;
-    padding: 10px 16px;
-    border-radius: 12px;
+    padding: 12px 20px;
     color: #48484a;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 600;
     cursor: pointer;
     transition: background 0.2s;
 }
 #back-btn:hover, #hinweis-btn:hover { background: #e8e8ed; color: #1d1d1f; }
 
+/* Typen-Badge */
 .badge {
     font-size: 12px;
     font-weight: 600;
@@ -152,7 +163,7 @@ h1 {
 .single-choice { background: #e1f0ff; color: #007aff; }
 .multiple-choice { background: #f3e5f5; color: #af52de; }
 
-/* --- 6. Feedback & Steuerung --- */
+/* --- 7. Boxen für Erklärungen & Haupt-Button --- */
 .hinweis-box {
     background: #fff8e1;
     border-left: 4px solid #ff9500;
@@ -163,7 +174,6 @@ h1 {
 }
 
 .loesungsweg-box {
-    margin-top: 12px;
     padding: 12px;
     background: rgba(0,0,0,0.04);
     border-radius: 10px;
@@ -180,7 +190,7 @@ h1 {
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
-    margin-top: 16px;
+    margin-top: 20px;
     transition: background 0.2s;
 }
 #action-btn:disabled {
