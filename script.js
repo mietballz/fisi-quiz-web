@@ -43,7 +43,7 @@ async function starteModus(modus) {
             const response = await fetch(modus);
             fragen = await response.json();
         } catch (e) {
-            alert("Fehler beim Laden des Fragensets!");
+            alert("Fehler beim Laden des Fragensets! Überprüfe ob die JSON-Datei im Ordner liegt.");
             return;
         }
     }
@@ -72,11 +72,9 @@ function zeigeFrage() {
     document.getElementById('kategorie').innerText = aktuelleFrage.kategorie;
     document.getElementById('frage-text').innerText = aktuelleFrage.frage;
 
-    // Typ-Badge (mit Failsafe)
-    const badgeContainer = document.getElementById('typ-badge-container');
+    // Typ-Badge (Failsafe)
     const badge = document.getElementById('typ-badge');
-    if (badgeContainer && badge) {
-        badgeContainer.style.display = 'block';
+    if (badge) {
         if (aktuelleFrage.typ === 'multiple-choice') {
             badge.innerText = 'Mehrere Antworten möglich';
             badge.className = 'badge multiple-choice';
@@ -86,7 +84,7 @@ function zeigeFrage() {
         }
     }
 
-    // Hinweis-Box (mit Failsafe)
+    // Hinweis-Box (Failsafe)
     const hinweisContainer = document.getElementById('hinweis-container');
     if (hinweisContainer) {
         const hinweisBox = document.getElementById('hinweis-box');
@@ -102,11 +100,7 @@ function zeigeFrage() {
         }
     }
 
-    // Antworten rendern
-    const antwortenBox = document.getElementById('antworten-box');
-    antwortenBox.innerHTML = '';
-
-  // Antworten rendern (Abgestimmt auf das neue, saubere CSS)
+    // Antworten rendern (Abgestimmt auf einheitlich runde Checkboxen)
     const antwortenBox = document.getElementById('antworten-box');
     antwortenBox.innerHTML = '';
 
@@ -121,7 +115,7 @@ function zeigeFrage() {
                 <span class="option-text">${option.text}</span>
                 <span class="feedback-icon" style="margin-left: auto;"></span>
             </div>
-            <div class="loesungsweg-box" style="display: none; margin-top: 10px;">${option.loesungsweg}</div>
+            <div class="loesungsweg-box" style="display: none; margin-top: 12px;">${option.loesungsweg}</div>
         `;
 
         optDiv.onclick = () => waehleAntwort(index);
@@ -142,22 +136,17 @@ function waehleAntwort(index) {
     const optDiv = document.getElementById(`option-${index}`);
 
     if (aktuelleFrage.typ === 'single-choice') {
-        aktuelleFrage.antwortOptionen.forEach((_, i) => {
-            document.getElementById(`option-${i}`).classList.remove('selected');
-            document.getElementById(`option-${i}`).querySelector('.option-icon').innerText = '○';
-        });
+        let alleOptionen = document.querySelectorAll('.antwort-option');
+        alleOptionen.forEach(opt => opt.classList.remove('selected'));
         ausgewaehlteAntworten = [index];
         optDiv.classList.add('selected');
-        optDiv.querySelector('.option-icon').innerText = '●';
     } else {
         if (ausgewaehlteAntworten.includes(index)) {
             ausgewaehlteAntworten = ausgewaehlteAntworten.filter(i => i !== index);
             optDiv.classList.remove('selected');
-            optDiv.querySelector('.option-icon').innerText = '❑';
         } else {
             ausgewaehlteAntworten.push(index);
             optDiv.classList.add('selected');
-            optDiv.querySelector('.option-icon').innerText = '☑';
         }
     }
 
@@ -208,7 +197,6 @@ function auswerten() {
     }
 }
 
-// --- Navigation ---
 function naechsteFrage() {
     aktuelleFrageIndex++;
     zeigeFrage();
@@ -240,7 +228,7 @@ function zeigeErgebnis() {
     const antwortenBox = document.getElementById('antworten-box');
     antwortenBox.innerHTML = `
         <div style="text-align: center; margin: 30px 0;">
-            <h3 style="font-size: 2.5rem; margin-bottom: 10px;">${prozent}%</h3>
+            <h3 style="font-size: 2.5rem; margin-bottom: 10px; color: #1d1d1f;">${prozent}%</h3>
             <p style="color: #666; font-size: 1.2rem;">${richtigeAntwortenCount} von ${fragen.length} Punkten erreicht</p>
             <h4 style="margin-top: 20px; color: ${prozent >= 50 ? '#34c759' : '#ff3b30'}">${feedbackText}</h4>
         </div>
