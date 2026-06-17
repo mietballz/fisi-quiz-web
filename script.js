@@ -106,20 +106,22 @@ function zeigeFrage() {
     const antwortenBox = document.getElementById('antworten-box');
     antwortenBox.innerHTML = '';
 
+  // Antworten rendern (Abgestimmt auf das neue, saubere CSS)
+    const antwortenBox = document.getElementById('antworten-box');
+    antwortenBox.innerHTML = '';
+
     aktuelleFrage.antwortOptionen.forEach((option, index) => {
         const optDiv = document.createElement('div');
         optDiv.className = 'antwort-option';
         optDiv.id = `option-${index}`;
-        
-        const icon = aktuelleFrage.typ === 'single-choice' ? '○' : '❑';
 
         optDiv.innerHTML = `
             <div class="option-content">
-                <span class="option-icon">${icon}</span>
+                <span class="option-icon"></span>
                 <span class="option-text">${option.text}</span>
-                <span class="feedback-icon"></span>
+                <span class="feedback-icon" style="margin-left: auto;"></span>
             </div>
-            <div class="loesungsweg-box" style="display: none;">${option.loesungsweg}</div>
+            <div class="loesungsweg-box" style="display: none; margin-top: 10px;">${option.loesungsweg}</div>
         `;
 
         optDiv.onclick = () => waehleAntwort(index);

@@ -1,75 +1,190 @@
-/* --- 1. Basis-Styling (Clean & Shadowless) --- */
+/* --- 1. Basis & Layout --- */
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background-color: #ffffff; /* Weißer Hintergrund statt Grau */
+    background-color: #ffffff;
     margin: 0;
-    padding: 20px;
+    padding: 24px;
     display: flex;
     justify-content: center;
     min-height: 100vh;
+    box-sizing: border-box;
 }
 
 #menu-view, #quiz-card {
     width: 100%;
-    max-width: 500px;
+    max-width: 520px;
+    box-shadow: none !important; /* Schatten komplett weg */
 }
 
-/* --- 2. Runder & Größer --- */
-.menu-btn, .antwort-option {
+h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1d1d1f;
+    margin-bottom: 24px;
+}
+
+/* --- 2. Einheitliche Buttons & Klick-Boxen (Überall 16px Radius) --- */
+.menu-btn, .antwort-option, #action-btn, .hinweis-box {
+    border-radius: 16px !important;
+}
+
+.menu-btn {
     display: block;
     width: 100%;
-    padding: 20px; /* Mehr Platz zum Klicken */
-    margin-bottom: 15px;
-    background: #f8f8f8;
-    border: 2px solid #eeeeee; /* Dünnere, subtilere Linie */
-    border-radius: 20px; /* Stärker abgerundet */
+    padding: 18px;
+    margin-bottom: 12px;
+    background: #f5f5f7;
+    border: 1px solid #d2d2d7;
+    color: #1d1d1f;
+    font-size: 16px;
+    font-weight: 600;
     text-align: left;
-    font-size: 16px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: background 0.2s ease;
 }
+.menu-btn:hover { background: #e8e8ed; }
 
-/* Aktiver Zustand (Checkbox-Effekt) */
-.antwort-option.selected { 
-    border-color: #007aff; 
-    background: #f0f7ff; 
-}
-
-/* Schatten komplett entfernt */
-.menu-btn, .antwort-option, #quiz-card {
-    box-shadow: none !important;
-}
-
-/* --- 3. Die Checkbox-Optik --- */
-.option-icon {
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    margin-right: 15px;
-    border: 2px solid #c7c7cc;
-    border-radius: 8px; /* Runde Checkboxen */
-    text-align: center;
-    line-height: 24px;
-    font-size: 16px;
-}
-
-/* Wenn gewählt: Füllung */
-.selected .option-icon {
-    background: #007aff;
-    border-color: #007aff;
-    color: white;
-}
-
-/* --- 4. Call-to-Action Button --- */
-#action-btn {
-    width: 100%;
-    padding: 20px;
+.random-btn {
     background: #007aff;
     color: white;
     border: none;
-    border-radius: 20px; /* Passend zum Rest */
-    font-weight: 600;
+    margin-bottom: 24px;
+}
+.random-btn:hover { background: #0066d6; }
+
+/* --- 3. Antwort-Optionen & Checkboxen --- */
+.antwort-option {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    margin-bottom: 12px;
+    background: #ffffff;
+    border: 2px solid #e5e5ea;
+    text-align: left;
     font-size: 16px;
+    color: #1d1d1f;
     cursor: pointer;
-    margin-top: 20px;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+.antwort-option:hover { background: #f5f5f7; }
+
+/* Zustand: Ausgewählt */
+.antwort-option.selected {
+    border-color: #007aff;
+    background: #f2f8ff;
+}
+
+/* Aufbau der Checkbox im Inneren */
+.option-content {
+    display: flex;
+    align-items: center;
+}
+
+.option-icon {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    margin-right: 14px;
+    border: 2px solid #c7c7cc;
+    border-radius: 6px; /* Leicht abgerundete Checkbox */
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+}
+
+/* Checkbox gefüllt, wenn ausgewählt */
+.antwort-option.selected .option-icon {
+    background: #007aff;
+    border-color: #007aff;
+}
+
+/* --- 4. Auswertungs-Farben --- */
+.antwort-option.correct {
+    background: #e8f5e9 !important;
+    border-color: #34c759 !important;
+}
+.antwort-option.correct .option-icon {
+    background: #34c759 !important;
+    border-color: #34c759 !important;
+}
+
+.antwort-option.wrong {
+    background: #fde8e8 !important;
+    border-color: #ff3b30 !important;
+}
+.antwort-option.wrong .option-icon {
+    background: #ff3b30 !important;
+    border-color: #ff3b30 !important;
+}
+
+/* --- 5. Obere Menüleiste & Badges --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 600;
+    color: #86868b;
+    margin-bottom: 16px;
+}
+#kategorie { color: #007aff; text-transform: uppercase; letter-spacing: 0.5px; }
+
+/* Zurück & Tipp Buttons einheitlich unaufdringlich */
+#back-btn, #hinweis-btn {
+    background: #f5f5f7;
+    border: 1px solid #d2d2d7;
+    padding: 10px 16px;
+    border-radius: 12px;
+    color: #48484a;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+#back-btn:hover, #hinweis-btn:hover { background: #e8e8ed; color: #1d1d1f; }
+
+.badge {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+.single-choice { background: #e1f0ff; color: #007aff; }
+.multiple-choice { background: #f3e5f5; color: #af52de; }
+
+/* --- 6. Feedback & Steuerung --- */
+.hinweis-box {
+    background: #fff8e1;
+    border-left: 4px solid #ff9500;
+    padding: 16px;
+    margin: 14px 0;
+    font-size: 15px;
+    color: #b78103;
+}
+
+.loesungsweg-box {
+    margin-top: 12px;
+    padding: 12px;
+    background: rgba(0,0,0,0.04);
+    border-radius: 10px;
+    font-size: 14px;
+    color: #48484a;
+}
+
+#action-btn {
+    width: 100%;
+    padding: 18px;
+    background: #007aff;
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 16px;
+    transition: background 0.2s;
+}
+#action-btn:disabled {
+    background: #d2d2d7;
+    color: #86868b;
+    cursor: not-allowed;
 }
